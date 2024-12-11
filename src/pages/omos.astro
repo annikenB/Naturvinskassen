@@ -1,0 +1,70 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import BestilCards from "../components/BestilCards.astro";
+---
+
+<MainLayout title="Titel">
+  <article>
+    <h1>OM OS</h1>
+
+    <section class="max-w-7xl mx-auto px-4 py-8">
+      <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="">
+            <h2 class="">Hvem er vi</h2>
+            <p class="text-lg leading-relaxed">
+              Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog
+              pjalterne sammen i Århus, til fælles kamp for udbredelsen af
+              naturvin. Sammen startede vi Reduktivt, som er vores
+              naturvinsbutik og importfirma, i hjertet af Århus. Herfra
+              servicere vi tørstige og nysgerrige naturvinsdrikkere, samt mange
+              af landet bedste restauranter.  Igennem dette opstod ideen til
+              Naturvinskassen. Vores lille abonnements-hjertebarn, som med tiden
+              har vokset sig til et selvstændigt, nysgerrigt og evigt tørstigt
+              væsen. Altid på jagt efter nye oplevelser. Til glæde for alle
+              vores medlemmer, selvfølgelig.
+            </p>
+            <p>knap her</p>
+          </div>
+          <div class="flex justify-center">
+            <p>bilde her</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-8">
+      <div class="bg-blue-100 rounded-3xl p-6 shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="flex justify-center">
+            <p>bilde her</p>
+          </div>
+          <div class="">
+            <h2 class="">illustasjon</h2>
+            <p class="text-lg">
+              Vores arbejde med Naturvinskassen handler først og fremmest om at
+              videreformidle og dele oplevelser, med alle vores medlemmer! Det
+              er lige præcis dét, som vi hele tiden bestræber os på.  Vi støder
+              på rigtig, rigtig mange vinbønder og smager endnu flere vine.
+              Noget smager godt, noget smager knap så godt, og noget smager så
+              godt, at vi bliver nødt til at dele det med alle vores medlemmer.
+            </p>
+            <p>knap her</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <BestilCards />
+
+    <p>
+      Link til <Link href="https://www.kea.dk" target="_blank"
+        >En anden side</Link
+      >
+    </p>
+    <Image src={thumbsup} alt="" />
+  </article>
+</MainLayout>

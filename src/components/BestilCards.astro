@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+---
+
+<h2 class="text-h2text text-center mb-6">Bestil dit abonnement her</h2>
+
+<section class="max-w-7xl mx-auto px-4 pb-32">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+  >
+    <div
+      class="bg-white rounded-3xl border border-transparent hover:border-farvenavn-accent hover:border-2 transition duration-300 p-3"
+    >
+      <a href="">
+        <div class="p-5">
+          <Image src={thumbsup} alt="" />
+          <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            Den lille
+          </h4>
+          <p>button her</p>
+        </div>
+      </a>
+    </div>
+
+    <div
+      class="bg-white rounded-3xl border border-transparent hover:border-farvenavn-accent hover:border-2 transition duration-300 p-3"
+    >
+      <a href="">
+        <div class="p-5">
+          <Image src={thumbsup} alt="" />
+          <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            Den mellomstore
+          </h4>
+          <p>button her</p>
+        </div>
+      </a>
+    </div>
+    <div
+      class="bg-white rounded-3xl border border-transparent hover:border-farvenavn-accent hover:border-2 transition duration-300 p-3"
+    >
+      <a href="">
+        <div class="p-5">
+          <Image src={thumbsup} alt="" />
+          <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            Den store
+          </h4>
+          <p>button her</p>
+        </div>
+      </a>
+    </div>
+
+    <div
+      class="bg-white rounded-3xl border border-transparent hover:border-farvenavn-accent hover:border-2 transition duration-300 p-3"
+    >
+      <a href="">
+        <div class="p-5">
+          <Image src={thumbsup} alt="" />
+          <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            Skræddersy
+          </h4>
+          <p>button her</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
