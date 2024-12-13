@@ -2,15 +2,149 @@
 
 ---
 
-<div class="flex justify-between items-center p-5 bg-gray-100">
-  <a href="/" class="text-lg font-bold hover:underline">Logo/Index</a>
-  <div class="space-x-4">
-    <a href="/omos" class="hover:">Om os</a>
-    <a href="/betal" class="hover:">Naturvinskassen</a>
-    <a href="/login" class="hover:">Login</a>
-    <a href="#" id="toggleDrawer" class="hover:underline cursor-pointer">Kurv</a
+<div class="sticky top-0 z-50 bg-gray-100">
+  <div class="flex justify-between items-center p-5">
+    <a href="/" class="text-lg font-bold hover:underline">Logo/Index</a>
+
+    <button
+      id="hamburgerButton"
+      class="block md:hidden text-gray-500 hover:text-gray-700 focus:outline-none"
     >
-    <a href="/bestil" class="hover:underline">Bestil</a>
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <div class="space-x-4 flex items-center hidden md:flex">
+      <a href="/omos" class="hover:underline">Om os</a>
+
+      <div class="relative">
+        <button id="naturvinskassenDropdown" class="hover:underline">
+          Naturvinskassen
+          <svg
+            class="inline-block w-4 h-4 ml-1"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"></path>
+          </svg>
+        </button>
+
+        <div
+          id="dropdownMenu"
+          class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
+        >
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Punkt 1</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Punkt 2</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Punkt 3</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Punkt 4</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="/login" class="hover:underline">Login</a>
+      <a href="#" id="toggleDrawer" class="hover:underline cursor-pointer"
+        >Kurv</a
+      >
+      <a href="/bestil" class="hover:underline">Bestil</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden hidden bg-gray-100 w-full">
+    <ul class="space-y-4 py-4">
+      <li>
+        <a href="/omos" class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
+          >Om os</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          id="mobileDropdownLink"
+          class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
+          >Naturvinskassen</a
+        >
+
+        <div
+          id="mobileDropdownMenu"
+          class="hidden bg-white shadow-lg rounded-lg"
+        >
+          <ul class="space-y-2 py-2 text-sm">
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Punkt 1</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Punkt 2</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Punkt 3</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Punkt 4</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="/login" class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          id="mobileToggleDrawer"
+          class="block px-4 py-2 text-gray-900 hover:bg-gray-200">Kurv</a
+        >
+      </li>
+      <li>
+        <a
+          href="/bestil"
+          class="block px-4 py-2 text-gray-900 hover:bg-gray-200">Bestil</a
+        >
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -20,7 +154,7 @@
 >
   <div class="p-4">
     <h5
-      class="text-base text-farvenavn-blaa font-semibold text-gray-500 uppercase dark:text-gray-400"
+      class="text-base text-farvenavn-blaa font-semibold uppercase dark:text-gray-400"
     >
       Kurv(0)
     </h5>
@@ -52,6 +186,18 @@
 </div>
 
 <script>
+  document.getElementById("hamburgerButton").addEventListener("click", () => {
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  document
+    .getElementById("mobileDropdownLink")
+    .addEventListener("click", (e) => {
+      const mobileDropdownMenu = document.getElementById("mobileDropdownMenu");
+      mobileDropdownMenu.classList.toggle("hidden");
+    });
+
   document.addEventListener("DOMContentLoaded", () => {
     const toggleDrawerButton = document.getElementById("toggleDrawer");
     const closeDrawerButton = document.getElementById("closeDrawer");
