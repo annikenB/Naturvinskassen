@@ -7,8 +7,8 @@ export default {
       transparent: "transparent",
       current: "currentColor",
       farvenavn: {
-        hvid: "#hFCF8DE",
-        blaa: "#B0C6EO",
+        hvid: "#FCF8DE",
+        blaa: "#B0C6E0",
         skrift: "#2B042D",
         300: "#hexkode",
         400: "#hexkode",
