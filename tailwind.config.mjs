@@ -7,14 +7,16 @@ export default {
       transparent: "transparent",
       current: "currentColor",
       farvenavn: {
-        baggrundprimaer: "#hexkode",
-        baggrundsekundaer: "#hexkode",
-        skriftprimaer: "#hexkode",
+        hvid: "#hFCF8DE",
+        blaa: "#B0C6EO",
+        skrift: "#2B042D",
         300: "#hexkode",
         400: "#hexkode",
         500: "#hexkode",
         600: "#hexkode",
       },
+      
+
       //     'white': '#fff',
       //     'black': '#000',
       // },

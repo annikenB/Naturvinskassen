@@ -2,12 +2,70 @@
 
 ---
 
-<div class="p-5">
-  <p>Header med midlertidlig links</p>
-  <a href="/">logo/index</a>
-  <a href="/omos" class='hover:underline"'> Om os </a>
-  <a href="/betal" class="hover:underline"> Naturvinskassen </a>
-  <a href="/login" class="hover:underline"> login </a>
-  <a href="/betal" class="hover:underline"> Kurv </a>
-  <a href="/bestil" class="hover:underline"> Bestil </a>
+<div class="flex justify-between items-center p-5 bg-gray-100 shadow-md">
+  <a href="/" class="text-lg font-bold hover:underline">Logo/Index</a>
+  <div class="space-x-4">
+    <a href="/omos" class="hover:">Om os</a>
+    <a href="/betal" class="hover:">Naturvinskassen</a>
+    <a href="/login" class="hover:">Login</a>
+    <a href="#" id="toggleDrawer" class="hover:underline cursor-pointer">Kurv</a
+    >
+    <a href="/bestil" class="hover:underline">Bestil</a>
+  </div>
 </div>
+
+<div
+  id="drawer"
+  class="fixed top-0 right-0 z-40 w-64 h-screen bg-farvenavn-blaa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+>
+  <div class="p-4">
+    <h5
+      class="text-base text-farvenavn-blaa font-semibold text-gray-500 uppercase dark:text-gray-400"
+    >
+      Kurv(0)
+    </h5>
+    <button
+      id="closeDrawer"
+      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+    >
+      Lukk
+    </button>
+  </div>
+  <ul class="py-4 space-y-2 font-medium">
+    <li>
+      <a
+        href="#"
+        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+      >
+        Ser ud som at din kurv er tom...
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+      >
+        knap her
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleDrawerButton = document.getElementById("toggleDrawer");
+    const closeDrawerButton = document.getElementById("closeDrawer");
+    const drawer = document.getElementById("drawer");
+
+    toggleDrawerButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      drawer.classList.remove("translate-x-full");
+      drawer.classList.add("translate-x-0");
+    });
+
+    closeDrawerButton.addEventListener("click", () => {
+      drawer.classList.add("translate-x-full");
+      drawer.classList.remove("translate-x-0");
+    });
+  });
+</script>
