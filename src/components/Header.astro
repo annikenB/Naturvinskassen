@@ -83,7 +83,10 @@
         </div>
       </div>
 
-      <a href="/login" class="hover:underline">Login</a>
+      <a href="#" id="toggleLogin" class="hover:underline cursor-pointer"
+        >Login</a
+      >
+
       <a href="#" id="toggleDrawer" class="hover:underline cursor-pointer"
         >Kurv</a
       >
@@ -184,6 +187,21 @@
   </ul>
 </div>
 
+<div
+  id="loginDrawer"
+  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+>
+  <div class="p-4">
+    <h1 class="text-xl font-bold text-center text-gray-800">Hej</h1>
+    <p class="text-center text-gray-600">Knap her</p>
+    <button
+      id="closeLoginDrawer"
+      class="text-farvenavn-lilla bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      >Luk</button
+    >
+  </div>
+</div>
+
 <script>
   document.getElementById("hamburgerButton").addEventListener("click", () => {
     const mobileMenu = document.getElementById("mobileMenu");
@@ -206,8 +224,11 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const toggleDrawerButton = document.getElementById("toggleDrawer");
+    const toggleLoginButton = document.getElementById("toggleLogin");
     const closeDrawerButton = document.getElementById("closeDrawer");
+    const closeLoginButton = document.getElementById("closeLoginDrawer");
     const drawer = document.getElementById("drawer");
+    const loginDrawer = document.getElementById("loginDrawer");
 
     toggleDrawerButton.addEventListener("click", (e) => {
       e.preventDefault();
@@ -215,9 +236,20 @@
       drawer.classList.add("translate-x-0");
     });
 
+    toggleLoginButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginDrawer.classList.remove("translate-x-full");
+      loginDrawer.classList.add("translate-x-0");
+    });
+
     closeDrawerButton.addEventListener("click", () => {
       drawer.classList.add("translate-x-full");
       drawer.classList.remove("translate-x-0");
+    });
+
+    closeLoginButton.addEventListener("click", () => {
+      loginDrawer.classList.add("translate-x-full");
+      loginDrawer.classList.remove("translate-x-0");
     });
   });
 </script>
