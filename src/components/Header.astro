@@ -4,10 +4,8 @@
 
 <div class="sticky top-0 z-50 bg-gray-100">
   <div class="flex justify-between items-center p-5">
-    <!-- Logo til venstre -->
     <a href="/" class="text-lg font-bold hover:underline">Logo/Index</a>
 
-    <!-- Hamburger knapp for mobil -->
     <button
       id="hamburgerButton"
       class="block md:hidden text-gray-500 hover:text-gray-700 focus:outline-none"
@@ -27,11 +25,9 @@
       </svg>
     </button>
 
-    <!-- Meny til høyre -->
     <div class="space-x-4 flex items-center hidden md:flex">
       <a href="/omos" class="hover:underline">Om os</a>
 
-      <!-- Dropdown for Naturvinskassen -->
       <div class="relative">
         <button id="naturvinskassenDropdown" class="hover:underline">
           Naturvinskassen
@@ -49,10 +45,10 @@
               d="m1 1 4 4 4-4"></path>
           </svg>
         </button>
-        <!-- Dropdown Menu -->
+
         <div
           id="dropdownMenu"
-          class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
+          class="hidden absolute right-0 mt-2 w-48 bg-farvenavn-lysgraa border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
         >
           <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
             <li>
@@ -87,8 +83,10 @@
         </div>
       </div>
 
-      <!-- Login, Kurv, and Bestil -->
-      <a href="/login" class="hover:underline">Login</a>
+      <a href="#" id="toggleLogin" class="hover:underline cursor-pointer"
+        >Login</a
+      >
+
       <a href="#" id="toggleDrawer" class="hover:underline cursor-pointer"
         >Kurv</a
       >
@@ -96,7 +94,6 @@
     </div>
   </div>
 
-  <!-- Mobil meny som vises når hamburgerknappen trykkes -->
   <div id="mobileMenu" class="md:hidden hidden bg-gray-100 w-full">
     <ul class="space-y-4 py-4">
       <li>
@@ -111,10 +108,10 @@
           class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
           >Naturvinskassen</a
         >
-        <!-- Mobil dropdown menu -->
+
         <div
           id="mobileDropdownMenu"
-          class="hidden bg-white shadow-lg rounded-lg"
+          class="hidden bg-farvenavn-lysgraa rounded-lg"
         >
           <ul class="space-y-2 py-2 text-sm">
             <li>
@@ -154,21 +151,20 @@
   </div>
 </div>
 
-<!-- Drawer for Kurv -->
 <div
   id="drawer"
-  class="fixed top-0 right-0 z-40 w-64 h-screen bg-farvenavn-blaa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
 >
   <div class="p-4">
     <h5
-      class="text-base text-farvenavn-blaa font-semibold uppercase dark:text-gray-400"
+      class="text-base text-farvenavn-lilla font-semibold uppercase dark:text-gray-400"
     >
       Kurv(0)
     </h5>
     <button
       id="closeDrawer"
-      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
-      >Lukk</button
+      class="text-farvenavn-lilla bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      >Luk</button
     >
   </div>
   <ul class="py-4 space-y-2 font-medium">
@@ -191,14 +187,74 @@
   </ul>
 </div>
 
+<div
+  id="loginDrawer"
+  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+>
+  <div class="p-4">
+    <h1 class="text-xl font-bold text-center text-gray-800">Hej</h1>
+
+    <form class="max-w-sm mx-auto">
+      <div class="mb-5">
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        ></label>
+        <input
+          type="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Din email"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        ></label>
+        <input
+          type="password"
+          id="password"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          required
+          placeholder="Adgangskode"
+        />
+      </div>
+      <div class="flex items-start mb-5">
+        <div class="flex items-center h-5">
+          <input
+            id="remember"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+            required
+          />
+        </div>
+        <label
+          for="remember"
+          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Husk mig</label
+        >
+      </div>
+      <p>Har du glemt din adgangskode? Klik her</p>
+      <p>Har du ikke en konto? Tilmeld dig her</p>
+    </form>
+
+    <button
+      id="closeLoginDrawer"
+      class="text-farvenavn-lilla bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      >Luk</button
+    >
+  </div>
+</div>
+
 <script>
-  // Toggle mobile menu visibility
   document.getElementById("hamburgerButton").addEventListener("click", () => {
     const mobileMenu = document.getElementById("mobileMenu");
     mobileMenu.classList.toggle("hidden");
   });
 
-  // Toggle mobile dropdown visibility
   document
     .getElementById("mobileDropdownLink")
     .addEventListener("click", (e) => {
@@ -206,7 +262,6 @@
       mobileDropdownMenu.classList.toggle("hidden");
     });
 
-  // Toggle dropdown visibility for Naturvinskassen (desktop version)
   document
     .getElementById("naturvinskassenDropdown")
     .addEventListener("click", (e) => {
@@ -214,11 +269,13 @@
       dropdownMenu.classList.toggle("hidden");
     });
 
-  // Kurv drawer toggle
   document.addEventListener("DOMContentLoaded", () => {
     const toggleDrawerButton = document.getElementById("toggleDrawer");
+    const toggleLoginButton = document.getElementById("toggleLogin");
     const closeDrawerButton = document.getElementById("closeDrawer");
+    const closeLoginButton = document.getElementById("closeLoginDrawer");
     const drawer = document.getElementById("drawer");
+    const loginDrawer = document.getElementById("loginDrawer");
 
     toggleDrawerButton.addEventListener("click", (e) => {
       e.preventDefault();
@@ -226,9 +283,20 @@
       drawer.classList.add("translate-x-0");
     });
 
+    toggleLoginButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginDrawer.classList.remove("translate-x-full");
+      loginDrawer.classList.add("translate-x-0");
+    });
+
     closeDrawerButton.addEventListener("click", () => {
       drawer.classList.add("translate-x-full");
       drawer.classList.remove("translate-x-0");
+    });
+
+    closeLoginButton.addEventListener("click", () => {
+      loginDrawer.classList.add("translate-x-full");
+      loginDrawer.classList.remove("translate-x-0");
     });
   });
 </script>
