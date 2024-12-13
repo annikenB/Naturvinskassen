@@ -9,11 +9,10 @@ export default {
       farvenavn: {
         hvid: "#FCF8DE",
         blaa: "#B0C6E0",
-        skrift: "#2B042D",
-        300: "#hexkode",
-        400: "#hexkode",
-        500: "#hexkode",
-        600: "#hexkode",
+        lilla: "#2B042D",
+        graa: "#B5AB96",
+        roed: "#DB1F2D",
+        lysgraa: "#EBE3D3",
       },
     },
 
