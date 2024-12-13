@@ -1,0 +1,17 @@
+---
+const { title = "Standard Tittel", image = "https://via.placeholder.com/300" } =
+  Astro.props;
+
+const cardStyling =
+  "bg-white rounded-lg  p-4 transition-transform duration-300 transform hover:scale-105";
+
+const titleStyling = "text-xl font-semibold mb-2";
+
+const imageStyling = "w-full h-48 object-cover rounded-md mb-4";
+---
+
+<div class={cardStyling}>
+  <img src={image} alt={title} class={imageStyling} />
+
+  <h3 class={titleStyling}>{title}</h3>
+</div>
