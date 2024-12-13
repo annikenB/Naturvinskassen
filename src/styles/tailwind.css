@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+  h1 {
+    @apply text-large;
+    @apply font-regular;
+    @apply font-display;
+    @apply uppercase;
+    @apply text-farvenavn-lilla;
+  }
 
+  h2 {
+    @apply text-medium;
+    @apply font-regular;
+    @apply font-display;
+    @apply uppercase;
+    @apply text-farvenavn-lilla;
+  }
+
+  h3 {
+    @apply text-small;
+    @apply font-regular;
+    @apply font-display;
+    @apply uppercase;
+    @apply text-farvenavn-lilla;
+  }
+  h4 {
+    @apply text-xsmall;
+    @apply font-regular;
+    @apply font-display;
+    @apply uppercase;
+    @apply text-farvenavn-lilla;
+  }
+  p {
+    @apply text-base;
+    @apply font-light;
+    @apply font-sans;
+    @apply text-farvenavn-lilla;
+  }
 }
