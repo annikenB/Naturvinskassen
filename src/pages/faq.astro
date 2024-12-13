@@ -1,9 +1,79 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
 ---
 
 <MainLayout>
-  <h1>hvad undrer du dig over?</h1>
+  <h1>Hva undrer du deg over?</h1>
+
+  <div class="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-lg">
+    <div class="space-y-4">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button
+          onclick="toggleAnswer(this)"
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+        >
+          Hva er en FAQ?
+          <span>
+            &#9660; <!-- Down arrow -->
+          </span>
+        </button>
+        <div class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ står for "Frequently Asked Questions" og er en liste med vanlige
+            spørsmål og svar som ofte stilles av brukere.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button
+          onclick="toggleAnswer(this)"
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+        >
+          Hvordan fungerer FAQ-listen?
+          <span>
+            &#9660; <!-- Down arrow -->
+          </span>
+        </button>
+        <div class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ-listen fungerer ved at du kan klikke på spørsmålene for å åpne
+            svarene, og lukke dem ved å klikke på dem igjen.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button
+          onclick="toggleAnswer(this)"
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+        >
+          Hvorfor er FAQ nyttig?
+          <span>
+            &#9660; <!-- Down arrow -->
+          </span>
+        </button>
+        <div class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Klientside JavaScript -->
+  <script type="module" client:load>
+    // Toggle funksjon for å vise/skjule svarene
+    function toggleAnswer(button) {
+      const answer = button.nextElementSibling;
+      // Toggle synlighet av svaret
+      answer.classList.toggle("hidden");
+    }
+  </script>
 </MainLayout>
