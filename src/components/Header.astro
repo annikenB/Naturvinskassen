@@ -2,10 +2,12 @@
 
 ---
 
-<div class="sticky top-0 z-50 bg-gray-100">
+<div class="sticky top-0 z-50 bg-gray-100 shadow-md">
   <div class="flex justify-between items-center p-5">
+    <!-- Logo til venstre -->
     <a href="/" class="text-lg font-bold hover:underline">Logo/Index</a>
 
+    <!-- Hamburger knapp for mobil -->
     <button
       id="hamburgerButton"
       class="block md:hidden text-gray-500 hover:text-gray-700 focus:outline-none"
@@ -25,9 +27,11 @@
       </svg>
     </button>
 
+    <!-- Meny til høyre -->
     <div class="space-x-4 flex items-center hidden md:flex">
-      <a href="/omos" class="text-farvenavn-skrift hover:underline">Om os</a>
+      <a href="/omos" class="hover:underline">Om os</a>
 
+      <!-- Dropdown for Naturvinskassen -->
       <div class="relative">
         <button id="naturvinskassenDropdown" class="hover:underline">
           Naturvinskassen
@@ -45,7 +49,7 @@
               d="m1 1 4 4 4-4"></path>
           </svg>
         </button>
-
+        <!-- Dropdown Menu -->
         <div
           id="dropdownMenu"
           class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
@@ -83,6 +87,7 @@
         </div>
       </div>
 
+      <!-- Login, Kurv, and Bestil -->
       <a href="/login" class="hover:underline">Login</a>
       <a href="#" id="toggleDrawer" class="hover:underline cursor-pointer"
         >Kurv</a
@@ -91,6 +96,7 @@
     </div>
   </div>
 
+  <!-- Mobil meny som vises når hamburgerknappen trykkes -->
   <div id="mobileMenu" class="md:hidden hidden bg-gray-100 w-full">
     <ul class="space-y-4 py-4">
       <li>
@@ -105,7 +111,7 @@
           class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
           >Naturvinskassen</a
         >
-
+        <!-- Mobil dropdown menu -->
         <div
           id="mobileDropdownMenu"
           class="hidden bg-white shadow-lg rounded-lg"
@@ -148,6 +154,7 @@
   </div>
 </div>
 
+<!-- Drawer for Kurv -->
 <div
   id="drawer"
   class="fixed top-0 right-0 z-40 w-64 h-screen bg-farvenavn-blaa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
@@ -161,9 +168,8 @@
     <button
       id="closeDrawer"
       class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      >Lukk</button
     >
-      Lukk
-    </button>
   </div>
   <ul class="py-4 space-y-2 font-medium">
     <li>
@@ -186,11 +192,13 @@
 </div>
 
 <script>
+  // Toggle mobile menu visibility
   document.getElementById("hamburgerButton").addEventListener("click", () => {
     const mobileMenu = document.getElementById("mobileMenu");
     mobileMenu.classList.toggle("hidden");
   });
 
+  // Toggle mobile dropdown visibility
   document
     .getElementById("mobileDropdownLink")
     .addEventListener("click", (e) => {
@@ -198,6 +206,15 @@
       mobileDropdownMenu.classList.toggle("hidden");
     });
 
+  // Toggle dropdown visibility for Naturvinskassen (desktop version)
+  document
+    .getElementById("naturvinskassenDropdown")
+    .addEventListener("click", (e) => {
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+  // Kurv drawer toggle
   document.addEventListener("DOMContentLoaded", () => {
     const toggleDrawerButton = document.getElementById("toggleDrawer");
     const closeDrawerButton = document.getElementById("closeDrawer");
