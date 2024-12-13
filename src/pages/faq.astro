@@ -5,23 +5,29 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout>
   <h1>Hva undrer du deg over?</h1>
 
-  <div class="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-lg">
+  <div
+    class="max-w-4xl mx-auto my-8 p-6 bg-farvenavn-blaa rounded-lg shadow-lg"
+  >
     <div class="space-y-4">
       <!-- FAQ 1 -->
       <div class="faq-item">
         <button
-          onclick="toggleAnswer(this)"
           class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq1Button"
         >
-          Hva er en FAQ?
-          <span>
-            &#9660; <!-- Down arrow -->
-          </span>
+          Hvad indebærer et abonnement?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
         </button>
-        <div class="faq-answer hidden px-4 py-2 text-gray-700">
+        <div id="faq1Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
           <p>
-            FAQ står for "Frequently Asked Questions" og er en liste med vanlige
-            spørsmål og svar som ofte stilles av brukere.
+            Hver måned vil du som medlem af naturvinskassen modtage 3 flasker
+            udvalgt vin, som alle er lavet ud fra et naturligt udgangspunkt.
+            Derudover vil du modtage en opskrift, kreeret af en restaurant
+            og/eller en kok, som vi har meget kær. Udførlige beskrivelser af
+            vinene vil selvfølgelig også medfølge, hver måned! Ved første
+            levering modtager du en specialdesignet proptrækker, så har du noget
+            godt værktøj at gå i krig med.
           </p>
         </div>
       </div>
@@ -29,34 +35,192 @@ import MainLayout from "../layouts/MainLayout.astro";
       <!-- FAQ 2 -->
       <div class="faq-item">
         <button
-          onclick="toggleAnswer(this)"
           class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq2Button"
         >
-          Hvordan fungerer FAQ-listen?
-          <span>
-            &#9660; <!-- Down arrow -->
-          </span>
+          Hvornår bliver min kasse så leveret?
+
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
         </button>
-        <div class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>
-            FAQ-listen fungerer ved at du kan klikke på spørsmålene for å åpne
-            svarene, og lukke dem ved å klikke på dem igjen.
-          </p>
+        <div id="faq2Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>Du vil få din naturvinskasse leveret hver måned.</p>
         </div>
       </div>
 
       <!-- FAQ 3 -->
       <div class="faq-item">
         <button
-          onclick="toggleAnswer(this)"
           class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
         >
-          Hvorfor er FAQ nyttig?
-          <span>
-            &#9660; <!-- Down arrow -->
-          </span>
+          Hvornår bliver min betaling trukket?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
         </button>
-        <div class="faq-answer hidden px-4 py-2 text-gray-700">
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            Din kasse vil blive leveret til dig, i starten af måneden. Bestiller
+            du 'Strakslevering' ved oprettelse af dit medlemskab, så vil din
+            kasse afsendes inden for 1 hverdag.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvornår bliver min betaling trukket?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            Din betaling vil blive reserveret den sidste dag i måneden. Du
+            modtager en e-mail hver gang vi opretter en automatisk ordre.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Binder jeg mig i en bestemt periode?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvordan bliver min vin leveret?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 7 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvordan opdaterer jeg mine private indstillinger?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 8 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvordan opdaterer jeg mine private indstillinger?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 9 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvordan opdaterer jeg mine private indstillinger?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 10 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvordan opdaterer jeg mine private indstillinger?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 11 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvordan skifter jeg leveringsmetode?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
+          <p>
+            FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
+            spørsmål uten å måtte kontakte kundeservice eller søke etter
+            informasjon på nytt.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ 12 -->
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Hvordan skifter jeg leveringsmetode?
+          <span class="faq-arrow">&#9660;</span>
+          <!-- Pil -->
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
           <p>
             FAQ er nyttig fordi det gir rask tilgang til svar på vanlige
             spørsmål uten å måtte kontakte kundeservice eller søke etter
@@ -69,11 +233,34 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   <!-- Klientside JavaScript -->
   <script type="module" client:load>
-    // Toggle funksjon for å vise/skjule svarene
-    function toggleAnswer(button) {
-      const answer = button.nextElementSibling;
+    // Funksjon for å toggle (åpne/lukke) svarene
+    function toggleAnswer(buttonId, answerId) {
+      const button = document.getElementById(buttonId);
+      const answer = document.getElementById(answerId);
+      const arrow = button.querySelector(".faq-arrow");
+
       // Toggle synlighet av svaret
       answer.classList.toggle("hidden");
+
+      // Endre pilens retning basert på om svaret er åpent eller lukket
+      if (answer.classList.contains("hidden")) {
+        arrow.innerHTML = "&#9660;"; // Ned-pil
+      } else {
+        arrow.innerHTML = "&#9650;"; // Opp-pil
+      }
     }
+
+    // Legge til event listeners for hvert spørsmål
+    document.getElementById("faq1Button").addEventListener("click", () => {
+      toggleAnswer("faq1Button", "faq1Answer");
+    });
+
+    document.getElementById("faq2Button").addEventListener("click", () => {
+      toggleAnswer("faq2Button", "faq2Answer");
+    });
+
+    document.getElementById("faq3Button").addEventListener("click", () => {
+      toggleAnswer("faq3Button", "faq3Answer");
+    });
   </script>
 </MainLayout>

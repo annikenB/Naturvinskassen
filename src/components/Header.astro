@@ -1,3 +1,313 @@
 ---
 
 ---
+
+<div class="sticky top-0 z-50 bg-gray-100">
+  <div class="flex justify-between items-center p-5">
+    <a href="/" class="text-lg font-bold hover:underline">Logo/Index</a>
+
+    <button
+      id="hamburgerButton"
+      class="block md:hidden text-gray-500 hover:text-gray-700 focus:outline-none"
+    >
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <div class="space-x-4 flex items-center hidden md:flex">
+      <a href="/omos" class="hover:underline">Om os</a>
+
+      <div class="relative">
+        <button id="naturvinskassenDropdown" class="hover:underline">
+          Naturvinskassen
+          <svg
+            class="inline-block w-4 h-4 ml-1"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"></path>
+          </svg>
+        </button>
+
+        <div
+          id="dropdownMenu"
+          class="hidden absolute right-0 mt-2 w-48 bg-farvenavn-lysgraa border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700"
+        >
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Punkt 1</a
+              >
+            </li>
+            <li>
+              <a
+                href="/faq"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Faq</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Punkt 3</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Punkt 4</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="#" id="toggleLogin" class="hover:underline cursor-pointer"
+        >Login</a
+      >
+
+      <a href="#" id="toggleDrawer" class="hover:underline cursor-pointer"
+        >Kurv</a
+      >
+      <a href="/bestil" class="hover:underline">Bestil</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden hidden bg-gray-100 w-full">
+    <ul class="space-y-4 py-4">
+      <li>
+        <a href="/omos" class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
+          >Om os</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          id="mobileDropdownLink"
+          class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
+          >Naturvinskassen</a
+        >
+
+        <div
+          id="mobileDropdownMenu"
+          class="hidden bg-farvenavn-lysgraa rounded-lg"
+        >
+          <ul class="space-y-2 py-2 text-sm">
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                >Strakslevering</a
+              >
+            </li>
+            <li>
+              <a href="/faq.astro" class="block px-4 py-2 hover:bg-gray-100"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kontakt</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                >Betingelser</a
+              >
+            </li>
+            <li>
+              <a href="bestil" class="block px-4 py-2 hover:bg-gray-100"
+                >Find dit abonnement</a
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="/login" class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          id="mobileToggleDrawer"
+          class="block px-4 py-2 text-gray-900 hover:bg-gray-200">Kurv</a
+        >
+      </li>
+      <li>
+        <a
+          href="/bestil"
+          class="block px-4 py-2 text-gray-900 hover:bg-gray-200">Bestil</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div
+  id="drawer"
+  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+>
+  <div class="p-4">
+    <h5
+      class="text-base text-farvenavn-lilla font-semibold uppercase dark:text-gray-400"
+    >
+      Kurv(0)
+    </h5>
+    <button
+      id="closeDrawer"
+      class="text-farvenavn-lilla bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      >Luk</button
+    >
+  </div>
+  <ul class="py-4 space-y-2 font-medium">
+    <li>
+      <a
+        href="#"
+        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+      >
+        Ser ud som at din kurv er tom...
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+      >
+        knap her
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div
+  id="loginDrawer"
+  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+>
+  <div class="p-4">
+    <h1 class="text-xl font-bold text-center text-gray-800">Hej</h1>
+
+    <form class="max-w-sm mx-auto">
+      <div class="mb-5">
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        ></label>
+        <input
+          type="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Din email"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        ></label>
+        <input
+          type="password"
+          id="password"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          required
+          placeholder="Adgangskode"
+        />
+      </div>
+      <div class="flex items-start mb-5">
+        <div class="flex items-center h-5">
+          <input
+            id="remember"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+            required
+          />
+        </div>
+        <label
+          for="remember"
+          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Husk mig</label
+        >
+      </div>
+      <p>Har du glemt din adgangskode? Klik her</p>
+      <p>Har du ikke en konto? Tilmeld dig her</p>
+    </form>
+
+    <button
+      id="closeLoginDrawer"
+      class="text-farvenavn-lilla bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      >Luk</button
+    >
+  </div>
+</div>
+
+<script>
+  document.getElementById("hamburgerButton").addEventListener("click", () => {
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  document
+    .getElementById("mobileDropdownLink")
+    .addEventListener("click", (e) => {
+      const mobileDropdownMenu = document.getElementById("mobileDropdownMenu");
+      mobileDropdownMenu.classList.toggle("hidden");
+    });
+
+  document
+    .getElementById("naturvinskassenDropdown")
+    .addEventListener("click", (e) => {
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleDrawerButton = document.getElementById("toggleDrawer");
+    const toggleLoginButton = document.getElementById("toggleLogin");
+    const closeDrawerButton = document.getElementById("closeDrawer");
+    const closeLoginButton = document.getElementById("closeLoginDrawer");
+    const drawer = document.getElementById("drawer");
+    const loginDrawer = document.getElementById("loginDrawer");
+
+    toggleDrawerButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      drawer.classList.remove("translate-x-full");
+      drawer.classList.add("translate-x-0");
+    });
+
+    toggleLoginButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginDrawer.classList.remove("translate-x-full");
+      loginDrawer.classList.add("translate-x-0");
+    });
+
+    closeDrawerButton.addEventListener("click", () => {
+      drawer.classList.add("translate-x-full");
+      drawer.classList.remove("translate-x-0");
+    });
+
+    closeLoginButton.addEventListener("click", () => {
+      loginDrawer.classList.add("translate-x-full");
+      loginDrawer.classList.remove("translate-x-0");
+    });
+  });
+</script>
