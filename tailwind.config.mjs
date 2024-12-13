@@ -49,13 +49,11 @@ export default {
 
     fontSize: {
       base: ["1rem", { lineHeight: "1.5rem" }],
-      large: ["2.5rem", { lineHeight: "3.75rem" }],
-      maintext: ["1rem", { lineHeight: "1.5rem" }],
-      herotext: ["5rem", { lineHeight: "5.rem" }],
-      h1text: ["3.5rem", { lineHeight: "4rem" }],
-      h2text: ["3rem", { lineHeight: "4rem" }],
-      h3text: ["2rem", { lineHeight: "2.5rem" }],
-      h4text: ["1.5rem", { lineHeight: "2.5rem" }],
+      xlarge: ["5rem", { lineHeight: "5.rem" }],
+      large: ["3.5rem", { lineHeight: "4rem" }],
+      medium: ["3rem", { lineHeight: "4rem" }],
+      small: ["2rem", { lineHeight: "2.5rem" }],
+      xsmall: ["1.5rem", { lineHeight: "2.5rem" }],
     },
 
     fontWeight: {
