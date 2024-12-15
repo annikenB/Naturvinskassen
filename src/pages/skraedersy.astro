@@ -6,4 +6,134 @@ import { Image } from "astro:assets";
 
 <MainLayout>
   <h1>Skræddersy dit abonnement</h1>
+
+  <div class="text-center">
+    <p>
+      Vælg
+      <a href="/betal" class="hover:underline">Betal</a>
+    </p>
+  </div>
+
+  <section class="rounded-3xl p-6 m-40 bg-farvenavn-blaa">
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-center">
+        Din kasse Lige som du kan lide det
+      </h3>
+      <p>
+        Tilføj de typer af naturvin som du ønsker i dit månedlige abonnement. Du
+        vil modtage kassen pr. d. første hver måned. - Naturvin lige til døre!
+      </p>
+    </div>
+    <div class="space-y-0 p-4">
+      <div
+        class="flex items-center justify-between border-b-2 border-gray-300 py-2"
+      >
+        <span class="text-lg font-medium">Hvid</span>
+        <div class="flex items-center space-x-2">
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >-</button
+          >
+          <span class="text-lg font-medium">1</span>
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >+</button
+          >
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between border-b-2 border-gray-300 py-2"
+      >
+        <span class="text-lg font-medium">Rød</span>
+        <div class="flex items-center space-x-2">
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >-</button
+          >
+          <span class="text-lg font-medium">2</span>
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >+</button
+          >
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between border-b-2 border-gray-300 py-2"
+      >
+        <span class="text-lg font-medium">Orange</span>
+        <div class="flex items-center space-x-2">
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >-</button
+          >
+          <span class="text-lg font-medium">2</span>
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >+</button
+          >
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between border-b-2 border-gray-300 py-2"
+      >
+        <span class="text-lg font-medium">Rose</span>
+        <div class="flex items-center space-x-2">
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >-</button
+          >
+          <span class="text-lg font-medium">0</span>
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >+</button
+          >
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between border-b-2 border-gray-300 py-2"
+      >
+        <span class="text-lg font-medium">Bobler</span>
+        <div class="flex items-center space-x-2">
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >-</button
+          >
+          <span class="text-lg font-medium">1</span>
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >+</button
+          >
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between border-b-2 border-gray-300 py-2"
+      >
+        <span class="text-lg font-medium">Suprise mig</span>
+        <div class="flex items-center space-x-2">
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >-</button
+          >
+          <span class="text-lg font-medium">0</span>
+          <button
+            class="bg-gray-300 text-gray-700 px-2 py-1 rounded hover:bg-gray-400"
+            >+</button
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center justify-between border-b-2 border-farvenavn-lilla py-2"
+    >
+      <div class="flex items-center space-x-2">
+        <h3>totalt</h3>
+        <p>600 dkk</p>
+      </div>
+    </div>
+  </section>
 </MainLayout>

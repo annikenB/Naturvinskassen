@@ -5,227 +5,319 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout>
   <h1>Hva undrer du deg over?</h1>
 
-  <div
-    class="max-w-4xl mx-auto my-8 p-6 bg-farvenavn-blaa rounded-lg shadow-lg"
-  >
-    <div class="space-y-4">
-      <!-- FAQ 1 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq1Button"
-        >
-          Hvad indebærer et abonnement?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq1Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>
-            Hver måned vil du som medlem af naturvinskassen modtage 3 flasker
-            udvalgt vin, som alle er lavet ud fra et naturligt udgangspunkt.
-            Derudover vil du modtage en opskrift, kreeret af en restaurant
-            og/eller en kok, som vi har meget kær. Udførlige beskrivelser af
-            vinene vil selvfølgelig også medfølge, hver måned! Ved første
-            levering modtager du en specialdesignet proptrækker, så har du noget
-            godt værktøj at gå i krig med.
-          </p>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+    <div
+      class="max-w-4xl mx-auto my-8 p-6 bg-farvenavn-blaa rounded-lg shadow-lg"
+    >
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq1Button"
+          >
+            Hvad indebærer et abonnement?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq1Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>
+              Hver måned vil du som medlem af naturvinskassen modtage 3 flasker
+              udvalgt vin, som alle er lavet ud fra et naturligt udgangspunkt.
+              Derudover vil du modtage en opskrift, kreeret af en restaurant
+              og/eller en kok, som vi har meget kær. Udførlige beskrivelser af
+              vinene vil selvfølgelig også medfølge, hver måned! Ved første
+              levering modtager du en specialdesignet proptrækker, så har du
+              noget godt værktøj at gå i krig med.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq2Button"
+          >
+            Hvornår bliver min kasse så leveret?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq2Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>Du vil få din naturvinskasse leveret hver måned.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq3Button"
+          >
+            Hvornår bliver min betaling trukket?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq3Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>
+              Din kasse vil blive leveret til dig, i starten af måneden.
+              Bestiller du 'Strakslevering' ved oprettelse af dit medlemskab, så
+              vil din kasse afsendes inden for 1 hverdag.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq4Button"
+          >
+            Hvad skal jeg gøre, hvis en vin er defekt?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq4Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>
+              Se, det er ikke så godt! Men det finder vi selvfølgelig en løsning
+              på. Naturligvis hel uden meromkostning fra din side! Skriv os en
+              mail på info@reduktivt.com, så finder vi ud af det.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq5Button"
+          >
+            Binder jeg mig i en bestemt periode?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq5Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>
+              Det gør du ikke, nej. Vi har ingen binding eller skjulte agendaer.
+              Du kan melde dig fra eller sætte dit abonnement på pause, præcis
+              når du vil.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq6Button"
+          >
+            Hvordan bliver min vin leveret?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq6Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>
+              Afhentning Din naturvinskasse kan afhentes i Aarhus, Borggade 16.
+              Hele danmark Din naturvinskasse leveres enten til DAO Pakkeshop
+              (Gratis) eller via DAO hjemmelevering (tillæg). Du vælger din
+              leveringsmetode når du bestiller dit abonnement. Cykelbude
+              (hjemmelevering, Aarhus) Din vin bliver leveret med Velopak's
+              cykelbude, direkte til din bopæl.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq7Button"
+          >
+            Kan man få leveret vin i hele landet?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq7Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>Vi levere til alle danske brofaste øer.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq8Button"
+          >
+            Kan jeg ændre min leveringsadresse?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq8Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>
+              Ja, du kan ændre leveringsadressen under kontoindstillinger...
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq9Button"
+          >
+            Hvordan opdaterer jeg mine private indstillinger?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq9Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>Du kan opsige dit abonnement ved at kontakte kundeservice...</p>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq10Button"
+          >
+            Er der ekstra gebyrer ved levering?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq10Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>Nej, der er ingen ekstra gebyrer ved levering...</p>
+          </div>
+        </div>
+
+        <!-- FAQ 11 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq11Button"
+          >
+            Hvordan afmelder jeg mit abonnement?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq11Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>Ja, vi tilbyder erstatning for beskadigede flasker...</p>
+          </div>
+        </div>
+
+        <!-- FAQ 12 -->
+        <div class="faq-item">
+          <button
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+            id="faq12Button"
+          >
+            Hvordan opdaterer jeg mine private indstillinger?
+            <span class="faq-arrow">&#9660;</span>
+          </button>
+          <div
+            id="faq12Answer"
+            class="faq-answer hidden px-4 py-2 text-gray-700"
+          >
+            <p>Du kan kontakte kundeservice via e-mail eller telefon...</p>
+          </div>
         </div>
       </div>
 
-      <!-- FAQ 2 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq2Button"
-        >
-          Hvornår bliver min kasse så leveret?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq2Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>Du vil få din naturvinskasse leveret hver måned.</p>
-        </div>
-      </div>
+      <!-- JavaScript -->
+      <script type="module" client:load>
+        function toggleAnswer(buttonId, answerId) {
+          const button = document.getElementById(buttonId);
+          const answer = document.getElementById(answerId);
+          const arrow = button.querySelector(".faq-arrow");
 
-      <!-- FAQ 3 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq3Button"
-        >
-          Hvornår bliver min betaling trukket?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq3Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>
-            Din kasse vil blive leveret til dig, i starten af måneden. Bestiller
-            du 'Strakslevering' ved oprettelse af dit medlemskab, så vil din
-            kasse afsendes inden for 1 hverdag.
-          </p>
-        </div>
-      </div>
+          answer.classList.toggle("hidden");
+          arrow.innerHTML = answer.classList.contains("hidden")
+            ? "&#9660;"
+            : "&#9650;";
+        }
 
-      <!-- FAQ 4 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq4Button"
-        >
-          Hvad skal jeg gøre, hvis en vin er defekt?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq4Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>
-            Se, det er ikke så godt! Men det finder vi selvfølgelig en løsning
-            på. Naturligvis hel uden meromkostning fra din side! Skriv os en
-            mail på info@reduktivt.com, så finder vi ud af det.
-          </p>
-        </div>
-      </div>
+        // Legge til event listeners for alle FAQ-er
+        for (let i = 1; i <= 12; i++) {
+          const buttonId = `faq${i}Button`;
+          const answerId = `faq${i}Answer`;
+          document.getElementById(buttonId).addEventListener("click", () => {
+            toggleAnswer(buttonId, answerId);
+          });
+        }
+      </script>
+    </div>
+    <div>
+      <div class="bg-farvenavn-lysgraa dark:bg-gray-800 rounded-lg mt-44">
+        <div class="p-4">
+          <p>illustrasjon her</p>
+          <h3 class="text-xl font-bold text-center text-gray-800">
+            Brug for hjælp?
+          </h3>
+          <p>Skriv til os her og vi vender tilbage hurtigst muligt</p>
 
-      <!-- FAQ 5 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq5Button"
-        >
-          Binder jeg mig i en bestemt periode?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq5Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>
-            Det gør du ikke, nej. Vi har ingen binding eller skjulte agendaer.
-            Du kan melde dig fra eller sætte dit abonnement på pause, præcis når
-            du vil.
-          </p>
-        </div>
-      </div>
-
-      <!-- FAQ 6 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq6Button"
-        >
-          Hvordan bliver min vin leveret?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq6Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>
-            Afhentning Din naturvinskasse kan afhentes i Aarhus, Borggade 16.
-            Hele danmark Din naturvinskasse leveres enten til DAO Pakkeshop
-            (Gratis) eller via DAO hjemmelevering (tillæg). Du vælger din
-            leveringsmetode når du bestiller dit abonnement. Cykelbude
-            (hjemmelevering, Aarhus) Din vin bliver leveret med Velopak's
-            cykelbude, direkte til din bopæl.
-          </p>
-        </div>
-      </div>
-
-      <!-- FAQ 7 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq7Button"
-        >
-          Kan man få leveret vin i hele landet?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq7Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>Vi levere til alle danske brofaste øer.</p>
-        </div>
-      </div>
-
-      <!-- FAQ 8 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq8Button"
-        >
-          Kan jeg ændre min leveringsadresse?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq8Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>Ja, du kan ændre leveringsadressen under kontoindstillinger...</p>
-        </div>
-      </div>
-
-      <!-- FAQ 9 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq9Button"
-        >
-          Hvordan opdaterer jeg mine private indstillinger?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq9Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>Du kan opsige dit abonnement ved at kontakte kundeservice...</p>
-        </div>
-      </div>
-
-      <!-- FAQ 10 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq10Button"
-        >
-          Er der ekstra gebyrer ved levering?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq10Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>Nej, der er ingen ekstra gebyrer ved levering...</p>
-        </div>
-      </div>
-
-      <!-- FAQ 11 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq11Button"
-        >
-          Hvordan afmelder jeg mit abonnement?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq11Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>Ja, vi tilbyder erstatning for beskadigede flasker...</p>
-        </div>
-      </div>
-
-      <!-- FAQ 12 -->
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq12Button"
-        >
-          Hvordan opdaterer jeg mine private indstillinger?
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq12Answer" class="faq-answer hidden px-4 py-2 text-gray-700">
-          <p>Du kan kontakte kundeservice via e-mail eller telefon...</p>
+          <form class="max-w-sm mx-auto">
+            <div class="mb-5">
+              <label
+                for="text"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              ></label>
+              <input
+                type="text"
+                id="text"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+                placeholder="Dit navn"
+              />
+            </div>
+            <div class="mb-5">
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              ></label>
+              <input
+                type="email"
+                id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Din email"
+                required
+              />
+            </div>
+            <div class="max-w-sm mx-auto">
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              ></label>
+              <textarea
+                id="message"
+                rows="4"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Dit spørgsmål..."></textarea>
+            </div>
+          </form>
+          <p>Indsend her</p>
         </div>
       </div>
     </div>
-
-    <!-- JavaScript -->
-    <script type="module" client:load>
-      function toggleAnswer(buttonId, answerId) {
-        const button = document.getElementById(buttonId);
-        const answer = document.getElementById(answerId);
-        const arrow = button.querySelector(".faq-arrow");
-
-        answer.classList.toggle("hidden");
-        arrow.innerHTML = answer.classList.contains("hidden")
-          ? "&#9660;"
-          : "&#9650;";
-      }
-
-      // Legge til event listeners for alle FAQ-er
-      for (let i = 1; i <= 12; i++) {
-        const buttonId = `faq${i}Button`;
-        const answerId = `faq${i}Answer`;
-        document.getElementById(buttonId).addEventListener("click", () => {
-          toggleAnswer(buttonId, answerId);
-        });
-      }
-    </script>
-  </div></MainLayout
->
+  </section>
+</MainLayout>

@@ -9,8 +9,11 @@ import BestilCard from "../components/BestilCard.astro";
 <MainLayout>
   <h1>Vælg dit favorit abonnement</h1>
 
-  <div>
-    <p>Vælg Betal</p>
+  <div class="text-center">
+    <p>
+      Vælg
+      <a href="/betal" class="hover:underline">Betal</a>
+    </p>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
@@ -40,13 +43,15 @@ import BestilCard from "../components/BestilCard.astro";
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-    <BestilCard
-      title="SKRÆDDERSY"
-      image="https://via.placeholder.com/300/ffff7f"
-      quantity={8}
-      price=" Fra 150"
-      buttonLabel="knap her"
-      class="col-span-full"
-    />
+    <a href="/skraedersy" class="hover:underline">
+      <BestilCard
+        title="SKRÆDDERSY"
+        image="https://via.placeholder.com/300/ffff7f"
+        quantity={8}
+        price=" Fra 150"
+        buttonLabel="knap her"
+        class="col-span-full"
+      />
+    </a>
   </div>
 </MainLayout>
