@@ -243,29 +243,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           </div>
         </div>
       </div>
-
-      <!-- JavaScript -->
-      <script type="module" client:load>
-        function toggleAnswer(buttonId, answerId) {
-          const button = document.getElementById(buttonId);
-          const answer = document.getElementById(answerId);
-          const arrow = button.querySelector(".faq-arrow");
-
-          answer.classList.toggle("hidden");
-          arrow.innerHTML = answer.classList.contains("hidden")
-            ? "&#9660;"
-            : "&#9650;";
-        }
-
-        // Legge til event listeners for alle FAQ-er
-        for (let i = 1; i <= 12; i++) {
-          const buttonId = `faq${i}Button`;
-          const answerId = `faq${i}Answer`;
-          document.getElementById(buttonId).addEventListener("click", () => {
-            toggleAnswer(buttonId, answerId);
-          });
-        }
-      </script>
     </div>
     <div>
       <div class="bg-farvenavn-lysgraa rounded-lg mt-44">
@@ -319,4 +296,25 @@ import MainLayout from "../layouts/MainLayout.astro";
       </div>
     </div>
   </section>
+
+  <script type="module" client:load>
+    function toggleAnswer(buttonId, answerId) {
+      const button = document.getElementById(buttonId);
+      const answer = document.getElementById(answerId);
+      const arrow = button.querySelector(".faq-arrow");
+
+      answer.classList.toggle("hidden");
+      arrow.innerHTML = answer.classList.contains("hidden")
+        ? "&#9660;"
+        : "&#9650;";
+    }
+
+    for (let i = 1; i <= 12; i++) {
+      const buttonId = `faq${i}Button`;
+      const answerId = `faq${i}Answer`;
+      document.getElementById(buttonId).addEventListener("click", () => {
+        toggleAnswer(buttonId, answerId);
+      });
+    }
+  </script>
 </MainLayout>
