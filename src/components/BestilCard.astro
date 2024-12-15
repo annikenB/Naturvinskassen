@@ -1,0 +1,34 @@
+---
+const {
+  title = "Standard Tittel",
+  image = "https://via.placeholder.com/300",
+  quantity = 1,
+  price = "100,00",
+  buttonLabel = "Legg i handlekurv",
+} = Astro.props;
+
+const cardStyling =
+  "bg-white rounded-lg shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col justify-between";
+
+const titleStyling = "";
+
+const imageStyling = "w-full h-48 object-cover rounded-md mb-4";
+
+const quantityStyling = "";
+
+const priceStyling = "";
+
+const buttonStyling = "";
+---
+
+<div class={cardStyling}>
+  <img src={image} alt={title} class={imageStyling} />
+
+  <p class={quantityStyling}>{quantity} Flasker / mnd</p>
+
+  <p class={priceStyling}>{price} DKK</p>
+
+  <h3 class={titleStyling}>{title}</h3>
+
+  <button class={buttonStyling}>{buttonLabel}</button>
+</div>

@@ -2,8 +2,51 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import Card from "../components/BestilCard.astro";
+import BestilCard from "../components/BestilCard.astro";
 ---
 
 <MainLayout>
   <h1>Vælg dit favorit abonnement</h1>
+
+  <div>
+    <p>Vælg Betal</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+    <BestilCard
+      title="DEN LILLE"
+      image="https://via.placeholder.com/300/ff7f7f"
+      quantity={2}
+      price="300,00"
+      buttonLabel="knap her"
+    />
+
+    <BestilCard
+      title="DEN MELLEMSTORE"
+      image="https://via.placeholder.com/300/7f7fff"
+      quantity={3}
+      price="450,00"
+      buttonLabel="knap her"
+    />
+
+    <BestilCard
+      title="DEN STORE"
+      image="https://via.placeholder.com/300/7fff7f"
+      quantity={5}
+      price="600,00"
+      buttonLabel="knap her"
+    />
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+    <BestilCard
+      title="SKRÆDDERSY"
+      image="https://via.placeholder.com/300/ffff7f"
+      quantity={8}
+      price=" Fra 150"
+      buttonLabel="knap her"
+      class="col-span-full"
+    />
+  </div>
 </MainLayout>
