@@ -3,13 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="NATURVINSKASSEN">
   <article>
     <Heroindex />
     <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="rounded-3xl p-6 bg-farvenavn-blaa">
+      <div class="rounded-3xl p-6 bg-blaa-300">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="flex justify-center">
             <p>bilde her</p>
@@ -23,7 +24,11 @@ import Heroindex from "../components/Heroindex.astro";
               måned efter måned. Du kan vælge mellem 2-6 flasker pr/mnd til en
               pris mellem 300-600
             </p>
-            <p>knap her</p>
+            <div class="max-w-xl">
+              <a href="#"
+                ><Button variant="primary">Find dit abbonement</Button></a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -87,7 +92,7 @@ import Heroindex from "../components/Heroindex.astro";
           <div class="">
             <h2 class="">Hvordan fungerer det så?</h2>
             <h4>Dit abonnement</h4>
-            <p class="text-lg leading-relaxed">
+            <p>
               Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
               direkte til din dør - hver måned. Fælles for alle flaskerne er, at
               det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
@@ -95,7 +100,7 @@ import Heroindex from "../components/Heroindex.astro";
               frem til det vi mener er det perfekte resultat.
             </p>
             <h4>Hvad får du igennem dit abonnement</h4>
-            <p class="text-lg leading-relaxed">
+            <p>
               Med til hver måneds levering af naturvinskassen, medfølger:
               Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
               direkte til din dør - første dag i hver måned Fri fragt og ingen
@@ -106,7 +111,7 @@ import Heroindex from "../components/Heroindex.astro";
               Forkøbsret på allokationsvine
             </p>
           </div>
-          <div class="flex justify-center">
+          <div>
             <p>bilde her</p>
           </div>
         </div>

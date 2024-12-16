@@ -8,7 +8,7 @@
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
-    @apply text-farvenavn-lilla;
+    @apply text-lilla-950;
   }
 
   h2 {
@@ -16,7 +16,7 @@
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
-    @apply text-farvenavn-lilla;
+    @apply text-lilla-950;
   }
 
   h3 {
@@ -24,14 +24,14 @@
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
-    @apply text-farvenavn-lilla;
+    @apply text-lilla-950;
   }
   h4 {
     @apply text-xsmall;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
-    @apply text-farvenavn-lilla;
+    @apply text-lilla-950;
   }
   p {
     @apply text-base;
