@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
@@ -158,20 +157,26 @@ import Heroindex from "../components/Heroindex.astro";
       <h2>Anmeldelser</h2>
     </section>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-      <Card title="Den lille" image="https://via.placeholder.com/300/ff7f7f" />
-      <Card
-        title="Den mellomstore"
-        image="https://via.placeholder.com/300/7f7fff"
-      />
-      <Card title="Den store" image="https://via.placeholder.com/300/7fff7f" />
-      <Card title="Skræddersy" image="https://via.placeholder.com/300/ffff7f" />
-    </div>
-
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
+    <section>
+      <h2>Bestil</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+        <Card
+          title="Den lille"
+          image="https://via.placeholder.com/300/ff7f7f"
+        />
+        <Card
+          title="Den mellomstore"
+          image="https://via.placeholder.com/300/7f7fff"
+        />
+        <Card
+          title="Den store"
+          image="https://via.placeholder.com/300/7fff7f"
+        />
+        <Card
+          title="Skræddersy"
+          image="https://via.placeholder.com/300/ffff7f"
+        />
+      </div>
+    </section>
   </article>
 </MainLayout>
