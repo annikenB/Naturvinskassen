@@ -9,29 +9,32 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 <MainLayout title="NATURVINSKASSEN">
   <article>
     <Heroindex />
-    <section class="mx-auto">
-      <div class="text-center"><p>pil her</p></div>
-      <div class="bg-farvenavn-blaa">
+    <section class="px-4 py-8">
+      <div class="bg-blaa-300">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="flex justify-center">
             <p>bilde her</p>
           </div>
           <div class="">
-            <h2 class="text-farvenavn-lilla">JOIN THE CLUB</h2>
-            <p class="leading-relaxed">
+            <h2>JOIN THE CLUB</h2>
+            <p>
               Modtag nøje udvalgte flasker med naturvin hver måned og udbred
               dine smagsoplevelser og viden omkring naturvin. Kom tæt på
               vinbønderne og få et autentisk indblik i den naturlige vinverden,
               måned efter måned. Du kan vælge mellem 2-6 flasker pr/mnd til en
               pris mellem 300-600
             </p>
-            <p>knap her</p>
+            <div class="max-w-xl">
+              <a href="/bestil"
+                ><Button variant="primary">Find dit abonnement</Button></a
+              >
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="p-5">
+    <section class="">
       <h1>Hvorfor naturvinskassen?</h1>
       <div>
         <p>gif her</p>
@@ -83,14 +86,13 @@ import Anmeldelser from "../components/Anmeldelser.astro";
         <p>vingalss her</p>
       </div>
     </section>
-
-    <section class="max-w-7xl mx-auto">
-      <div class="bg-farvenavn-blaa">
+    <section class="max-w-7xl mx-auto p-5">
+      <div class="">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="">
             <h2 class="">Hvordan fungerer det så?</h2>
             <h4>Dit abonnement</h4>
-            <p class="leading-relaxed">
+            <p>
               Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
               direkte til din dør - hver måned. Fælles for alle flaskerne er, at
               det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
@@ -98,7 +100,7 @@ import Anmeldelser from "../components/Anmeldelser.astro";
               frem til det vi mener er det perfekte resultat.
             </p>
             <h4>Hvad får du igennem dit abonnement</h4>
-            <p class="leading-relaxed">
+            <p>
               Med til hver måneds levering af naturvinskassen, medfølger:
               Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
               direkte til din dør - første dag i hver måned Fri fragt og ingen
@@ -109,7 +111,7 @@ import Anmeldelser from "../components/Anmeldelser.astro";
               Forkøbsret på allokationsvine
             </p>
           </div>
-          <div class="flex justify-center">
+          <div>
             <p>bilde her</p>
           </div>
         </div>
