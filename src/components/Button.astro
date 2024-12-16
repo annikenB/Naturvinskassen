@@ -1,0 +1,14 @@
+---
+const { variant = "primary" } = Astro.props;
+
+const buttonStyling = "rounded-full px-4 p-1.5";
+
+const variantClasses = {
+  primary:
+    "font-semibold bg-roed-600 text-farvenavn-hvid border-web border-transparent hover:bg-transparent  hover:border-farvenavn-roed hover:text-farvenavn-roed",
+  secondary:
+    "font-semibold bg-lilla-950 text-farvenavn-hvid border-web border-transparent hover:bg-transparent  hover:border-farvenavn-lilla hover:text-farvenavn-roed",
+};
+---
+
+<button class:list={[buttonStyling, variantClasses[variant]]}><slot /></button>
