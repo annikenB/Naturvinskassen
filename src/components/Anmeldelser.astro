@@ -2,55 +2,140 @@
 
 ---
 
-<section class="mx-auto">
-  <div class="bg-farvenavn-blaa">
-    <h2 class="text-center">Anmeldelser</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-      <div>
-        <a
-          href="#"
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
+<section class="relative w-full bg-gray-100 pb-32 mx-auto bg-farvenavn-blaa">
+  <h2 class="text-center">Anmeldelser</h2>
+  <div class="relative w-full overflow-hidden gap-8">
+    <div
+      id="carouselItems"
+      class="flex transition-transform duration-700 ease-in-out gap-8"
+    >
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
           <h4 class="">stjerner</h4>
           <h4 class="">NEMT OG GODT</h4>
           <p class="">
             Vi har brugt Naturvinskassen gennem flere år og elsker det hver
             gang.
           </p>
-        </a>
+        </div>
       </div>
-      <div>
-        <a
-          href="#"
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
+
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
           <h4 class="">stjerner</h4>
           <h4 class="">VI ELSKER DET!</h4>
           <p class="">Mega god vin og rigtig god service!</p>
-        </a>
+        </div>
       </div>
-      <div>
-        <a
-          href="#"
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
           <h4 class="">stjerner</h4>
-          <h4 class="">RIKTIG GOD VIN</h4>
-          <p class="">Vi får altid mange forskellige interessante naturvine!</p>
-        </a>
+          <h4 class="">VI ELSKER DET!</h4>
+          <p class="">Mega god vin og rigtig god service!</p>
+        </div>
       </div>
-      <div>
-        <a
-          href="#"
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
+
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
           <h4 class="">stjerner</h4>
-          <h4 class="">GODT TIL PRISEN</h4>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            Kvaliteten af vinen er rigtig høj og prisen er lav - perfekt!
-          </p>
-        </a>
+          <h4 class="">VI ELSKER DET!</h4>
+          <p class="">Mega god vin og rigtig god service!</p>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
+          <h4 class="">stjerner</h4>
+          <h4 class="">VI ELSKER DET!</h4>
+          <p class="">Mega god vin og rigtig god service!</p>
+        </div>
+      </div>
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
+          <h4 class="">stjerner</h4>
+          <h4 class="">VI ELSKER DET!</h4>
+          <p class="">Mega god vin og rigtig god service!</p>
+        </div>
+      </div>
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
+          <h4 class="">stjerner</h4>
+          <h4 class="">VI ELSKER DET!</h4>
+          <p class="">Mega god vin og rigtig god service!</p>
+        </div>
+      </div>
+      <div class="flex-shrink-0 h-auto relative">
+        <div class="">
+          <h4 class="">stjerner</h4>
+          <h4 class="">VI ELSKER DET!</h4>
+          <p class="">Mega god vin og rigtig god service!</p>
+        </div>
       </div>
     </div>
+
+    <button
+      id="prev"
+      class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white/70 text-black p-3 rounded-full cursor-pointer"
+    >
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button
+      id="next"
+      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/70 text-black p-3 rounded-full cursor-pointer"
+    >
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
   </div>
 </section>
+
+<script>
+  let currentIndex = 0;
+  const itemsPerView = 3;
+
+  const carouselItems = document.getElementById("carouselItems");
+  const totalItems = carouselItems.children.length;
+
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+
+  function updateCarousel() {
+    const offset = (-currentIndex * 100) / itemsPerView;
+    carouselItems.style.transform = `translateX(${offset}%)`;
+  }
+
+  prevButton.addEventListener("click", () => {
+    currentIndex = Math.max(currentIndex - 1, 0);
+    updateCarousel();
+  });
+
+  nextButton.addEventListener("click", () => {
+    currentIndex = Math.min(currentIndex + 1, totalItems - itemsPerView);
+    updateCarousel();
+  });
+
+  updateCarousel();
+</script>
