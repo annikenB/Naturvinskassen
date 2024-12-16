@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 const {
   title = "Standard Tittel",
   image = "https://via.placeholder.com/300",
@@ -35,5 +36,9 @@ const buttonStyling = "";
 
   <h3 class={titleStyling}>{title}</h3>
 
-  <button class={buttonStyling}>{buttonLabel}</button>
+  <div class="max-w-xl">
+    <a href="/bestil">
+      <Button variant="secondary">Vælg</Button>
+    </a>
+  </div>
 </div>

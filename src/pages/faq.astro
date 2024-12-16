@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout>
@@ -279,7 +280,11 @@ import MainLayout from "../layouts/MainLayout.astro";
                 placeholder="Dit spørgsmål..."></textarea>
             </div>
           </form>
-          <p>Indsend her</p>
+          <div class="max-w-xl">
+            <a href="/bestil"
+              ><Button variant="secondary">Find dit abonnement</Button></a
+            >
+          </div>
         </div>
       </div>
     </div>
