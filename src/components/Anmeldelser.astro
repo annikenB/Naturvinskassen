@@ -1,5 +1,5 @@
 ---
-
+import Button from "../components/Button.astro";
 ---
 
 <section class="relative w-full bg-gray-100 pb-32 mx-auto bg-farvenavn-blaa">
@@ -130,11 +130,17 @@
           d="M9 5l7 7-7 7"></path>
       </svg>
     </button>
+
+    <div class="text-center">
+      <a href="/bestil"
+        ><Button variant="secondary">Se alle trustpilot anmeldelser</Button></a
+      >
+    </div>
   </div>
 
   <script>
     let currentIndex = 0;
-    const itemsPerView = 4; // Antall elementer som skal vises på én gang
+    const itemsPerView = 4;
     const carouselItems = document.getElementById("carouselItems");
     const totalItems = carouselItems.children[0].children.length;
 
@@ -142,25 +148,23 @@
     const nextButton = document.getElementById("next");
 
     function updateCarousel() {
-      const offset = (-currentIndex * 100) / itemsPerView; // Beregn offset for å flytte karusellen
+      const offset = (-currentIndex * 100) / itemsPerView;
       carouselItems.style.transform = `translateX(${offset}%)`;
     }
 
-    // Når "previous"-knappen klikkes, flytt til forrige sett med kort
     prevButton.addEventListener("click", () => {
-      currentIndex = Math.max(currentIndex - 1, 0); // Sørg for at vi ikke går under null
+      currentIndex = Math.max(currentIndex - 1, 0);
       updateCarousel();
     });
 
-    // Når "next"-knappen klikkes, flytt til neste sett med kort
     nextButton.addEventListener("click", () => {
       currentIndex = Math.min(
         currentIndex + 1,
         Math.floor(totalItems / itemsPerView) - 1
-      ); // Sørg for at vi ikke overskrider antall sett
+      );
       updateCarousel();
     });
 
-    updateCarousel(); // Initialiserer karusellen
+    updateCarousel();
   </script>
 </section>
