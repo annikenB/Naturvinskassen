@@ -8,8 +8,9 @@ import Heroindex from "../components/Heroindex.astro";
 <MainLayout title="NATURVINSKASSEN">
   <article>
     <Heroindex />
-    <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="rounded-3xl p-6 bg-farvenavn-blaa">
+    <section class="max-w-7xl mx-auto">
+      <div class="text-center"><p>pil her</p></div>
+      <div class="bg-farvenavn-blaa">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="flex justify-center">
             <p>bilde her</p>
@@ -81,8 +82,9 @@ import Heroindex from "../components/Heroindex.astro";
         <p>vingalss her</p>
       </div>
     </section>
-    <section class="max-w-7xl mx-auto p-5">
-      <div class="">
+
+    <section class="max-w-7xl mx-auto">
+      <div class="bg-farvenavn-blaa">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="">
             <h2 class="">Hvordan fungerer det så?</h2>
@@ -153,30 +155,36 @@ import Heroindex from "../components/Heroindex.astro";
       </div>
     </section>
 
-    <section>
-      <h2>Anmeldelser</h2>
-    </section>
-
-    <section>
-      <h2 class="text-center">Bestil dit abonnement her</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-        <Card
-          title="Den lille"
-          image="https://via.placeholder.com/300/ff7f7f"
-        />
-        <Card
-          title="Den mellomstore"
-          image="https://via.placeholder.com/300/7f7fff"
-        />
-        <Card
-          title="Den store"
-          image="https://via.placeholder.com/300/7fff7f"
-        />
-        <Card
-          title="Skræddersy"
-          image="https://via.placeholder.com/300/ffff7f"
-        />
+    <section class="max-w-7xl mx-auto">
+      <div class="bg-farvenavn-blaa">
+        <h2>Anmeldelser</h2>
       </div>
+
+      <section>
+        <p>pil her</p>
+        <p>Lyder det som noget for dig?</p>
+      </section>
+      <section>
+        <h2 class="text-center">Bestil dit abonnement her</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+          <Card
+            title="Den lille"
+            image="https://via.placeholder.com/300/ff7f7f"
+          />
+          <Card
+            title="Den mellomstore"
+            image="https://via.placeholder.com/300/7f7fff"
+          />
+          <Card
+            title="Den store"
+            image="https://via.placeholder.com/300/7fff7f"
+          />
+          <Card
+            title="Skræddersy"
+            image="https://via.placeholder.com/300/ffff7f"
+          />
+        </div>
+      </section>
     </section>
   </article>
 </MainLayout>
