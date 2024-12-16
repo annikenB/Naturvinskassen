@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
+import Anmeldelser from "../components/Anmeldelser.astro";
 ---
 
 <MainLayout title="NATURVINSKASSEN">
@@ -154,37 +155,31 @@ import Heroindex from "../components/Heroindex.astro";
         </p>
       </div>
     </section>
-
-    <section class="max-w-7xl mx-auto">
-      <div class="bg-farvenavn-blaa">
-        <h2>Anmeldelser</h2>
+    <Anmeldelser />
+    <section>
+      <p class="ml-32">pil her</p>
+      <p class="ml-32">Lyder det som noget for dig?</p>
+    </section>
+    <section>
+      <h2 class="text-center">Bestil dit abonnement her</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+        <Card
+          title="Den lille"
+          image="https://via.placeholder.com/300/ff7f7f"
+        />
+        <Card
+          title="Den mellomstore"
+          image="https://via.placeholder.com/300/7f7fff"
+        />
+        <Card
+          title="Den store"
+          image="https://via.placeholder.com/300/7fff7f"
+        />
+        <Card
+          title="Skræddersy"
+          image="https://via.placeholder.com/300/ffff7f"
+        />
       </div>
-
-      <section>
-        <p class="ml-32">pil her</p>
-        <p class="ml-32">Lyder det som noget for dig?</p>
-      </section>
-      <section>
-        <h2 class="text-center">Bestil dit abonnement her</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          <Card
-            title="Den lille"
-            image="https://via.placeholder.com/300/ff7f7f"
-          />
-          <Card
-            title="Den mellomstore"
-            image="https://via.placeholder.com/300/7f7fff"
-          />
-          <Card
-            title="Den store"
-            image="https://via.placeholder.com/300/7fff7f"
-          />
-          <Card
-            title="Skræddersy"
-            image="https://via.placeholder.com/300/ffff7f"
-          />
-        </div>
-      </section>
     </section>
   </article>
 </MainLayout>
