@@ -80,13 +80,6 @@ export default {
       },
     },
 
-    spacing: {
-      margin: "105px",
-      s: "44px",
-      m: "68px",
-      l: "116px",
-    },
-
     fontFamily: {
       sans: ["Manrope", "sans-serif"],
       display: ["Londrina solid", "monospace"],
@@ -139,7 +132,14 @@ export default {
     //     none: '0px',
     // },
 
-    extend: {},
+    extend: {
+      spacing: {
+        margin: "105px",
+        voress: "44px",
+        voresm: "68px",
+        voresl: "116px",
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
