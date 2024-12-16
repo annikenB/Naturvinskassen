@@ -87,6 +87,7 @@ export default {
 
     fontSize: {
       base: ["1rem", { lineHeight: "1.5rem" }],
+      herotext: ["9rem", { lineHeight: "5.rem" }],
       xlarge: ["5rem", { lineHeight: "5.rem" }],
       large: ["3.5rem", { lineHeight: "4rem" }],
       medium: ["3rem", { lineHeight: "4rem" }],
@@ -135,6 +136,7 @@ export default {
     extend: {
       spacing: {
         margin: "105px",
+        voresxs: "24px",
         voress: "44px",
         voresm: "68px",
         voresl: "116px",
