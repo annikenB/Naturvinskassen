@@ -18,7 +18,7 @@ import { Image } from "astro:assets";
       <div class="w-full max-w-lg mx-auto">
         <form>
           <div class="mb-4">
-            <h3 class="font-medium text-lg">KONTAKT</h3>
+            <h3 class="">KONTAKT</h3>
             <label
               for="email"
               class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
@@ -27,7 +27,7 @@ import { Image } from "astro:assets";
             <input
               type="email"
               id="email"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full bg-gray-50 border border-gray-300 rounded-lg"
               placeholder="Din email"
               required
             />
@@ -37,23 +37,14 @@ import { Image } from "astro:assets";
             <input
               id="remember"
               type="checkbox"
-              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600"
+              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-2 focus:ring-blue-300"
             />
-            <label
-              for="remember"
-              class="text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Tilmeld mig nyhedsbrevet
-            </label>
+            <label for="remember" class=""> Tilmeld mig nyhedsbrevet </label>
           </div>
 
           <div class="mb-4">
-            <h3 class="font-medium text-lg">Adresse</h3>
-            <label
-              for="text"
-              class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-            >
-            </label>
+            <h3 class="">Adresse</h3>
+            <label for="text" class="block mb-1"> </label>
             <input
               type="text"
               id="text"
@@ -64,15 +55,11 @@ import { Image } from "astro:assets";
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 mt-4">
               <div class="w-full">
-                <label
-                  for="floating_first_name"
-                  class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-                >
-                </label>
+                <label for="floating_first_name" class="block mb-1"> </label>
                 <input
                   type="text"
                   id="floating_first_name"
-                  class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700"
                   placeholder="Fornavn"
                   required
                 />
@@ -80,43 +67,35 @@ import { Image } from "astro:assets";
               <div class="w-full">
                 <label
                   for="floating_last_name"
-                  class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
+                  class="block dark:text-white mb-1"
                 >
                 </label>
                 <input
                   type="text"
                   id="floating_last_name"
-                  class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   placeholder="Efternavn"
                   required
                 />
               </div>
             </div>
 
-            <label
-              for="text"
-              class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-            >
-            </label>
+            <label for="text" class="block dark:text-white mb-1"> </label>
             <input
               type="text"
               id="text"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               placeholder="Adresse"
               required
             />
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div class="w-full">
-                <label
-                  for="by"
-                  class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-                >
-                </label>
+                <label for="by" class="block dark:text-white mb-1"> </label>
                 <input
                   type="text"
                   id="by"
-                  class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   placeholder="By"
                   required
                 />
@@ -124,28 +103,24 @@ import { Image } from "astro:assets";
               <div class="w-full">
                 <label
                   for="floating_last_name"
-                  class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
+                  class="block dark:text-white mb-1"
                 >
                 </label>
                 <input
                   type="text"
                   id="floating_last_name"
-                  class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   placeholder="Postnr"
                   required
                 />
               </div>
             </div>
           </div>
-          <label
-            for="tel"
-            class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-          >
-          </label>
+          <label for="tel" class="block dark:text-white mb-1"> </label>
           <input
             type="tel"
             id="tel"
-            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             placeholder="Telefon nr."
             required
           />
@@ -154,15 +129,11 @@ import { Image } from "astro:assets";
         <form>
           <div class="mb-4">
             <h3 class="font-medium text-lg">Fragtmetode</h3>
-            <label
-              for="text"
-              class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-            >
-            </label>
+            <label for="text" class="block mb-1"> </label>
             <input
               type="text"
               id="text"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               placeholder="Indtast din adresse for at se  fragtsmetoder"
               required
             />
@@ -172,44 +143,32 @@ import { Image } from "astro:assets";
         <form>
           <div class="mb-4">
             <h3 class="font-medium text-lg">Betaling</h3>
-            <label
-              for="text"
-              class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-            >
-            </label>
+            <label for="text" class="block mb-1"> </label>
             <input
               type="text"
               id="text"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               placeholder="Kortnummer"
               required
             />
           </div>
           <div class="w-full">
-            <label
-              for="by"
-              class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-            >
-            </label>
+            <label for="by" class="block mb-1"> </label>
             <input
               type="text"
               id="by"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               placeholder="Fuldenavn"
               required
             />
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div class="w-full">
-              <label
-                for="by"
-                class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-              >
-              </label>
+              <label for="by" class="block dark:text-white mb-1"> </label>
               <input
                 type="text"
                 id="by"
-                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 placeholder="Kontonummer"
                 required
               />
@@ -218,13 +177,13 @@ import { Image } from "astro:assets";
             <div class="w-full">
               <label
                 for="floating_last_name"
-                class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
+                class="block dark:text-white mb-1"
               >
               </label>
               <input
                 type="text"
                 id="floating_last_name"
-                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 placeholder="CVC"
                 required
               />
@@ -250,29 +209,22 @@ import { Image } from "astro:assets";
       <form>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div class="w-full">
-            <label
-              for="by"
-              class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-            >
-            </label>
+            <label for="by" class="block mb-1"> </label>
             <input
               type="text"
               id="by"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               placeholder="Rabatkode eller gavekort"
               required
             />
           </div>
           <div class="w-full">
-            <label
-              for="floating_last_name"
-              class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-            >
+            <label for="floating_last_name" class="block dark:text-white mb-1">
             </label>
             <input
               type="text"
               id="floating_last_name"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              class="w-full bg-gray-50 border border-gray-300 rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               placeholder="Indløs knap her"
               required
             />
