@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import pil from "../assets/images/arrow.webp";
+import pil2 from "../assets/images/arrowtwo.webp";
+import drop from "../assets/images/drop-01.webp";
 import spilling from "../assets/images/spilling.webp";
 import gift from "../assets/images/poisen.webp";
 import bobler from "../assets/images/tasty.webp";
@@ -17,137 +19,156 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="NATURVINSKASSEN">
-  <article>
+  <section class="">
     <Heroindex />
     <div class="flex justify-center items-center my-voresxs">
       <Image src={pil} alt="pil" class="max-w-voresm" />
     </div>
-    <section class="bg-blaa-300 px-margin">
-      <div class="">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-          <div class="flex justify-center">
-            <Image src={pil} alt="pil" class="" />
-          </div>
-          <div class="">
-            <h2 class="text-center">JOIN THE CLUB</h2>
-            <p>
-              Modtag nøje udvalgte flasker med naturvin hver måned og udbred
-              dine smagsoplevelser og viden omkring naturvin. Kom tæt på
-              vinbønderne og få et autentisk indblik i den naturlige vinverden,
-              måned efter måned. Du kan vælge mellem 2-6 flasker pr/mnd til en
-              pris mellem 300-600
-            </p>
-            <div class="max-w-xl">
-              <a href="/bestil"
-                ><Button variant="primary">Find dit abonnement</Button></a
-              >
-            </div>
+    <article class="bg-blaa-300 px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+        <div class="flex justify-center">
+          <Image src={hand} alt="pil" class="" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <h2 class="text-center">JOIN THE CLUB</h2>
+          <p class="my-voresxs">
+            Modtag nøje udvalgte flasker med naturvin hver måned og udbred dine
+            smagsoplevelser og viden omkring naturvin. Kom tæt på vinbønderne og
+            få et autentisk indblik i den naturlige vinverden, måned efter
+            måned. Du kan vælge mellem 2-6 flasker pr/mnd til en pris mellem
+            300-600.
+          </p>
+          <div class="max-w-xl mx-auto">
+            <a href="/bestil"
+              ><Button variant="primary">Find dit abonnement</Button></a
+            >
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
-    <section class="">
+    <article class="mt-voresl px-margin">
       <div class="flex justify-center">
         <Image src={spilling} alt="mand der spiller vin" class="max-w-voresl" />
       </div>
-      <h1 class="text-center">Hvorfor naturvinskassen?</h1>
-      <div>
-        <div class="flex justify-center">
-          <Image src={bil} alt="bil" class="max-w-voresl" />
-        </div>
-        <h3>Fri levering & ingen binding</h3>
-        <p>
-          Naturvin leveret til dig, fragtfrit hver måned! Vi leverer
-          selvfølgelig til alle afkroge af Danmark, uden undtagelser.
-        </p>
-        <nav>
+      <h1 class="text-center pb-voresl">Hvorfor naturvinskassen?</h1>
+      <div class="flex justify-center">
+        <Image src={drop} alt="drop" class="max-w-voress" />
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div class="mx-auto">
+          <div class="flex justify-center">
+            <Image src={bil} alt="bil" class="w-64 pb-voress" />
+          </div>
+          <h3 class="text-center">Fri levering & ingen binding</h3>
+          <p class="py-voresxs">
+            Naturvin leveret til dig, fragtfrit hver måned! Vi leverer
+            selvfølgelig til alle afkroge af Danmark, uden undtagelser.
+          </p>
           <ul>
             <li>Ingen binding.</li>
             <li>Sæt på pause når du ønsker.</li>
             <li>Fri fragt.</li>
           </ul>
-        </nav>
-      </div>
-      <div>
-        <div class="flex justify-center">
-          <Image src={sale} alt="mand med skilt" class="max-w-voresl" />
         </div>
-        <h3>Medlemsfordele</h3>
-        <p>
-          Vi sætter rigtig stor pris på vores medlemmer. Det synes vi skal
-          værdsættes. Derfor kan man som abonnent, se frem til følgende fordele:
-        </p>
-        <nav>
+        <div></div>
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div></div>
+        <div>
+          <div class="flex justify-center">
+            <Image src={sale} alt="mand med skilt" class="w-44 pb-voress" />
+          </div>
+          <h3 class="text-center">Medlemsfordele</h3>
+          <p class="py-voresxs">
+            Vi sætter rigtig stor pris på vores medlemmer. Det synes vi skal
+            værdsættes. Derfor kan man som abonnent, se frem til følgende
+            fordele:
+          </p>
           <ul>
             <li>10% på køb over 500 i butik/webshop.</li>
             <li>Månedlige medlemstilbud.</li>
             <li>Forkøbsret på allokationsvine.</li>
           </ul>
-        </nav>
-      </div>
-      <div>
-        <div class="flex justify-center">
-          <Image src={kasse} alt="kasse med vin" class="max-w-voresl" />
         </div>
-        <h3>Fra os til jer</h3>
-        <p>
-          Vores vurdering er, at desto flere goder der er ved et abonnement,
-          desto sjovere er det at være med. Derfor kan man som abonnent, også se
-          frem til:
-        </p>
-        <nav>
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div>
+          <div class="flex justify-center">
+            <Image src={kasse} alt="kasse med vin" class="w-64 pb-voress" />
+          </div>
+          <h3 class="text-center">Fra os til jer</h3>
+          <p class="py-voresxs">
+            Vores vurdering er, at desto flere goder der er ved et abonnement,
+            desto sjovere er det at være med. Derfor kan man som abonnent, også
+            se frem til:
+          </p>
           <ul>
             <li>Nøje udvalgte vine, hver måned</li>
-            <li>Udførlige vinbeskrivelser.</li>
-            <li>Jubilæumsgaver.</li>
+            <li>Udførlige vinbeskrivelser</li>
+            <li>Jubilæumsgaver</li>
           </ul>
-        </nav>
+        </div>
+        <div></div>
       </div>
-      <div class="flex justify-center">
-        <Image src={glas} alt="vinglas" class="max-w-voresl" />
-      </div>
-    </section>
-    <section class="">
-      <div class="bg-blaa-300">
-        <h2 class="text-center">Hvordan fungerer det så?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-          <div class="">
-            <h4 class="text-center">Dit abonnement</h4>
-            <p>
-              Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
-              direkte til din dør - hver måned. Fælles for alle flaskerne er, at
-              det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
-              smager, søger, rejser og smager lidt mere. Alt dette, for at nå
-              frem til det vi mener er det perfekte resultat.
-            </p>
-            <h4 class="text-center">Hvad får du igennem dit abonnement</h4>
-            <p>
-              Med til hver måneds levering af naturvinskassen, medfølger:
+    </article>
+  </section>
+  <div class="flex justify-center">
+    <Image src={glas} alt="vinglas" class="max-w-44" />
+  </div>
+  <article class="px-margin bg-blaa-300">
+    <div class="">
+      <h2 class="text-center py-voresxs">Hvordan fungerer det så?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pb-voress">
+        <div class="order-2">
+          <p>bilde her</p>
+        </div>
+        <div class="order-1">
+          <h4 class="text-center">Dit abonnement</h4>
+          <p>
+            Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
+            direkte til din dør - hver måned. Fælles for alle flaskerne er, at
+            det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
+            smager, søger, rejser og smager lidt mere. Alt dette, for at nå frem
+            til det vi mener er det perfekte resultat.
+          </p>
+          <h4 class="text-center pt-voress">
+            Hvad får du igennem dit abonnement
+          </h4>
+          <p class="pb-voresxs">
+            Med til hver måneds levering af naturvinskassen, medfølger:
+          </p>
+          <ul>
+            <li>
               Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
-              direkte til din dør - første dag i hver måned Fri fragt og ingen
-              betingelser Beskrivelser af vinene og personerne bag produktionen
+              direkte til din dør
+            </li>
+            <li>Fri fragt og ingen betingelser</li>
+            <li>Beskrivelser af vinene og personerne bag produktionen</li>
+            <li>
               Skræddersyede “kassetilbud”, kun til medlemmer af Naturvinskassen
-              Derudover får du som medlem også følgende fordele: Jubilæumsgaver
+            </li>
+            <li>Jubilæumsgaver</li>
+            <li>
               Rabat på køb af vin i vores fysiske butik og på vores webshop
-              Forkøbsret på allokationsvine
-            </p>
-          </div>
-          <div>
-            <p>bilde her</p>
-          </div>
+            </li>
+            <li>Forkøbsret på allokationsvine</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </article>
 
-    <section class="">
-      <h1 class="text-center">Hvad er naturvin egentlig?</h1>
+  <article class="px-margin pb-voress">
+    <h2 class="text-center py-voress">Hvad er naturvin egentlig?</h2>
+    <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+      <div></div>
       <div>
         <div class="flex justify-center">
-          <Image src={gift} alt="vinglas" class="max-w-voresl" />
+          <Image src={gift} alt="giftflaske" class="max-w-voresl pb-voress" />
         </div>
         <h3 class="text-center">Ingen syntetiske stoffer</h3>
-        <p>
+        <p class="py-voresxs">
           Naturvin laves med minimal intervention og uden syntetiske stoffer,
           modsat konventionel vin. Dette giver en mere rustik og naturlig
           karakter til vinen. Konventionel vin bruger kemiske hjælpemidler og
@@ -155,12 +176,14 @@ import Button from "../components/Button.astro";
           Altså er naturvin uden manipulation
         </p>
       </div>
+    </div>
+    <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
       <div>
         <div class="flex justify-center">
-          <Image src={bobler} alt="vinglas" class="max-w-voresl" />
+          <Image src={bobler} alt="vin" class="max-w-voresm pb-voress" />
         </div>
         <h3 class="text-center">Giver Sprælske tendenser</h3>
-        <p>
+        <p class="py-voresxs">
           Når vin forbliver vin, og ikke et produkt af tilsætningsstoffer og
           andet gift, kan der opstå magiske tilstande. Vinen er et resultat af
           naturen og den naturlige udvikling. Den kan give anledning til
@@ -170,12 +193,16 @@ import Button from "../components/Button.astro";
           du havde.
         </p>
       </div>
+      <div></div>
+    </div>
+    <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+      <div></div>
       <div>
         <div class="flex justify-center">
-          <Image src={hand} alt="vinglas" class="max-w-voresl" />
+          <Image src={hand} alt="vinglas" class="max-w-44 pb-voress" />
         </div>
         <h3 class="text-center">Vinen bliver levende</h3>
-        <p>
+        <p class="py-voresxs">
           Fællesnævneren for alt den vin vi arbejder med, er først og fremmest
           at det skal smage godt! Ligeså vigtigt er det, at det er lavet med så
           lidt intervention og tilsætnin som muligt. Faktisk endda helst helt
@@ -184,32 +211,25 @@ import Button from "../components/Button.astro";
           vinen levende, personlig og ærlig. Det synes vi, er enormt afgørende.
         </p>
       </div>
-    </section>
-    <Anmeldelser />
-    <section>
-      <p class="ml-voresm">pil her</p>
-      <p class="ml-voresm">Lyder det som noget for dig?</p>
-    </section>
-    <section>
-      <h2 class="text-center">Bestil dit abonnement her</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-        <Card
-          title="Den lille"
-          image="https://via.placeholder.com/300/ff7f7f"
-        />
-        <Card
-          title="Den mellomstore"
-          image="https://via.placeholder.com/300/7f7fff"
-        />
-        <Card
-          title="Den store"
-          image="https://via.placeholder.com/300/7fff7f"
-        />
-        <Card
-          title="Skræddersy"
-          image="https://via.placeholder.com/300/ffff7f"
-        />
-      </div>
-    </section>
+    </div>
   </article>
+  <Anmeldelser />
+  <section class="px-margin">
+    <div class="ml-voresm pt-voresl">
+      <p class="">Lyder det som noget for dig?</p>
+      <Image src={pil2} alt="vinglas" class="max-w-voresm ml-voresl" />
+    </div>
+  </section>
+  <section class="px-margin">
+    <h2 class="text-center">Bestil dit abonnement her</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+      <Card title="Den lille" image="https://via.placeholder.com/300/ff7f7f" />
+      <Card
+        title="Den mellomstore"
+        image="https://via.placeholder.com/300/7f7fff"
+      />
+      <Card title="Den store" image="https://via.placeholder.com/300/7fff7f" />
+      <Card title="Skræddersy" image="https://via.placeholder.com/300/ffff7f" />
+    </div>
+  </section>
 </MainLayout>
