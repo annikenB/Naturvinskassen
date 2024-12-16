@@ -39,4 +39,11 @@
     @apply font-sans;
     @apply text-farvenavn-lilla;
   }
+
+  li {
+    @apply text-base;
+    @apply font-light;
+    @apply font-sans;
+    @apply text-farvenavn-lilla;
+  }
 }
