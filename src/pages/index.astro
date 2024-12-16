@@ -2,6 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import pil from "../assets/images/arrow.webp";
+import spilling from "../assets/images/spilling.webp";
+import gift from "../assets/images/poisen.webp";
+import bobler from "../assets/images/tasty.webp";
+import hand from "../assets/images/spin.webp";
+import bil from "../assets/images/car.webp";
+import sale from "../assets/images/sale.webp";
+import glas from "../assets/images/glass-01.webp";
+import kasse from "../assets/images/deliver.webp";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
@@ -21,7 +29,7 @@ import Button from "../components/Button.astro";
             <Image src={pil} alt="pil" class="" />
           </div>
           <div class="">
-            <h2>JOIN THE CLUB</h2>
+            <h2 class="text-center">JOIN THE CLUB</h2>
             <p>
               Modtag nøje udvalgte flasker med naturvin hver måned og udbred
               dine smagsoplevelser og viden omkring naturvin. Kom tæt på
@@ -40,9 +48,14 @@ import Button from "../components/Button.astro";
     </section>
 
     <section class="">
-      <h1>Hvorfor naturvinskassen?</h1>
+      <div class="flex justify-center">
+        <Image src={spilling} alt="mand der spiller vin" class="max-w-voresl" />
+      </div>
+      <h1 class="text-center">Hvorfor naturvinskassen?</h1>
       <div>
-        <p>gif her</p>
+        <div class="flex justify-center">
+          <Image src={bil} alt="bil" class="max-w-voresl" />
+        </div>
         <h3>Fri levering & ingen binding</h3>
         <p>
           Naturvin leveret til dig, fragtfrit hver måned! Vi leverer
@@ -57,7 +70,9 @@ import Button from "../components/Button.astro";
         </nav>
       </div>
       <div>
-        <p>gif her</p>
+        <div class="flex justify-center">
+          <Image src={sale} alt="mand med skilt" class="max-w-voresl" />
+        </div>
         <h3>Medlemsfordele</h3>
         <p>
           Vi sætter rigtig stor pris på vores medlemmer. Det synes vi skal
@@ -72,7 +87,9 @@ import Button from "../components/Button.astro";
         </nav>
       </div>
       <div>
-        <p>gif her</p>
+        <div class="flex justify-center">
+          <Image src={kasse} alt="kasse med vin" class="max-w-voresl" />
+        </div>
         <h3>Fra os til jer</h3>
         <p>
           Vores vurdering er, at desto flere goder der er ved et abonnement,
@@ -87,16 +104,16 @@ import Button from "../components/Button.astro";
           </ul>
         </nav>
       </div>
-      <div>
-        <p>vingalss her</p>
+      <div class="flex justify-center">
+        <Image src={glas} alt="vinglas" class="max-w-voresl" />
       </div>
     </section>
-    <section class="max-w-7xl mx-auto p-5">
-      <div class="">
+    <section class="">
+      <div class="bg-blaa-300">
+        <h2 class="text-center">Hvordan fungerer det så?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="">
-            <h2 class="">Hvordan fungerer det så?</h2>
-            <h4>Dit abonnement</h4>
+            <h4 class="text-center">Dit abonnement</h4>
             <p>
               Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
               direkte til din dør - hver måned. Fælles for alle flaskerne er, at
@@ -104,7 +121,7 @@ import Button from "../components/Button.astro";
               smager, søger, rejser og smager lidt mere. Alt dette, for at nå
               frem til det vi mener er det perfekte resultat.
             </p>
-            <h4>Hvad får du igennem dit abonnement</h4>
+            <h4 class="text-center">Hvad får du igennem dit abonnement</h4>
             <p>
               Med til hver måneds levering af naturvinskassen, medfølger:
               Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
@@ -123,11 +140,13 @@ import Button from "../components/Button.astro";
       </div>
     </section>
 
-    <section class="p-5">
-      <h1>Hvad er naturvin egentlig?</h1>
+    <section class="">
+      <h1 class="text-center">Hvad er naturvin egentlig?</h1>
       <div>
-        <p>gif her</p>
-        <h3>Ingen syntetiske stoffer</h3>
+        <div class="flex justify-center">
+          <Image src={gift} alt="vinglas" class="max-w-voresl" />
+        </div>
+        <h3 class="text-center">Ingen syntetiske stoffer</h3>
         <p>
           Naturvin laves med minimal intervention og uden syntetiske stoffer,
           modsat konventionel vin. Dette giver en mere rustik og naturlig
@@ -137,8 +156,10 @@ import Button from "../components/Button.astro";
         </p>
       </div>
       <div>
-        <p>gif her</p>
-        <h3>Giver Sprælske tendenser</h3>
+        <div class="flex justify-center">
+          <Image src={bobler} alt="vinglas" class="max-w-voresl" />
+        </div>
+        <h3 class="text-center">Giver Sprælske tendenser</h3>
         <p>
           Når vin forbliver vin, og ikke et produkt af tilsætningsstoffer og
           andet gift, kan der opstå magiske tilstande. Vinen er et resultat af
@@ -150,8 +171,10 @@ import Button from "../components/Button.astro";
         </p>
       </div>
       <div>
-        <p>gif her</p>
-        <h3>Vinen bliver levende</h3>
+        <div class="flex justify-center">
+          <Image src={hand} alt="vinglas" class="max-w-voresl" />
+        </div>
+        <h3 class="text-center">Vinen bliver levende</h3>
         <p>
           Fællesnævneren for alt den vin vi arbejder med, er først og fremmest
           at det skal smage godt! Ligeså vigtigt er det, at det er lavet med så
@@ -164,8 +187,8 @@ import Button from "../components/Button.astro";
     </section>
     <Anmeldelser />
     <section>
-      <p class="ml-32">pil her</p>
-      <p class="ml-32">Lyder det som noget for dig?</p>
+      <p class="ml-voresm">pil her</p>
+      <p class="ml-voresm">Lyder det som noget for dig?</p>
     </section>
     <section>
       <h2 class="text-center">Bestil dit abonnement her</h2>
