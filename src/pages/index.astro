@@ -1,15 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
+import mand from "../assets/images/spilling.webp";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
 import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="NATURVINSKASSEN">
-  <article>
+  <section>
     <Heroindex />
-    <section class="px-4 py-8">
+    <article class="px-4 py-8">
       <div class="bg-blaa-300">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="flex justify-center">
@@ -32,12 +33,12 @@ import Button from "../components/Button.astro";
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
-    <section class="">
+    <article class="">
       <h1>Hvorfor naturvinskassen?</h1>
       <div>
-        <p>gif her</p>
+        <Image src={mand} alt="" class="" />
         <h3>Fri levering & ingen binding</h3>
         <p>
           Naturvin leveret til dig, fragtfrit hver måned! Vi leverer
@@ -85,8 +86,8 @@ import Button from "../components/Button.astro";
       <div>
         <p>vingalss her</p>
       </div>
-    </section>
-    <section class="max-w-7xl mx-auto p-5">
+    </article>
+    <article class="max-w-7xl mx-auto p-5">
       <div class="">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="">
@@ -116,9 +117,9 @@ import Button from "../components/Button.astro";
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
-    <section class="p-5">
+    <article class="">
       <h1>Hvad er naturvin egentlig?</h1>
       <div>
         <p>gif her</p>
@@ -156,13 +157,13 @@ import Button from "../components/Button.astro";
           vinen levende, personlig og ærlig. Det synes vi, er enormt afgørende.
         </p>
       </div>
-    </section>
+    </article>
 
-    <section>
+    <article>
       <h2>Anmeldelser</h2>
-    </section>
+    </article>
 
-    <section>
+    <article>
       <h2 class="text-center">Bestil dit abonnement her</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
         <Card
@@ -182,6 +183,6 @@ import Button from "../components/Button.astro";
           image="https://via.placeholder.com/300/ffff7f"
         />
       </div>
-    </section>
-  </article>
+    </article>
+  </section>
 </MainLayout>
