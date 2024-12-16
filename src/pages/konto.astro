@@ -6,5 +6,87 @@ import { Image } from "astro:assets";
 
 <MainLayout>
   <h1>Adminiterér dit abonnement</h1>
-  <p class="p-24">hejhej</p>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+    <div class="max-w-4xl mx-auto my-8 p-6">
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq1Button"
+        >
+          Dit abonnement
+        </button>
+        <div id="faq1Answer" class="faq-answer px-4 py-2">
+          <p>
+            Hver måned vil du som medlem af naturvinskassen modtage 3 flasker
+            udvalgt vin, som alle er lavet ud fra et naturligt udgangspunkt.
+            Derudover vil du modtage en opskrift, kreeret af en restaurant
+            og/eller en kok, som vi har meget kær. Udførlige beskrivelser af
+            vinene vil selvfølgelig også medfølge, hver måned! Ved første
+            levering modtager du en specialdesignet proptrækker, så har du noget
+            godt værktøj at gå i krig med.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq2Button"
+        >
+          Skift dit abonnement
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div id="faq2Answer" class="faq-answer hidden px-4 py-2">
+          <p>Du vil få din naturvinskasse leveret hver måned.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
+          id="faq3Button"
+        >
+          Afmeld dit abonnement
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
+          <p>
+            Din kasse vil blive leveret til dig, i starten af måneden. Bestiller
+            du 'Strakslevering' ved oprettelse af dit medlemskab, så vil din
+            kasse afsendes inden for 1 hverdag.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-farvenavn-lysgraa rounded-lg mt-24 mb-24">
+      <div class="p-4">
+        <h3 class="font-bold text-center">Klippekort??</h3>
+        <p class="text-center">glass?</p>
+
+        <p>2 tilbake</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" client:load>
+    function toggleAnswer(buttonId, answerId) {
+      const button = document.getElementById(buttonId);
+      const answer = document.getElementById(answerId);
+      const arrow = button.querySelector(".faq-arrow");
+
+      answer.classList.toggle("hidden");
+      arrow.innerHTML = answer.classList.contains("hidden")
+        ? "&#9660;"
+        : "&#9650;";
+    }
+
+    for (let i = 1; i <= 12; i++) {
+      const buttonId = `faq${i}Button`;
+      const answerId = `faq${i}Answer`;
+      document.getElementById(buttonId).addEventListener("click", () => {
+        toggleAnswer(buttonId, answerId);
+      });
+    }
+  </script>
 </MainLayout>

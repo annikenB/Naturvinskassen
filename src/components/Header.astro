@@ -38,20 +38,20 @@
         <button id="naturvinskassenDropdown" class="">
           <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
             Naturvinskassen
+            <svg
+              class="inline-block w-2 h-2 ml-1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+            </svg>
           </h4>
-          <svg
-            class="inline-block w-4 h-4 ml-1"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 1 4 4 4-4"></path>
-          </svg>
         </button>
 
         <div
@@ -192,63 +192,58 @@
 
 <div
   id="drawer"
-  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa transform translate-x-full transition-transform duration-300 ease-in-out"
 >
   <div class="p-4">
-    <h5
-      class="text-base text-farvenavn-lilla font-semibold uppercase dark:text-gray-400"
-    >
+    <h5 class="text-base text-farvenavn-lilla font-semibold uppercase">
       Kurv(0)
     </h5>
     <button
       id="closeDrawer"
-      class="text-farvenavn-lilla bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      class="text-farvenavn-lilla bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
       >Luk</button
     >
   </div>
   <ul class="py-4 space-y-2 font-medium">
     <li>
-      <a
-        href="#"
-        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-      >
+      <a href="#" class="flex items-center p-2 rounded-lg group">
         <h3>Ser ud som at din kurv er tom...</h3>
       </a>
     </li>
-    <li></li>
+    <li>
+      <a
+        href="/bestil"
+        class="flex items-center p-2 rounded-lg dark:text-white group"
+        >call 2 action bestil</a
+      >
+    </li>
   </ul>
 </div>
 
 <div
   id="loginDrawer"
-  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa dark:bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+  class="fixed top-12 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa transform translate-x-full transition-transform duration-300 ease-in-out"
 >
   <div class="p-4">
-    <h1 class="text-xl font-bold text-center text-gray-800">Hej</h1>
+    <h1 class="text-xl font-bold text-center">Hej</h1>
 
     <form class="max-w-sm mx-auto">
       <div class="mb-5">
-        <label
-          for="email"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        ></label>
+        <label for="email" class="block mb-2 text-sm font-medium"></label>
         <input
           type="email"
           id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Din email"
           required
         />
       </div>
       <div class="mb-5">
-        <label
-          for="password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        ></label>
+        <label for="password" class="block mb-2 text-sm font-medium"></label>
         <input
           type="password"
           id="password"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
           placeholder="Adgangskode"
         />
@@ -263,20 +258,16 @@
             required
           />
         </div>
-        <label
-          for="remember"
-          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >Husk mig</label
-        >
+        <label for="remember" class="ms-2 text-sm font-medium">Husk mig</label>
       </div>
-      <a href="/konto" class="block px-4 py-2 hover:bg-gray-100">LOGIN KNAP</a>
+      <a href="/konto" class="block px-4 py-2">LOGIN KNAP</a>
       <p>Har du glemt din adgangskode? Klik her</p>
       <p>Har du ikke en konto? Tilmeld dig her</p>
     </form>
 
     <button
       id="closeLoginDrawer"
-      class="text-farvenavn-lilla bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      class="text-farvenavn-lilla bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
       >Luk</button
     >
   </div>

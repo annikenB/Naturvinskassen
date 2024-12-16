@@ -14,7 +14,7 @@ import Card from "../components/Card.astro";
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="">
             <h2 class="">Hvem er vi</h2>
-            <p class="text-lg leading-relaxed">
+            <p class="leading-relaxed">
               Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog
               pjalterne sammen i Århus, til fælles kamp for udbredelsen af
               naturvin. Sammen startede vi Reduktivt, som er vores
@@ -35,15 +35,15 @@ import Card from "../components/Card.astro";
       </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="rounded-3xl p-6 bg-farvenavn-blaa">
+    <section class="mx-auto">
+      <div class="bg-farvenavn-blaa">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="flex justify-center">
             <p>bilde her</p>
           </div>
           <div class="">
             <h2 class="">Våres ønske</h2>
-            <p class="text-lg">
+            <p class="">
               Vores arbejde med Naturvinskassen handler først og fremmest om at
               videreformidle og dele oplevelser, med alle vores medlemmer! Det
               er lige præcis dét, som vi hele tiden bestræber os på.  Vi støder
@@ -58,7 +58,7 @@ import Card from "../components/Card.astro";
     </section>
 
     <section>
-      <h1>Erfaring og viden</h1>
+      <h1 class="text-center">Erfaring og viden</h1>
       <div>
         <p>gif her</p>
         <h3>30 år i restaurationsbranchen</h3>
@@ -94,20 +94,37 @@ import Card from "../components/Card.astro";
       </div>
     </section>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-      <Card title="Den lille" image="https://via.placeholder.com/300/ff7f7f" />
-      <Card
-        title="Den mellomstore"
-        image="https://via.placeholder.com/300/7f7fff"
-      />
-      <Card title="Den store" image="https://via.placeholder.com/300/7fff7f" />
-      <Card title="Skræddersy" image="https://via.placeholder.com/300/ffff7f" />
-    </div>
+    <section>
+      <p class="ml-32">pil her</p>
+      <p class="ml-32">Lyder det som noget for dig?</p>
 
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-  </article>
-</MainLayout>
+      <section>
+        <h2 class="text-center">Bestil dit abonnement her</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+          <Card
+            title="Den lille"
+            image="https://via.placeholder.com/300/ff7f7f"
+          />
+          <Card
+            title="Den mellomstore"
+            image="https://via.placeholder.com/300/7f7fff"
+          />
+          <Card
+            title="Den store"
+            image="https://via.placeholder.com/300/7fff7f"
+          />
+          <Card
+            title="Skræddersy"
+            image="https://via.placeholder.com/300/ffff7f"
+          />
+        </div>
+
+        <p>
+          Link til <Link href="https://www.kea.dk" target="_blank"
+            >En anden side</Link
+          >
+        </p>
+      </section>
+    </section>
+  </article></MainLayout
+>

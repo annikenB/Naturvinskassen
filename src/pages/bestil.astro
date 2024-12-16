@@ -17,13 +17,17 @@ import BestilCard from "../components/BestilCard.astro";
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-    <BestilCard
-      title="DEN LILLE"
-      image="https://via.placeholder.com/300/ff7f7f"
-      quantity={2}
-      price="300,00"
-      buttonLabel="knap her"
-    />
+    <div>
+      <a href="/betal">
+        <BestilCard
+          title="DEN LILLE"
+          image="https://via.placeholder.com/300/ff7f7f"
+          quantity={2}
+          price="300,00"
+          buttonLabel="knap her"
+        />
+      </a>
+    </div>
     <div>
       <a href="/betal">
         <BestilCard
@@ -35,13 +39,18 @@ import BestilCard from "../components/BestilCard.astro";
         />
       </a>
     </div>
-    <BestilCard
-      title="DEN STORE"
-      image="https://via.placeholder.com/300/7fff7f"
-      quantity={5}
-      price="600,00"
-      buttonLabel="knap her"
-    />
+
+    <div>
+      <a href="/betal">
+        <BestilCard
+          title="DEN STORE"
+          image="https://via.placeholder.com/300/7fff7f"
+          quantity={5}
+          price="600,00"
+          buttonLabel="knap her"
+        />
+      </a>
+    </div>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
