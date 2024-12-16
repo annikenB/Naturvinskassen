@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 ---
@@ -13,7 +14,7 @@ import { Image } from "astro:assets";
     </p>
   </div>
 
-  <section class="p-4 m-40 bg-farvenavn-blaa">
+  <section class="p-4 mx-margin bg-farvenavn-blaa">
     <div class="p-4">
       <h3 class="text-center">Din kasse Lige som du kan lide det</h3>
       <p>
@@ -26,7 +27,7 @@ import { Image } from "astro:assets";
         <span class="text-lg font-medium">Hvid</span>
         <div class="flex items-center space-x-2">
           <button class="px-2 py-1 rounded">-</button>
-          <span class="text-lg font-medium">1</span>
+          <span class="font-medium">1</span>
           <button class="px-2 py-1 rounded">+</button>
         </div>
       </div>
@@ -91,4 +92,7 @@ import { Image } from "astro:assets";
       </div>
     </div>
   </section>
+  <div class="max-w-xl mb-20 ml-96">
+    <a href="/bestil"><Button variant="primary">Betale</Button></a>
+  </div>
 </MainLayout>

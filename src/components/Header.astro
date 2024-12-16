@@ -259,68 +259,69 @@ import Button from "../components/Button.astro";
         <label for="remember" class="ms-2 text-sm font-medium">Husk mig</label>
       </div>
       <div class="max-w-xl">
-        <a href="/bestil"><Button variant="primary">Log in</Button></a>
+        <Button variant="primary">Log ind</Button>
       </div>
-      <p>Har du glemt din adgangskode? Klik her</p>
-      <p>Har du ikke en konto? Tilmeld dig her</p>
     </form>
-
-    <button
-      id="closeLoginDrawer"
-      class="text-farvenavn-lilla bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
-      >Luk</button
-    >
+    <p>Har du glemt din adgangskode? Klik her</p>
+    <p>Har du ikke en konto? Tilmeld dig her</p>
   </div>
+
+  <button
+    id="closeLoginDrawer"
+    class="text-farvenavn-lilla bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
+    >Luk</button
+  >
+
+  <script>
+    document.getElementById("hamburgerButton").addEventListener("click", () => {
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document
+      .getElementById("mobileDropdownLink")
+      .addEventListener("click", (e) => {
+        const mobileDropdownMenu =
+          document.getElementById("mobileDropdownMenu");
+        mobileDropdownMenu.classList.toggle("hidden");
+      });
+
+    document
+      .getElementById("naturvinskassenDropdown")
+      .addEventListener("click", (e) => {
+        const dropdownMenu = document.getElementById("dropdownMenu");
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleDrawerButton = document.getElementById("toggleDrawer");
+      const toggleLoginButton = document.getElementById("toggleLogin");
+      const closeDrawerButton = document.getElementById("closeDrawer");
+      const closeLoginButton = document.getElementById("closeLoginDrawer");
+      const drawer = document.getElementById("drawer");
+      const loginDrawer = document.getElementById("loginDrawer");
+
+      toggleDrawerButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        drawer.classList.remove("translate-x-full");
+        drawer.classList.add("translate-x-0");
+      });
+
+      toggleLoginButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginDrawer.classList.remove("translate-x-full");
+        loginDrawer.classList.add("translate-x-0");
+      });
+
+      closeDrawerButton.addEventListener("click", () => {
+        drawer.classList.add("translate-x-full");
+        drawer.classList.remove("translate-x-0");
+      });
+
+      closeLoginButton.addEventListener("click", () => {
+        loginDrawer.classList.add("translate-x-full");
+        loginDrawer.classList.remove("translate-x-0");
+      });
+    });
+  </script>
 </div>
-
-<script>
-  document.getElementById("hamburgerButton").addEventListener("click", () => {
-    const mobileMenu = document.getElementById("mobileMenu");
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  document
-    .getElementById("mobileDropdownLink")
-    .addEventListener("click", (e) => {
-      const mobileDropdownMenu = document.getElementById("mobileDropdownMenu");
-      mobileDropdownMenu.classList.toggle("hidden");
-    });
-
-  document
-    .getElementById("naturvinskassenDropdown")
-    .addEventListener("click", (e) => {
-      const dropdownMenu = document.getElementById("dropdownMenu");
-      dropdownMenu.classList.toggle("hidden");
-    });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleDrawerButton = document.getElementById("toggleDrawer");
-    const toggleLoginButton = document.getElementById("toggleLogin");
-    const closeDrawerButton = document.getElementById("closeDrawer");
-    const closeLoginButton = document.getElementById("closeLoginDrawer");
-    const drawer = document.getElementById("drawer");
-    const loginDrawer = document.getElementById("loginDrawer");
-
-    toggleDrawerButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      drawer.classList.remove("translate-x-full");
-      drawer.classList.add("translate-x-0");
-    });
-
-    toggleLoginButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      loginDrawer.classList.remove("translate-x-full");
-      loginDrawer.classList.add("translate-x-0");
-    });
-
-    closeDrawerButton.addEventListener("click", () => {
-      drawer.classList.add("translate-x-full");
-      drawer.classList.remove("translate-x-0");
-    });
-
-    closeLoginButton.addEventListener("click", () => {
-      loginDrawer.classList.add("translate-x-full");
-      loginDrawer.classList.remove("translate-x-0");
-    });
-  });
-</script>
