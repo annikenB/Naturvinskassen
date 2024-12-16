@@ -107,13 +107,6 @@ export default {
       mobile: "1px",
     },
 
-    borderRadius: {
-      DEFAULT: "1.25rem",
-      image: "20px",
-      card: "42px",
-      none: "0px",
-    },
-
     /* Borders - borderstørrelser herunder */
     // borderWidth: {
     //     DEFAULT: '1px',
@@ -140,6 +133,12 @@ export default {
         voress: "44px",
         voresm: "68px",
         voresl: "116px",
+      },
+      borderRadius: {
+        DEFAULT: "1.25rem",
+        image: "20px",
+        card: "42px",
+        none: "0px",
       },
     },
   },
