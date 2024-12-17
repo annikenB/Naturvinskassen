@@ -18,6 +18,7 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 import Button from "../components/Button.astro";
 import NyhetsbrevPopup from "../components/NyhetsbrevPopup.astro";
 import SectionCard from "../components/SectionCard.astro";
+import Drop from "../components/Drop.astro";
 ---
 
 <NyhetsbrevPopup />
@@ -55,13 +56,14 @@ import SectionCard from "../components/SectionCard.astro";
         <Image src={spilling} alt="mand der spiller vin" class="max-w-voresl" />
       </div>
       <h1 class="text-center pb-voresl">Hvorfor naturvinskassen?</h1>
-      <div class="flex justify-center">
+      <Drop />
+      <!-- <div class="flex justify-center">
         <Image
           src={drop}
           alt="drop"
           class="max-w-voress hidden md:block dropinview"
         />
-      </div>
+      </div> -->
       <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
         <div class="mx-auto">
           <div class="flex justify-center">
@@ -119,112 +121,115 @@ import SectionCard from "../components/SectionCard.astro";
         <div></div>
       </div>
     </article>
+    <div class="flex justify-center">
+      <Image src={glas} alt="vinglas" class="max-w-44" />
+    </div>
+    <article class="px-margin bg-blaa-300">
+      <div class="">
+        <h2 class="text-center py-voresxs">Hvordan fungerer det så?</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pb-voress"
+        >
+          <div class="order-2">
+            <p>bilde her</p>
+          </div>
+          <div class="order-1">
+            <h4 class="text-center">Dit abonnement</h4>
+            <p>
+              Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
+              direkte til din dør - hver måned. Fælles for alle flaskerne er, at
+              det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
+              smager, søger, rejser og smager lidt mere. Alt dette, for at nå
+              frem til det vi mener er det perfekte resultat.
+            </p>
+            <h4 class="text-center pt-voress">
+              Hvad får du igennem dit abonnement
+            </h4>
+            <p class="pb-voresxs">
+              Med til hver måneds levering af naturvinskassen, medfølger:
+            </p>
+            <ul>
+              <li>
+                Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
+                direkte til din dør
+              </li>
+              <li>Fri fragt og ingen betingelser</li>
+              <li>Beskrivelser af vinene og personerne bag produktionen</li>
+              <li>
+                Skræddersyede “kassetilbud”, kun til medlemmer af
+                Naturvinskassen
+              </li>
+              <li>Jubilæumsgaver</li>
+              <li>
+                Rabat på køb af vin i vores fysiske butik og på vores webshop
+              </li>
+              <li>Forkøbsret på allokationsvine</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="px-margin pb-voress">
+      <h2 class="text-center py-voress">Hvad er naturvin egentlig?</h2>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div></div>
+        <div>
+          <div class="flex justify-center">
+            <Image src={gift} alt="giftflaske" class="max-w-voresl pb-voress" />
+          </div>
+          <h3 class="text-center">Ingen syntetiske stoffer</h3>
+          <p class="py-voresxs">
+            Naturvin laves med minimal intervention og uden syntetiske stoffer,
+            modsat konventionel vin. Dette giver en mere rustik og naturlig
+            karakter til vinen. Konventionel vin bruger kemiske hjælpemidler og
+            tilsætningsstoffer for at sikre en ensartet og forudsigelig smag.
+            Altså er naturvin uden manipulation
+          </p>
+        </div>
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div>
+          <div class="flex justify-center">
+            <Image src={bobler} alt="vin" class="max-w-voresm pb-voress" />
+          </div>
+          <h3 class="text-center">Giver Sprælske tendenser</h3>
+          <p class="py-voresxs">
+            Når vin forbliver vin, og ikke et produkt af tilsætningsstoffer og
+            andet gift, kan der opstå magiske tilstande. Vinen er et resultat af
+            naturen og den naturlige udvikling. Den kan give anledning til
+            sprælske tendenser, men bestemt også anledning til elegance, renhed
+            og kompleksitet. Det er vin der giver stof til eftertanke, tid til
+            eftertænksomhed, og dansetrin du ikke havde den fjerneste idé om, at
+            du havde.
+          </p>
+        </div>
+        <div></div>
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div></div>
+        <div>
+          <div class="flex justify-center">
+            <Image src={hand} alt="vinglas" class="max-w-44 pb-voress" />
+          </div>
+          <h3 class="text-center">Vinen bliver levende</h3>
+          <p class="py-voresxs">
+            Fællesnævneren for alt den vin vi arbejder med, er først og fremmest
+            at det skal smage godt! Ligeså vigtigt er det, at det er lavet med
+            så lidt intervention og tilsætnin som muligt. Faktisk endda helst
+            helt uden! Det er vigtigt for os, at vinen taler for sig selv, og
+            dermed ikke bakkes op af et væld af tilsætningsstoffer. På den måde
+            bliver vinen levende, personlig og ærlig. Det synes vi, er enormt
+            afgørende.
+          </p>
+        </div>
+      </div>
+    </article>
+    <Anmeldelser />
+    <SectionCard />
   </section>
-  <div class="flex justify-center">
-    <Image src={glas} alt="vinglas" class="max-w-44" />
-  </div>
-  <article class="px-margin bg-blaa-300">
-    <div class="">
-      <h2 class="text-center py-voresxs">Hvordan fungerer det så?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pb-voress">
-        <div class="order-2">
-          <p>bilde her</p>
-        </div>
-        <div class="order-1">
-          <h4 class="text-center">Dit abonnement</h4>
-          <p>
-            Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
-            direkte til din dør - hver måned. Fælles for alle flaskerne er, at
-            det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
-            smager, søger, rejser og smager lidt mere. Alt dette, for at nå frem
-            til det vi mener er det perfekte resultat.
-          </p>
-          <h4 class="text-center pt-voress">
-            Hvad får du igennem dit abonnement
-          </h4>
-          <p class="pb-voresxs">
-            Med til hver måneds levering af naturvinskassen, medfølger:
-          </p>
-          <ul>
-            <li>
-              Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
-              direkte til din dør
-            </li>
-            <li>Fri fragt og ingen betingelser</li>
-            <li>Beskrivelser af vinene og personerne bag produktionen</li>
-            <li>
-              Skræddersyede “kassetilbud”, kun til medlemmer af Naturvinskassen
-            </li>
-            <li>Jubilæumsgaver</li>
-            <li>
-              Rabat på køb af vin i vores fysiske butik og på vores webshop
-            </li>
-            <li>Forkøbsret på allokationsvine</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </article>
 
-  <article class="px-margin pb-voress">
-    <h2 class="text-center py-voress">Hvad er naturvin egentlig?</h2>
-    <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-      <div></div>
-      <div>
-        <div class="flex justify-center">
-          <Image src={gift} alt="giftflaske" class="max-w-voresl pb-voress" />
-        </div>
-        <h3 class="text-center">Ingen syntetiske stoffer</h3>
-        <p class="py-voresxs">
-          Naturvin laves med minimal intervention og uden syntetiske stoffer,
-          modsat konventionel vin. Dette giver en mere rustik og naturlig
-          karakter til vinen. Konventionel vin bruger kemiske hjælpemidler og
-          tilsætningsstoffer for at sikre en ensartet og forudsigelig smag.
-          Altså er naturvin uden manipulation
-        </p>
-      </div>
-    </div>
-    <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-      <div>
-        <div class="flex justify-center">
-          <Image src={bobler} alt="vin" class="max-w-voresm pb-voress" />
-        </div>
-        <h3 class="text-center">Giver Sprælske tendenser</h3>
-        <p class="py-voresxs">
-          Når vin forbliver vin, og ikke et produkt af tilsætningsstoffer og
-          andet gift, kan der opstå magiske tilstande. Vinen er et resultat af
-          naturen og den naturlige udvikling. Den kan give anledning til
-          sprælske tendenser, men bestemt også anledning til elegance, renhed og
-          kompleksitet. Det er vin der giver stof til eftertanke, tid til
-          eftertænksomhed, og dansetrin du ikke havde den fjerneste idé om, at
-          du havde.
-        </p>
-      </div>
-      <div></div>
-    </div>
-    <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-      <div></div>
-      <div>
-        <div class="flex justify-center">
-          <Image src={hand} alt="vinglas" class="max-w-44 pb-voress" />
-        </div>
-        <h3 class="text-center">Vinen bliver levende</h3>
-        <p class="py-voresxs">
-          Fællesnævneren for alt den vin vi arbejder med, er først og fremmest
-          at det skal smage godt! Ligeså vigtigt er det, at det er lavet med så
-          lidt intervention og tilsætnin som muligt. Faktisk endda helst helt
-          uden! Det er vigtigt for os, at vinen taler for sig selv, og dermed
-          ikke bakkes op af et væld af tilsætningsstoffer. På den måde bliver
-          vinen levende, personlig og ærlig. Det synes vi, er enormt afgørende.
-        </p>
-      </div>
-    </div>
-  </article>
-  <Anmeldelser />
-  <SectionCard />
-</MainLayout>
-
-<script>
+  <!-- <script>
   import { inView, scroll } from "motion";
 
   inView(".dropinview", ({ target, inView }) => {
@@ -238,4 +243,5 @@ import SectionCard from "../components/SectionCard.astro";
   // inView(".dropinview", () => {
 
   // });
-</script>
+</script> -->
+</MainLayout>
