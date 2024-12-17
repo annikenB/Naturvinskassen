@@ -10,9 +10,7 @@ import cartHover from "../assets/images/cartred.webp";
 <div class="z-50 bg-gray-100">
   <div class="flex justify-between items-center p-5">
     <a href="/" class="text-lg font-bold">
-      <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-        Naturvinkassen
-      </h4></a
+      <h4 class="text-lilla-950 hover:text-roed-600">Naturvinkassen</h4></a
     >
 
     <button
@@ -36,14 +34,12 @@ import cartHover from "../assets/images/cartred.webp";
 
     <div class="space-x-4 flex items-center hidden md:flex">
       <a href="/omos" class="">
-        <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-          HVEM ER VI?
-        </h4></a
+        <h4 class="text-lilla-950 hover:text-roed-600">HVEM ER VI?</h4></a
       >
 
       <div class="relative">
         <button id="naturvinskassenDropdown" class="">
-          <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
+          <h4 class="text-lilla-950 hover:text-roed-600">
             OM KASSENE
             <svg
               class="inline-block w-2 h-2 ml-1"
@@ -63,38 +59,29 @@ import cartHover from "../assets/images/cartred.webp";
 
         <div
           id="dropdownMenu"
-          class="hidden absolute right-0 mt-2 w-48 bg-farvenavn-lysgraa rounded-lg sdark:bg-gray-800 dark:border-gray-700 z-40"
+          class="hidden absolute right-0 mt-2 w-48 bg-graa-200 rounded-lg z-40"
         >
-          <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+          <ul class="py-2 text-gray-700">
             <li>
-              <a
-                href="/faq"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-farvenavn-roed"
-                >FAQ</a
-              >
+              <a href="/faq" class="block px-4 py-2 hover:text-roed-600">FAQ</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              <a href="#" class="block px-4 py-2 hover:text-roed-600"
                 >Strakslevering</a
               >
             </li>
 
             <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kontakt</a>
+              <a href="#" class="block px-4 py-2 hover:text-roed-600">Kontakt</a
+              >
             </li>
             <li>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              <a href="#" class="block px-4 py-2 hover:text-roed-600"
                 >Betingelser</a
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              <a href="#" class="block px-4 py-2 hover:text-roed-600"
                 >Find dit abonnement</a
               >
             </li>
@@ -214,16 +201,14 @@ import cartHover from "../assets/images/cartred.webp";
 
 <div
   id="drawer"
-  class="fixed top-20 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa transform translate-x-full transition-transform duration-300 ease-in-out"
+  class="fixed top-20 right-0 z-40 w-64 h-screen bg--graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
 >
   <div class="p-4">
-    <h5 class="text-base text-farvenavn-lilla font-semibold uppercase">
-      Kurv(0)
-    </h5>
+    <h5 class="text-base text-lilla-950 font-semibold uppercase">Kurv(0)</h5>
 
     <button
       id="closeDrawer"
-      class="text-farvenavn-lilla bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
+      class="text-lilla-950 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
     >
       ×
     </button>
@@ -246,7 +231,7 @@ import cartHover from "../assets/images/cartred.webp";
 
 <div
   id="loginDrawer"
-  class="fixed top-20 right-0 z-40 w-64 h-screen bg-farvenavn-lysgraa transform translate-x-full transition-transform duration-300 ease-in-out"
+  class="fixed top-20 right-0 z-40 w-64 h-screen bg-graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
 >
   <div class="p-4">
     <h1 class="text-xl font-bold text-center">Hej</h1>
@@ -257,7 +242,7 @@ import cartHover from "../assets/images/cartred.webp";
         <input
           type="email"
           id="email"
-          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-graa-100 border border-lilla-950 text-sm rounded-lg block w-full p-2.5"
           placeholder="Din email"
           required
         />
@@ -267,7 +252,7 @@ import cartHover from "../assets/images/cartred.webp";
         <input
           type="password"
           id="password"
-          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-graa-100 border border-lilla-950 text-sm rounded-lg block w-full p-2.5"
           required
           placeholder="Adgangskode"
         />
@@ -278,7 +263,7 @@ import cartHover from "../assets/images/cartred.webp";
             id="remember"
             type="checkbox"
             value=""
-            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+            class="w-4 h-4 border border-lilla-950 rounded bg-gray-50"
             required
           />
         </div>
