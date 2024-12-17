@@ -7,15 +7,15 @@ import BestilCard from "../components/BestilCard.astro";
 ---
 
 <MainLayout>
-  <h1>Vælg dit favorit abonnement</h1>
+  <h1 class="text-center">Vælg dit favorit abonnement</h1>
 
   <div class="text-center">
-    <p>
+    <p class="font-bold">
       Vælg
-      <a href="/betal" class="hover:underline">Betal</a>
+
+      <a href="/betal" class="font-light">Betal</a>
     </p>
   </div>
-
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
     <div>
       <a href="/betal">
@@ -39,7 +39,6 @@ import BestilCard from "../components/BestilCard.astro";
         />
       </a>
     </div>
-
     <div>
       <a href="/betal">
         <BestilCard
@@ -51,18 +50,17 @@ import BestilCard from "../components/BestilCard.astro";
         />
       </a>
     </div>
-  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-    <a href="/skraedersy" class="hover:underline">
-      <BestilCard
-        title="SKRÆDDERSY"
-        image="https://via.placeholder.com/300/ffff7f"
-        quantity="1-8"
-        price=" Fra 150"
-        buttonLabel="knap her"
-        class="col-span-full"
-      />
-    </a>
+    <div>
+      <a href="/skraedersy" class="hover:underline">
+        <BestilCard
+          title="SKRÆDDERSY"
+          image="https://via.placeholder.com/300/ffff7f"
+          quantity="1-8"
+          price="Fra 150"
+          buttonLabel="knap her"
+        />
+      </a>
+    </div>
   </div>
 </MainLayout>

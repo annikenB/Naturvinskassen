@@ -4,12 +4,10 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout>
-  <h1>Hva undrer du deg over?</h1>
+  <h1 class="text-center">Hva undrer du deg over?</h1>
 
   <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
-    <div
-      class="max-w-4xl mx-auto my-8 p-6 bg-farvenavn-blaa rounded-lg shadow-lg"
-    >
+    <div class="max-w-4xl mx-auto my-8 p-6 bg-farvenavn-blaa rounded-lg">
       <div class="space-y-4">
         <div class="faq-item">
           <button
@@ -243,7 +241,7 @@ import Button from "../components/Button.astro";
                 placeholder="Dit spørgsmål..."></textarea>
             </div>
           </form>
-          <div class="max-w-xl">
+          <div class="text-center m-voress">
             <a href="/bestil"
               ><Button variant="secondary">Find dit abonnement</Button></a
             >
