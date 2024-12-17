@@ -1,5 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Button from "../components/Button.astro";
+import login from "../assets/images/login.webp";
+import loginHover from "../assets/images/loginred.webp";
+import cart from "../assets/images/cart.webp";
+import cartHover from "../assets/images/cartred.webp";
 ---
 
 <div class="z-50 bg-gray-100">
@@ -95,15 +100,33 @@ import Button from "../components/Button.astro";
         </div>
       </div>
 
-      <a href="#" id="toggleLogin" class="cursor-pointer"
-        ><h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-          Login
-        </h4></a
-      >
+      <a href="#" id="toggleLogin" class="group cursor-pointer inline-block">
+        <Image
+          src={login}
+          alt="Login"
+          class="block group-hover:hidden max-w-voresm scale-50"
+        />
 
-      <a href="#" id="toggleDrawer" class="cursor-pointer"
-        ><h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">Kurv</h4></a
-      >
+        <Image
+          src={loginHover}
+          alt="Login Hover"
+          class="hidden group-hover:block max-w-voresm scale-50"
+        />
+      </a>
+
+      <a href="#" id="toggleDrawer" class="group cursor-pointer inline-block">
+        <Image
+          src={cart}
+          alt="Kurv"
+          class="block group-hover:hidden max-w-voresm scale-50"
+        />
+
+        <Image
+          src={cartHover}
+          alt="Kurv Hover"
+          class="hidden group-hover:block max-w-voresm scale-50"
+        />
+      </a>
       <a href="/bestil">
         <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
           Bestil
@@ -257,12 +280,14 @@ import Button from "../components/Button.astro";
         </div>
         <label for="remember" class="ms-2 text-sm font-medium">Husk mig</label>
       </div>
-      <div class="max-w-xl">
-        <Button variant="primary">Log ind</Button>
+      <div class="text-center">
+        <a href="/konto" class="">
+          <Button variant="primary">Log ind</Button>
+        </a>
       </div>
     </form>
-    <p>Har du glemt din adgangskode? Klik her</p>
-    <p>Har du ikke en konto? Tilmeld dig her</p>
+    <p>Har du glemt din adgangskode? <p class="underline">Klik her</p></p>
+    <p>Har du ikke en konto? <p class="underline">Tilmeld dig her</p></p>
   </div>
 
   <button
@@ -306,12 +331,10 @@ import Button from "../components/Button.astro";
         drawer.classList.add("translate-x-0");
       });
 
-      toggleLoginButton.addEventListener("click", (e) => {
-        e.preventDefault();
+      toggleLoginButton.addEventListener("click", () => {
         loginDrawer.classList.remove("translate-x-full");
         loginDrawer.classList.add("translate-x-0");
       });
-
       closeDrawerButton.addEventListener("click", () => {
         drawer.classList.add("translate-x-full");
         drawer.classList.remove("translate-x-0");
