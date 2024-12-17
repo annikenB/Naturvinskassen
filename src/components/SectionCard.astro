@@ -10,22 +10,29 @@ import storkasse from "../assets/images/large.webp";
 import skræddersy from "../assets/images/make.webp";
 ---
 
-
 <section class="px-margin">
-    <div class="ml-voresm pt-voresl">
-      <p class="-rotate-12 pb-28">Lyder det som noget for dig?</p>
-      <Image src={pil2} alt="vinglas" class="max-w-voresm ml-voresl" />
-    </div>
-  </section>
-  <section>
-    <h2 class="text-center">Bestil dit abonnement her</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-        <Card title="Den lille" image={lillekasse.src} />
-        <Card title="Den mellem kasse" image={mellemkasse.src} />
-        <Card title="Den store kasse" image={storkasse.src} />
-        <Card title="Skræddersy" image={skræddersy.src} />
-    </div>
-  </section>
-  <div class="text-center mb-voress">
-    <a href="/bestil"><Button variant="secondary">Se abonnementer</Button></a>
+  <div class="ml-voresm pt-voresl">
+    <p class="-rotate-12 pb-28">Lyder det som noget for dig?</p>
+    <Image src={pil2} alt="vinglas" class="max-w-voresm ml-voresl" />
   </div>
+</section>
+<section>
+  <h2 class="text-center">Bestil dit abonnement her</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+    <a href="/bestil">
+      <Card title="Den lille" image={lillekasse.src} />
+    </a>
+    <a href="/bestil">
+      <Card title="Den mellem kasse" image={mellemkasse.src} />
+    </a>
+    <a href="/bestil">
+      <Card title="Den store kasse" image={storkasse.src} />
+    </a>
+    <a href="/bestil">
+      <Card title="Skræddersy" image={skræddersy.src} />
+    </a>
+  </div>
+</section>
+<div class="text-center mb-voress">
+  <a href="/bestil"><Button variant="secondary">Se abonnementer</Button></a>
+</div>
