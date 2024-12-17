@@ -93,6 +93,7 @@ export default {
       medium: ["3rem", { lineHeight: "4rem" }],
       small: ["2rem", { lineHeight: "2.5rem" }],
       xsmall: ["1.5rem", { lineHeight: "2.5rem" }],
+      // xlfooter: ["20rem", { lineHeight: "20rem" }],
     },
 
     fontWeight: {
