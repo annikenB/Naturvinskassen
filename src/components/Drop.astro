@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import drop from "../assets/images/drop-01.webp";
+---
+
+<!-- ---
+import { Image } from "astro:assets";
+import drop from "../assets/images/drop-01.webp";
+---
+
+<!-- 
+<div class="flex justify-center">
+  <Image
+    src={drop}
+    alt="drop"
+    class="max-w-voress hidden md:block dropinview"
+  />
+</div> --><!-- <div class="flex justify-center pin-element">
+  <Image
+    src={drop}
+    alt="drop"
+    class="max-w-voress hidden md:block dropinview"
+  />
+</div> --><!-- <script>
+  import { inView, animate } from "motion";
+
+  inView(".dropinview", ({ target, inView }) => {
+    if (inView) {
+      target.classList.add("fixed-in-view");
+      animate(
+        target,
+        { opacity: 1, transform: "translateY(0)" },
+        { duration: 0.5 }
+      );
+    } else {
+      animate(
+        target,
+        { opacity: 0, transform: "translateY(-50px)" },
+        { duration: 0.5 }
+      ).finished.then(() => {
+        target.classList.remove("fixed-in-view");
+      });
+    }
+  }); --><!-- //   inView(".dropinview", ({ target, inView }) => { --><!-- //     if (inView) { --><!-- //       target.classList.add("fixed-in-view");
+  //     } else { --><!-- //       target.classList.remove("fixed-in-view");
+  //     }
+  //   });
+</script> --><!-- <style> --><!-- /* .fixed-in-view {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+  } */
+  /* .dropinview {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+  .fixed-in-view {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    opacity: 1;
+  }
+</style> */ -->
+<div class="flex justify-center pin-element">
+  <Image
+    src={drop}
+    alt="drop"
+    class="max-w-voress hidden md:block dropinview"
+  />
+</div>
+
+<script client:load>
+  import { inView, animate } from "motion";
+
+  inView(".dropinview", ({ target, inView }) => {
+    console.log("Element in view:", inView); // Debugging
+    if (inView) {
+      target.classList.add("fixed-in-view");
+      animate(
+        target,
+        { opacity: 1, transform: "translateY(0)" },
+        { duration: 0.5 }
+      );
+    } else {
+      animate(
+        target,
+        { opacity: 0, transform: "translateY(-50px)" },
+        { duration: 0.5 }
+      ).finished.then(() => {
+        target.classList.remove("fixed-in-view");
+      });
+    }
+  });
+</script>
+
+<style>
+  .dropinview {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+  .fixed-in-view {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    opacity: 1;
+  }
+</style>
