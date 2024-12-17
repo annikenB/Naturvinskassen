@@ -5,12 +5,14 @@ import { Image } from "astro:assets";
 import Card from "../components/Card.astro";
 import pil2 from "../assets/images/arrowtwo.webp";
 import Button from "../components/Button.astro";
+import fork from "../assets/images/fork.webp";
+import michelin from "../assets/images/michelin.webp";
+import spark from "../assets/images/spark.webp";
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="om os">
+  <h1 class="text-center pb-voresl">Om os</h1>
   <article>
-    <h1>OM OS</h1>
-
     <section class="max-w-7xl mx-auto px-4 py-8">
       <div class="p-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -19,7 +21,7 @@ import Button from "../components/Button.astro";
             <p class="leading-relaxed">
               Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog
               pjalterne sammen i Århus, til fælles kamp for udbredelsen af
-              naturvin. Sammen startede vi Reduktivt, som er vores
+              naturvin. Sammen startede vi  <a class="underline" target="_blank" href="https://reduktivt.dk/">Reduktivt</a>, som er vores
               naturvinsbutik og importfirma, i hjertet af Århus. Herfra
               servicere vi tørstige og nysgerrige naturvinsdrikkere, samt mange
               af landet bedste restauranter.  Igennem dette opstod ideen til
@@ -28,10 +30,9 @@ import Button from "../components/Button.astro";
               væsen. Altid på jagt efter nye oplevelser. Til glæde for alle
               vores medlemmer, selvfølgelig.
             </p>
-            <p>knap her</p>
           </div>
           <div class="flex justify-center">
-            <p>bilde her</p>
+            <p>billede her</p>
           </div>
         </div>
       </div>
@@ -43,8 +44,9 @@ import Button from "../components/Button.astro";
           <div class="flex justify-center">
             <p>bilde her</p>
           </div>
-          <div class="">
+          <div class="my-voresm">
             <h2 class="">Vores ønske</h2>
+            <p class="">… er at videreformidle & dele oplevelser!</p>
             <p class="">
               Vores arbejde med Naturvinskassen handler først og fremmest om at
               videreformidle og dele oplevelser, med alle vores medlemmer! Det
@@ -53,49 +55,51 @@ import Button from "../components/Button.astro";
               Noget smager godt, noget smager knap så godt, og noget smager så
               godt, at vi bliver nødt til at dele det med alle vores medlemmer.
             </p>
-            <p>knap her</p>
           </div>
         </div>
       </div>
     </section>
-
-    <section>
-      <h1 class="text-center">Erfaring og viden</h1>
-      <div>
-        <p>gif her</p>
-        <h3>30 år i restaurationsbranchen</h3>
-        <p>
-          Tæller man efter, har vi til sammen tilbagelagt omkring 30 år i
-          restaurationsbranchen. Med andre ord, så har vi skænket vores del vin,
-          og fortalt mindst ligeså mange røverhistorier.  Så man kan vidst
-          roligt sige, at vi har erfaring og viden med i bagagen.
+    <article class="px-margin pb-voress">
+      <h2 class="text-center py-voress">Erfaren og viden</h2>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div><div class="flex justify-center">
+          <Image src={fork} alt="tallerken" class="max-w-voresl pb-voress scale-[1.5]" />
+        </div>
+        <h3 class="text-center">30 år i restaurationsbranchen</h3>
+        <p class="py-voresxs mx-voress">
+          Tæller man efter, har vi til sammen tilbagelagt omkring 30 år i restaurationsbranchen. Med andre ord, så har vi skænket vores del vin, og fortalt mindst ligeså mange røverhistorier. 
+Så man kan vidst roligt sige, at vi har erfaring og viden med i bagagen.
         </p>
+      </div></div>
+      <div></div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div>
+        </div>
+        <div>
+          <div class="mb-voresm md:mb-0">
+            <div>
+              <div class="flex justify-center">
+                <Image src={michelin} alt="michelin logo" class="max-w-voresm pb-voress scale-[2]" />
+              </div>
+              <h3 class="text-center">Michelin og landets bedste vinbarer</h3>
+              <p class="py-voresxs mx-voress">
+                Et vigtigt element for os begge, har altid været arbejdet med naturvinen. Et fokusområde som vi har implementeret på samtlige af de steder vi har arbejdet igennem tiden. Steder som tæller alt ligefra Michelin-restauranter til nogle af landets absolut bedste vinbarer. Dette kombineret med en umættelig nysgerrighed og interesse for vinen, gør, at vi kan videregive fantastiske oplevelser til alle jer.
+              </p>
+            </div>
+        </div>
       </div>
-      <div>
-        <p>gif her</p>
-        <h3>Michelin og landets bedste vinbarer</h3>
-        <p>
-          Et vigtigt element for os begge, har altid været arbejdet med
-          naturvinen. Et fokusområde som vi har implementeret på samtlige af de
-          steder vi har arbejdet igennem tiden. Steder som tæller alt ligefra
-          Michelin-restauranter til nogle af landets absolut bedste
-          vinbarer. Dette kombineret med en umættelig nysgerrighed og interesse
-          for vinen, gør, at vi kan videregive fantastiske oplevelser til alle
-          jer.
-        </p>
+      <div class="mb-voresm md:mb-0">
+        <div>
+          <div class="flex justify-center">
+            <Image src={spark} alt="naturvin" class="max-w-44 pb-voress" />
+          </div>
+          <h3 class="text-center">Smagsløg blandet med fornuft</h3>
+          <p class="py-voresxs mx-voress">
+            Fælles for os begge er, at vi værdsætter vin uden manipulation. Vin, som blot er vin, uden alverdens tilsætningsstoffer i mark og kælder. Naturvin gør både godt for ganen og bæredygtigheden. Derfor har det altid handlet om naturvin for os. Det synes vi giver bedst mening!
+          </p>
+        </div>
       </div>
-      <div>
-        <p>gif her</p>
-        <h3>Smagsløg blandet med fornuft</h3>
-        <p>
-          Fælles for os begge er, at vi værdsætter vin uden manipulation. Vin,
-          som blot er vin, uden alverdens tilsætningsstoffer i mark og kælder.
-          Naturvin gør både godt for ganen og bæredygtigheden. Derfor har det
-          altid handlet om naturvin for os. Det synes vi giver bedst mening!
-        </p>
-      </div>
-    </section>
-
+    </article>
     <section class="px-margin">
       <div class="ml-voresm pt-voresl">
         <p class="-rotate-12 pb-28">Lyder det som noget for dig?</p>
