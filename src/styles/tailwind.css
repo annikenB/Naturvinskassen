@@ -33,6 +33,14 @@
     @apply uppercase;
     @apply text-lilla-950;
   }
+
+  /* h5{
+    @apply xlfooter;
+    @apply font-regular;
+    @apply font-display;
+    @apply uppercase;
+    @apply text-farvenavn-hvid
+  } */
   p {
     @apply text-base;
     @apply font-light;
