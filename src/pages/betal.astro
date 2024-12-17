@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import mellemkasse from "../assets/images/medium.webp";
 ---
 
 <MainLayout>
@@ -202,7 +202,7 @@ import { Image } from "astro:assets";
     >
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         <div class="flex justify-center">
-          <p>bilde her</p>
+          <Image src={mellemkasse} alt="mellemkasse" class="" />
         </div>
         <div class="">
           <h3 class="text-farvenavn-lilla">Den mellemstore</h3>
