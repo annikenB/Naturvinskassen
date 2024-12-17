@@ -331,12 +331,10 @@ import cartHover from "../assets/images/cartred.webp";
         drawer.classList.add("translate-x-0");
       });
 
-      toggleLoginButton.addEventListener("click", (e) => {
-        e.preventDefault();
+      toggleLoginButton.addEventListener("click", () => {
         loginDrawer.classList.remove("translate-x-full");
         loginDrawer.classList.add("translate-x-0");
       });
-
       closeDrawerButton.addEventListener("click", () => {
         drawer.classList.add("translate-x-full");
         drawer.classList.remove("translate-x-0");
