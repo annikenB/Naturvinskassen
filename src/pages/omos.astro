@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Card from "../components/Card.astro";
 import pil2 from "../assets/images/arrowtwo.webp";
@@ -8,6 +7,7 @@ import Button from "../components/Button.astro";
 import fork from "../assets/images/fork.webp";
 import michelin from "../assets/images/michelin.webp";
 import spark from "../assets/images/spark.webp";
+import SectionCard from "../components/SectionCard.astro";
 ---
 
 <MainLayout title="om os">
@@ -100,41 +100,6 @@ Så man kan vidst roligt sige, at vi har erfaring og viden med i bagagen.
         </div>
       </div>
     </article>
-    <section class="px-margin">
-      <div class="ml-voresm pt-voresl">
-        <p class="-rotate-12 pb-28">Lyder det som noget for dig?</p>
-        <Image src={pil2} alt="vinglas" class="max-w-voresm ml-voresl" />
-      </div>
-    </section>
-    <section>
-      <h2 class="text-center">Bestil dit abonnement her</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-        <Card
-          title="Den lille"
-          image="https://via.placeholder.com/300/ff7f7f"
-        />
-        <Card
-          title="Den mellomstore"
-          image="https://via.placeholder.com/300/7f7fff"
-        />
-        <Card
-          title="Den store"
-          image="https://via.placeholder.com/300/7fff7f"
-        />
-        <Card
-          title="Skræddersy"
-          image="https://via.placeholder.com/300/ffff7f"
-        />
-      </div>
 
-      <p>
-        Link til <Link href="https://www.kea.dk" target="_blank"
-          >En anden side</Link
-        >
-      </p>
-    </section>
-    <div class="text-center mb-voress">
-      <a href="/bestil"><Button variant="secondary">Se abonnementer</Button></a>
-    </div>
-  </article>
+    <SectionCard/>
 </MainLayout>

@@ -16,6 +16,7 @@ import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
 import Button from "../components/Button.astro";
+import SectionCard from "../components/SectionCard.astro";
 ---
 import Button from "../components/Button.astro";
 <MainLayout title="NATURVINSKASSEN">
@@ -213,26 +214,7 @@ import Button from "../components/Button.astro";
       </div>
     </div>
   </article>
-  <Anmeldelser />
-  <section class="px-margin">
-    <div class="ml-voresm pt-voresl">
-      <p class="-rotate-12 pb-28">Lyder det som noget for dig?</p>
-      <Image src={pil2} alt="vinglas" class="max-w-voresm ml-voresl" />
-    </div>
-  </section>
-  <section class="px-margin">
-    <h2 class="text-center">Bestil dit abonnement her</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-      <Card title="Den lille" image="https://via.placeholder.com/300/ff7f7f" />
-      <Card
-        title="Den mellomstore"
-        image="https://via.placeholder.com/300/7f7fff"
-      />
-      <Card title="Den store" image="https://via.placeholder.com/300/7fff7f" />
-      <Card title="Skræddersy" image="https://via.placeholder.com/300/ffff7f" />
-    </div>
-    <div class="text-center mb-voress">
-      <a href="/bestil"><Button variant="secondary">Se abonnementer</Button></a>
-    </div>
-  </section>
+  <Anmeldelser/>
+  <SectionCard/>
+ 
 </MainLayout>
