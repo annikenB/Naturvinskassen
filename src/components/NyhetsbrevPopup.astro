@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import hand from "../assets/images/spin.webp";
+import Button from "../components/Button.astro";
+---
+
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<article
+  id="newsletter-popup"
+  class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50 hidden"
+>
+  <div
+    class="bg-white p-0 max-w-4xl mx-auto relative flex rounded-3xl overflow-hidden"
+  >
+    <div class="flex-1 flex justify-center items-center bg-farvenavn-blaa">
+      <Image src={hand} alt="pil" class="w-32 h-32" />
+    </div>
+
+    <div
+      class="flex-1 flex flex-col justify-center items-center bg-farvenavn-hvid p-6"
+    >
+      <button
+        class="absolute top-4 right-4 text-2xl font-bold"
+        id="close-popup-btn"
+      >
+        ×
+      </button>
+      <h2 class="text-center text-2xl font-bold mb-4">JOIN THE CLUB</h2>
+      <p class="my-4 text-center text-lg">Spar 10% på din næste vinkasse</p>
+      <div class="w-full">
+        <label for="by" class="block mb-1 text-sm"> </label>
+        <input
+          type="text"
+          id="by"
+          class="bg-blaa-200 w-full border rounded-xl p-3 dark:bg-gray-700"
+          placeholder="Indsæt navn"
+          required
+        />
+        <div class="max-w-xl mx-auto text-center mt-4">
+          <a href="/"><Button variant="secondary">Bliv medlem</Button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      const popup = document.getElementById("newsletter-popup");
+      const closeButton = document.getElementById("close-popup-btn");
+
+      popup.classList.remove("hidden");
+
+      closeButton.addEventListener("click", () => {
+        popup.classList.add("hidden");
+      });
+    };
+  </script>
+</article>
