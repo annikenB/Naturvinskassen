@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import hand from "../assets/images/spin.webp";
+import logomanlight from "../assets/images/logomanlight.webp";
 import Button from "../components/Button.astro";
 ---
 
@@ -10,32 +10,32 @@ import Button from "../components/Button.astro";
 
 <article
   id="newsletter-popup"
-  class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50 hidden"
+  class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden"
 >
+  <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40">
+  </div>
+
   <div
-    class="bg-white p-0 max-w-4xl mx-auto relative flex rounded-3xl overflow-hidden"
+    class="bg-white p-0 max-w-4xl mx-auto relative flex rounded-3xl overflow-hidden z-50"
   >
     <div class="flex-1 flex justify-center items-center bg-farvenavn-blaa">
-      <Image src={hand} alt="pil" class="w-32 h-32" />
+      <Image src={logomanlight} alt="pil" class="w-32 h-38" />
     </div>
 
     <div
       class="flex-1 flex flex-col justify-center items-center bg-farvenavn-hvid p-6"
     >
-      <button
-        class="absolute top-4 right-4 text-2xl font-bold"
-        id="close-popup-btn"
-      >
+      <button class="absolute top-4 right-4 text-2xl" id="close-popup-btn">
         ×
       </button>
-      <h2 class="text-center text-2xl font-bold mb-4">JOIN THE CLUB</h2>
+      <h2 class="text-center text-2xl font-bold my-voress">JOIN THE CLUB</h2>
       <p class="my-4 text-center text-lg">Spar 10% på din næste vinkasse</p>
       <div class="w-full">
         <label for="by" class="block mb-1 text-sm"> </label>
         <input
           type="text"
           id="by"
-          class="bg-blaa-200 w-full border rounded-xl p-3 dark:bg-gray-700"
+          class="bg-farvenavn-hvid w-full bg-gray-50 border rounded-xl p-3"
           placeholder="Indsæt navn"
           required
         />
