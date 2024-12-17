@@ -16,7 +16,6 @@ import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
 import Button from "../components/Button.astro";
-import NyhetsbrevPopup from "../components/NyhetsbrevPopup.astro";
 ---
 
 <NyhetsbrevPopup />
@@ -63,11 +62,11 @@ import NyhetsbrevPopup from "../components/NyhetsbrevPopup.astro";
             <Image src={bil} alt="bil" class="w-64 pb-voress" />
           </div>
           <h3 class="text-center">Fri levering & ingen binding</h3>
-          <p class="py-voresxs">
+          <p class="py-voresxs mx-voress">
             Naturvin leveret til dig, fragtfrit hver måned! Vi leverer
             selvfølgelig til alle afkroge af Danmark, uden undtagelser.
           </p>
-          <ul>
+          <ul class="mx-voress">
             <li>Ingen binding.</li>
             <li>Sæt på pause når du ønsker.</li>
             <li>Fri fragt.</li>
@@ -82,12 +81,12 @@ import NyhetsbrevPopup from "../components/NyhetsbrevPopup.astro";
             <Image src={sale} alt="mand med skilt" class="w-44 pb-voress" />
           </div>
           <h3 class="text-center">Medlemsfordele</h3>
-          <p class="py-voresxs">
+          <p class="py-voresxs mx-voress">
             Vi sætter rigtig stor pris på vores medlemmer. Det synes vi skal
             værdsættes. Derfor kan man som abonnent, se frem til følgende
             fordele:
           </p>
-          <ul>
+          <ul class="mx-voress">
             <li>10% på køb over 500 i butik/webshop.</li>
             <li>Månedlige medlemstilbud.</li>
             <li>Forkøbsret på allokationsvine.</li>
@@ -100,12 +99,12 @@ import NyhetsbrevPopup from "../components/NyhetsbrevPopup.astro";
             <Image src={kasse} alt="kasse med vin" class="w-64 pb-voress" />
           </div>
           <h3 class="text-center">Fra os til jer</h3>
-          <p class="py-voresxs">
+          <p class="py-voresxs mx-voress">
             Vores vurdering er, at desto flere goder der er ved et abonnement,
             desto sjovere er det at være med. Derfor kan man som abonnent, også
             se frem til:
           </p>
-          <ul>
+          <ul class="mx-voress">
             <li>Nøje udvalgte vine, hver måned</li>
             <li>Udførlige vinbeskrivelser</li>
             <li>Jubilæumsgaver</li>
@@ -215,26 +214,7 @@ import NyhetsbrevPopup from "../components/NyhetsbrevPopup.astro";
       </div>
     </div>
   </article>
-  <Anmeldelser />
-  <section class="px-margin">
-    <div class="ml-voresm pt-voresl">
-      <p class="-rotate-12 pb-28">Lyder det som noget for dig?</p>
-      <Image src={pil2} alt="vinglas" class="max-w-voresm ml-voresl" />
-    </div>
-  </section>
-  <section class="px-margin">
-    <h2 class="text-center">Bestil dit abonnement her</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-      <Card title="Den lille" image="https://via.placeholder.com/300/ff7f7f" />
-      <Card
-        title="Den mellomstore"
-        image="https://via.placeholder.com/300/7f7fff"
-      />
-      <Card title="Den store" image="https://via.placeholder.com/300/7fff7f" />
-      <Card title="Skræddersy" image="https://via.placeholder.com/300/ffff7f" />
-    </div>
-    <div class="text-center mb-voress">
-      <a href="/bestil"><Button variant="secondary">Se abonnementer</Button></a>
-    </div>
-  </section>
+  <Anmeldelser/>
+  <SectionCard/>
+ 
 </MainLayout>
