@@ -7,10 +7,11 @@ export default {
       transparent: "transparent",
       current: "currentColor",
       gul: {
+        25: "#FFFDF1",
         50: "#FCF8DE",
         100: "#FBF5C6",
         200: "#F9E88F",
-        300: "#F5F34f",
+        300: "#F5F34F",
         400: "#F0BD1F",
         500: "#E0A512",
         600: "#C17F0D",
