@@ -56,7 +56,11 @@ import SectionCard from "../components/SectionCard.astro";
       </div>
       <h1 class="text-center pb-voresl">Hvorfor naturvinskassen?</h1>
       <div class="flex justify-center">
-        <Image src={drop} alt="drop" class="max-w-voress" />
+        <Image
+          src={drop}
+          alt="drop"
+          class="max-w-voress hidden md:block dropinview"
+        />
       </div>
       <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
         <div class="mx-auto">
@@ -219,3 +223,19 @@ import SectionCard from "../components/SectionCard.astro";
   <Anmeldelser />
   <SectionCard />
 </MainLayout>
+
+<script>
+  import { inView, scroll } from "motion";
+
+  inView(".dropinview", ({ target, inView }) => {
+    if (inView) {
+      target.classList.add(".sticky");
+    } else {
+      target.classList.remove(".sticky");
+    }
+  });
+
+  // inView(".dropinview", () => {
+
+  // });
+</script>
