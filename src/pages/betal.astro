@@ -3,13 +3,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import mellemkasse from "../assets/images/medium.webp";
+import pil from "../assets/images/v.webp";
 ---
 
 <MainLayout>
   <h1>din bestilling</h1>
   <div class="text-center">
-    <p>
+    <p class="inline-flex items-center">
       <a href="/bestil" class="font-regular">Vælg</a>
+
+      <Image src={pil} alt="pil" class="mx-voress w-4 opacity-100 -rotate-90" />
+
       <a href="/betal" class="font-bold">Betal</a>
     </p>
   </div>

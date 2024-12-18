@@ -8,18 +8,22 @@ import lillekasse from "../assets/images/small.webp";
 import mellemkasse from "../assets/images/medium.webp";
 import storkasse from "../assets/images/large.webp";
 import skræddersy from "../assets/images/make.webp";
+import pil from "../assets/images/v.webp";
 ---
 
 <MainLayout>
   <h1 class="text-center">Vælg dit favorit abonnement</h1>
 
   <div class="text-center">
-    <p class="font-bold">
-      Vælg
+    <p class="inline-flex items-center">
+      <a href="/bestil" class="font-bold">Vælg</a>
 
-      <a href="/betal" class="font-light">Betal</a>
+      <Image src={pil} alt="pil" class="mx-voress w-4 opacity-100 -rotate-90" />
+
+      <a href="/betal" class="font-regular">Betal</a>
     </p>
   </div>
+
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
     <div>
       <a href="/betal">
