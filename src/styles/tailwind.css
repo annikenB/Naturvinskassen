@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-lillelarge;
+    @apply text-lillexlarge;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
@@ -12,7 +12,7 @@
   }
 
   h2 {
-    @apply text-lillemedium;
+    @apply text-lillelarge;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
@@ -20,14 +20,14 @@
   }
 
   h3 {
-    @apply text-lillesmall;
+    @apply text-lillemedium;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
     @apply text-lilla-950;
   }
   h4 {
-    @apply text-lillexsmall;
+    @apply text-lillemedium;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
@@ -48,7 +48,7 @@
   }
   @media (min-width: 768px) {
     h1 {
-      @apply text-large;
+      @apply text-xlarge;
       @apply font-regular;
       @apply font-display;
       @apply uppercase;
@@ -56,7 +56,7 @@
     }
 
     h2 {
-      @apply text-medium;
+      @apply text-large;
       @apply font-regular;
       @apply font-display;
       @apply uppercase;
@@ -64,14 +64,14 @@
     }
 
     h3 {
-      @apply text-small;
+      @apply text-medium;
       @apply font-regular;
       @apply font-display;
       @apply uppercase;
       @apply text-lilla-950;
     }
     h4 {
-      @apply text-xsmall;
+      @apply text-small;
       @apply font-regular;
       @apply font-display;
       @apply uppercase;
