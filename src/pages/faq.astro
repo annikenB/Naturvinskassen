@@ -3,21 +3,35 @@ import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import thinking from "../assets/images/thinking.webp";
+import pil from "../assets/images/v.webp";
+import pilhover from "../assets/images/vhover.webp";
 ---
 
 <MainLayout>
-  <h1 class="text-center">Hva undrer du deg over?</h1>
+  <h1 class="text-center">Hvad undrer du dig over?</h1>
 
   <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
     <div class="max-w-4xl mx-auto my-8 p-6 bg-blaa-300 rounded-card">
-      <div class="space-y-4">
+      <div class="space-y-6">
         <div class="faq-item">
           <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
+            class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
             id="faq1Button"
           >
             Hvad indebærer et abonnement?
-            <span class="faq-arrow">&#9660;</span>
+            <div class="relative w-4 h-4">
+              <Image
+                src={pil}
+                alt="pil"
+                class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+              />
+
+              <Image
+                src={pilhover}
+                alt="pil hover"
+                class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+              />
+            </div>
           </button>
           <div id="faq1Answer" class="faq-answer hidden px-4 py-2">
             <p>
@@ -31,172 +45,279 @@ import thinking from "../assets/images/thinking.webp";
             </p>
           </div>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq2Button"
-          >
-            Hvornår bliver min kasse så leveret?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq2Answer" class="faq-answer hidden px-4 py-2">
-            <p>Du vil få din naturvinskasse leveret hver måned.</p>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq2Button"
+        >
+          Hvornår bliver min kasse så leveret?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
+
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq2Answer" class="faq-answer hidden px-4 py-2">
+          <p>Du vil få din naturvinskasse leveret hver måned</p>
         </div>
+      </div>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq3Button"
+        >
+          Hvornår bliver min betaling trukket?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq3Button"
-          >
-            Hvornår bliver min betaling trukket?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
-            <p>
-              Din kasse vil blive leveret til dig, i starten af måneden.
-              Bestiller du 'Strakslevering' ved oprettelse af dit medlemskab, så
-              vil din kasse afsendes inden for 1 hverdag.
-            </p>
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
+          <p>
+            Din kasse vil blive leveret til dig, i starten af måneden. Bestiller
+            du 'Strakslevering' ved oprettelse af dit medlemskab, så vil din
+            kasse afsendes inden for 1 hverdag.
+          </p>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq4Button"
-          >
-            Hvad skal jeg gøre, hvis en vin er defekt?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq4Answer" class="faq-answer hidden px-4 py-2">
-            <p>
-              Se, det er ikke så godt! Men det finder vi selvfølgelig en løsning
-              på. Naturligvis hel uden meromkostning fra din side! Skriv os en
-              mail på info@reduktivt.com, så finder vi ud af det.
-            </p>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq4Button"
+        >
+          Hvad skal jeg gøre, hvis en vin er defekt?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
+
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq4Answer" class="faq-answer hidden px-4 py-2">
+          <p>
+            Se, det er ikke så godt! Men det finder vi selvfølgelig en løsning
+            på. Naturligvis hel uden meromkostning fra din side! Skriv os en
+            mail på info@reduktivt.com, så finder vi ud af det.
+          </p>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq5Button"
-          >
-            Binder jeg mig i en bestemt periode?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq5Answer" class="faq-answer hidden px-4 py-2">
-            <p>
-              Det gør du ikke, nej. Vi har ingen binding eller skjulte agendaer.
-              Du kan melde dig fra eller sætte dit abonnement på pause, præcis
-              når du vil.
-            </p>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq5Button"
+        >
+          Binder jeg mig i en bestemt periode?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
+
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq5Answer" class="faq-answer hidden px-4 py-2">
+          <p>
+            Det gør du ikke, nej. Vi har ingen binding eller skjulte agendaer.
+            Du kan melde dig fra eller sætte dit abonnement på pause, præcis når
+            du vil.
+          </p>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq6Button"
-          >
-            Hvordan bliver min vin leveret?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq6Answer" class="faq-answer hidden px-4 py-2">
-            <p class="max-w-xs">
-              Afhentning Din naturvinskasse kan afhentes i Aarhus, Borggade 16.
-              Hele danmark Din naturvinskasse leveres enten til DAO Pakkeshop
-              (Gratis) eller via DAO hjemmelevering (tillæg). Du vælger din
-              leveringsmetode når du bestiller dit abonnement. Cykelbude
-              (hjemmelevering, Aarhus) Din vin bliver leveret med Velopak's
-              cykelbude, direkte til din bopæl.
-            </p>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq6Button"
+        >
+          Hvordan bliver min vin leveret?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
+
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq6Answer" class="faq-answer hidden px-4 py-2">
+          <p>
+            Afhentning Din naturvinskasse kan afhentes i Aarhus, Borggade 16.
+            Hele danmark Din naturvinskasse leveres enten til DAO Pakkeshop
+            (Gratis) eller via DAO hjemmelevering (tillæg). Du vælger din
+            leveringsmetode når du bestiller dit abonnement. Cykelbude
+            (hjemmelevering, Aarhus) Din vin bliver leveret med Velopak's
+            cykelbude, direkte til din bopæl.
+          </p>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq7Button"
-          >
-            Kan man få leveret vin i hele landet?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq7Answer" class="faq-answer hidden px-4 py-2">
-            <p>Vi levere til alle danske brofaste øer.</p>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq7Button"
+        >
+          Kan man få leveret vin i hele landet?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
+
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq7Answer" class="faq-answer hidden px-4 py-2">
+          <p>Vi levere til alle danske brofaste øer.</p>
         </div>
+      </div>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq8Button"
+        >
+          Kan jeg ændre min leveringsadresse?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq8Button"
-          >
-            Kan jeg ændre min leveringsadresse?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq8Answer" class="faq-answer hidden px-4 py-2">
-            <p>
-              Ja, du kan ændre leveringsadressen under kontoindstillinger...
-            </p>
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq8Answer" class="faq-answer hidden px-4 py-2">
+          <p>Ja, du kan ændre leveringsadressen under administer din konto</p>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold bg-farvenavn-lilla-200 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq9Button"
-          >
-            Hvordan opdaterer jeg mine private indstillinger?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq9Answer" class="faq-answer hidden px-4 py-2">
-            <p>Du kan opsige dit abonnement ved at kontakte kundeservice...</p>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq9Button"
+        >
+          Hvordan opdaterer jeg mine private indstillinger?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
+
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq9Answer" class="faq-answer hidden px-4 py-2">
+          <p>
+            Du kan endre dine private indstillinger under administert dit
+            abonnement
+          </p>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq10Button"
-          >
-            Er der ekstra gebyrer ved levering?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq10Answer" class="faq-answer hidden px-4 py-2">
-            <p>Nej, der er ingen ekstra gebyrer ved levering...</p>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq10Button"
+        >
+          Er der ekstra gebyrer ved levering?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
+
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq10Answer" class="faq-answer hidden px-4 py-2">
+          <p>Nej, der er ingen ekstra gebyrer ved levering.</p>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq11Button"
-          >
-            Hvordan afmelder jeg mit abonnement?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq11Answer" class="faq-answer hidden px-4 py-2">
-            <p>Ja, vi tilbyder erstatning for beskadigede flasker...</p>
-          </div>
-        </div>
+      <div class="faq-item">
+        <button
+          class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center group"
+          id="faq11Button"
+        >
+          Hvordan afmelder jeg mit abonnement?
+          <div class="relative w-4 h-4">
+            <Image
+              src={pil}
+              alt="pil"
+              class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+            />
 
-        <div class="faq-item">
-          <button
-            class="w-full text-left px-4 py-2 text-lg font-semibold bg-farvenavn-lilla-200 rounded-lg focus:outline-none hover:bg-farvenavn-lilla-300 flex justify-between items-center"
-            id="faq12Button"
-          >
-            Hvordan opdaterer jeg mine private indstillinger?
-            <span class="faq-arrow">&#9660;</span>
-          </button>
-          <div id="faq12Answer" class="faq-answer hidden px-4 py-2">
-            <p>Du kan kontakte kundeservice via e-mail eller telefon...</p>
+            <Image
+              src={pilhover}
+              alt="pil hover"
+              class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+            />
           </div>
+        </button>
+        <div id="faq11Answer" class="faq-answer hidden px-4 py-2">
+          <p>du kan si op dit abonnement under admenisterer din konto</p>
         </div>
       </div>
     </div>
+
     <div>
       <div class="flex justify-center">
         <Image src={thinking} alt="vinglas" class="max-w-44 mt-voresl" />
@@ -254,25 +375,25 @@ import thinking from "../assets/images/thinking.webp";
       </div>
     </div>
   </section>
-
-  <script type="module" client:load>
-    function toggleAnswer(buttonId, answerId) {
-      const button = document.getElementById(buttonId);
-      const answer = document.getElementById(answerId);
-      const arrow = button.querySelector(".faq-arrow");
-
-      answer.classList.toggle("hidden");
-      arrow.innerHTML = answer.classList.contains("hidden")
-        ? "&#9660;"
-        : "&#9650;";
-    }
-
-    for (let i = 1; i <= 12; i++) {
-      const buttonId = `faq${i}Button`;
-      const answerId = `faq${i}Answer`;
-      document.getElementById(buttonId).addEventListener("click", () => {
-        toggleAnswer(buttonId, answerId);
-      });
-    }
-  </script>
 </MainLayout>
+
+<script type="module" client:load>
+  function toggleAnswer(buttonId, answerId) {
+    const button = document.getElementById(buttonId);
+    const answer = document.getElementById(answerId);
+    const arrow = button.querySelector(".faq-arrow");
+
+    answer.classList.toggle("hidden");
+    arrow.innerHTML = answer.classList.contains("hidden")
+      ? "&#9660;" // ned-pil
+      : "&#9650;"; // opp-pil
+  }
+
+  for (let i = 1; i <= 12; i++) {
+    const buttonId = `faq${i}Button`;
+    const answerId = `faq${i}Answer`;
+    document.getElementById(buttonId).addEventListener("click", () => {
+      toggleAnswer(buttonId, answerId);
+    });
+  }
+</script>
