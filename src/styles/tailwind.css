@@ -20,7 +20,7 @@
   }
 
   h3 {
-    @apply text-lillemedium;
+    @apply text-lillelarge;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;

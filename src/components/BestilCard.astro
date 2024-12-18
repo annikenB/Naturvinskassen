@@ -10,7 +10,7 @@ const {
 
 const cardStyling = "";
 
-const titleStyling = "hover:text-roed-600";
+// const titleStyling = "hover:text-roed-600 pt-voresxs";
 
 const imageStyling = "";
 
@@ -22,7 +22,7 @@ const buttonStyling = "";
 ---
 
 <div
-  class="bg-white rounded-lg p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col justify-between"
+  class="bg-white rounded-lg p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col justify-between group"
 >
   <img
     src={image}
@@ -34,11 +34,16 @@ const buttonStyling = "";
 
   <p class={priceStyling}>{price} DKK</p>
 
-  <h3 class={titleStyling}>{title}</h3>
+  <h3 class="group-hover:text-roed-600 py-voresxs">{title}</h3>
 
-  <div class="max-w-xl">
+  <div class="max-w-xl md:hidden block">
     <a href="/bestil">
-      <Button variant="secondary">Vælg</Button>
+      <Button variant="mobileprimary">Vælg</Button>
+    </a>
+  </div>
+  <div class="max-w-xl hidden md:block">
+    <a href="/bestil">
+      <Button variant="primary">Vælg</Button>
     </a>
   </div>
 </div>

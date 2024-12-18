@@ -5,7 +5,7 @@ import Button from "../components/Button.astro";
 ---
 
 <section class="p-6 bg-roed-600 rounded-t-3xl mt-voresl h-full">
-  <section class="flex flex-wrap justify-between gap-4">
+  <section class="grid grid-cols-4 justify-between gap-4">
     <nav>
       <h3 class="mt-voresxs text-gul-50 mb-voresxs">Kontakt</h3>
       <ul>
@@ -79,11 +79,11 @@ import Button from "../components/Button.astro";
             <input
               type="text"
               id="by"
-              class="bg-roed-600 w-full border-2 border-gul-50 rounded-card p-3 text-gul-50 placeholder-gul-50"
+              class="bg-roed-600 w-full border border-gul-50 rounded-card px-3 py-1.5 text-gul-50 placeholder-gul-50"
               placeholder="Din Email"
               required
             />
-            <div class="max-w-xl mx-auto text-center mt-4">
+            <div class="max-w-xl mx-auto text-center ml-voresxs">
               <a href="/konto"><Button variant="footer">Indsend</Button></a>
             </div>
           </div>
@@ -92,11 +92,11 @@ import Button from "../components/Button.astro";
     </nav>
 
     <nav>
-      <Image src={logo} alt="pil" class="w-1/4" />
+      <Image src={logo} alt="pil" class="max-w-voresl mx-auto" />
     </nav>
   </section>
 
-  <section class="text-center">
+  <section class="text-center mt-voress">
     <h1 class="text-lillexlfooter md:text-xlfooter text-gul-50">
       Naturvinskassen
     </h1>
