@@ -1,15 +1,20 @@
 ---
-import { motion } from "motion";
+import { Image } from "astro:assets";
+import drop from "../assets/images/drop-01.webp";
 ---
 
-<motion.div
-  id="drop"
-  class="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-0"
-  animate={{
-    opacity: 1,
-    y: "100vh", // Setter animasjonen til å bevege seg nedover til bunnen av skjermen
-  }}
-  transition={{ duration: 2, ease: "ease-out" }}
->
-  <img src="/assets/images/drop.webp" alt="dråpe" class="w-16 h-16" />
-</motion.div>
+<div class="flex items-center justify-center absolute inset-x-0 pb-voresl">
+  <Image
+    src={drop}
+    alt="drop"
+    class="hidden md:block dropinview max-w-voress"
+  />
+</div>
+
+<script>
+  import { inView, animate } from "motion";
+
+  inView(".dropinview", () => {
+    animate(".dropinview", { y: [0, 1250] }, { duration: 10 });
+  });
+</script>
