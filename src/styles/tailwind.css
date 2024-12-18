@@ -44,7 +44,7 @@
     @apply text-lillebase;
     @apply font-light;
     @apply font-sans;
-    @apply text-text-lilla-950;
+    @apply text-lilla-950;
   }
   @media (min-width: 768px) {
     h1 {
