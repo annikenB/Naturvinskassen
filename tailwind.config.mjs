@@ -72,13 +72,6 @@ export default {
         900: "#5B4233",
         950: "#312119",
       },
-      farvenavn: {
-        hvid: "#FCF8DE",
-        blaa: "#B0C6E0",
-        lilla: "#2B042D",
-        roed: "#DB1F2D",
-        lysgraa: "#EBE3D3",
-      },
     },
 
     fontFamily: {
@@ -88,21 +81,21 @@ export default {
 
     fontSize: {
       lillebase: ["1rem", { lineHeight: "1.5rem" }],
-      lilleherotext: ["5rem", { lineHeight: "5rem" }],
+      lilleherotext: ["3.2rem", { lineHeight: "4rem" }],
       lillexlarge: ["3rem", { lineHeight: "5rem" }],
-      lillelarge: ["2.5rem", { lineHeight: "4rem" }],
-      lillemedium: ["2rem", { lineHeight: "4rem" }],
-      lillesmall: ["1rem", { lineHeight: "2.5rem" }],
-      lillexsmall: ["1.2rem", { lineHeight: "2.5rem" }],
-      lillexlfooter: ["9rem", { lineHeight: "20rem" }],
+      lillelarge: ["2rem", { lineHeight: "4rem" }],
+      lillemedium: ["1.5rem", { lineHeight: "4rem" }],
+      // lillesmall: ["1rem", { lineHeight: "2.5rem" }],
+      // lillexsmall: ["1.2rem", { lineHeight: "2.5rem" }],
+      lillexlfooter: ["4rem", { lineHeight: "4rem" }],
       base: ["1rem", { lineHeight: "1.5rem" }],
       herotext: ["9rem", { lineHeight: "5rem" }],
-      xlarge: ["5rem", { lineHeight: "5rem" }],
-      large: ["3.5rem", { lineHeight: "4rem" }],
-      medium: ["3rem", { lineHeight: "4rem" }],
-      small: ["2rem", { lineHeight: "2.5rem" }],
-      xsmall: ["1.5rem", { lineHeight: "2.5rem" }],
-      xlfooter: ["12rem", { lineHeight: "20rem" }],
+      xlarge: ["5rem", { lineHeight: "6rem" }],
+      large: ["4rem", { lineHeight: "4rem" }],
+      medium: ["3rem", { lineHeight: "3rem" }],
+      small: ["2rem", { lineHeight: "2rem" }],
+      xsmall: ["1.5rem", { lineHeight: "1.5rem" }],
+      xlfooter: ["12rem", { lineHeight: "12rem" }],
     },
 
     fontWeight: {
