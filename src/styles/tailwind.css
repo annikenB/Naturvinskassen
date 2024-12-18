@@ -92,3 +92,12 @@
     }
   }
 }
+@layer components {
+  .navigation {
+    @apply text-navtext;
+    @apply font-regular;
+    @apply font-display;
+    @apply uppercase;
+    @apply text-lilla-950;
+  }
+}

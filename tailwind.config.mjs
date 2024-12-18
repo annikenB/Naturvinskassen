@@ -96,6 +96,7 @@ export default {
       small: ["2rem", { lineHeight: "2rem" }],
       xsmall: ["1rem", { lineHeight: "1.5rem" }],
       xlfooter: ["12rem", { lineHeight: "12rem" }],
+      navtext: ["1.5rem", { lineHeight: "1.5rem" }],
     },
 
     fontWeight: {
