@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/images/logomanlight.webp";
+import Button from "../components/Button.astro";
 ---
 
 <section class="p-6 bg-roed-600 rounded-t-3xl mt-voresl h-full">
@@ -73,8 +74,22 @@ import logo from "../assets/images/logomanlight.webp";
         </li>
 
         <li class="text-gul-50"><a href="/konto">Login på din konto</a></li>
-        <li class="text-gul-50">Tilmeld dig vores nyhedsbrev</li>
-        <li class="text-gul-50">TILFØJ DE KNAPPER HER</li>
+        <li class="text-gul-50">Tilføj dig nyhetsbrev her</li>
+        <li class="text-gul-50">
+          <div class="flex items-center justify-between">
+            <label for="by" class="block mb-1 text-sm"></label>
+            <input
+              type="text"
+              id="by"
+              class="bg-roed-600 w-full border-2 border-gul-50 rounded-card p-3 text-gul-50 placeholder-gul-50"
+              placeholder="Din Email"
+              required
+            />
+            <div class="max-w-xl mx-auto text-center mt-4">
+              <a href="/konto"><Button variant="primary">Indsend</Button></a>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
