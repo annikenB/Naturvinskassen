@@ -139,175 +139,199 @@ import pilhover from "../assets/images/vhover.webp";
       </li>
       <li>
         <a href="#" id="mobileDropdownLink" class="block px-4 py-2">
-          <p class="hover:text-roed-600 navigation">Om abonnementerne</p></a
-        >
+          <div class="flex">
+            <button
+              id="naturvinskassenDropdown"
+              class="flex items-center gap-2 group"
+            >
+              <p class="text-lilla-950 group-hover:text-roed-600 navigation">
+                Om abonnementerne
+              </p>
+              <div class="relative w-6 h-6">
+                <Image
+                  src={pil}
+                  alt="dropdown"
+                  class="inset-0 max-w-5 group-hover:opacity-0 mt-1"
+                />
+                <Image
+                  src={pilhover}
+                  alt="dropdown hover"
+                  class="inset-0 max-w-5 opacity-0 group-hover:opacity-100 mt-1"
+                />
+              </div>
+            </button>
+          </div>
 
-        <div id="mobileDropdownMenu" class="hidden bg-graa-200 rounded-lg">
-          <ul class="space-y-2 py-2 text-sm">
-            <li>
-              <a href="/faq" class="block px-4 py-2">FAQ</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2">Strakslevering</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2">Kontakt</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2">Betingelser</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <a href="/konto" class="block px-4 py-2">
-          <p class="navigation hover:text-roed-600">Login</p>
+          <div id="mobileDropdownMenu" class="hidden bg-graa-200 rounded-lg">
+            <ul class="space-y-2 py-2 text-sm">
+              <li>
+                <a href="/faq" class="block px-4 py-2">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2">Strakslevering</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2">Kontakt</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2">Betingelser</a>
+              </li>
+            </ul>
+          </div>
         </a>
-      </li>
-      <li>
-        <a href="#" id="mobileToggleDrawer" class="block px-4 py-2">
-          <p class="navigation hover:text-roed-600">Kurv</p></a
-        >
+        <li>
+          <a href="/konto" class="block px-4 py-2">
+            <p class="navigation hover:text-roed-600">Login</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="mobileToggleDrawer" class="block px-4 py-2">
+            <p class="navigation hover:text-roed-600">Kurv</p></a
+          >
+        </li>
       </li>
     </ul>
   </div>
-</div>
 
-<div
-  id="drawer"
-  class="fixed top-20 right-0 z-40 w-64 h-screen bg-graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
->
-  <div class="p-4">
-    <p class="">Kurv(0)</p>
+  <div
+    id="drawer"
+    class="fixed top-20 right-0 z-40 w-64 h-screen bg-graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
+  >
+    <div class="p-4">
+      <p class="">Kurv(0)</p>
 
-    <button
-      id="closeDrawer"
-      class="text-lilla-950 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
-    >
-      ×
-    </button>
+      <button
+        id="closeDrawer"
+        class="text-lilla-950 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
+      >
+        ×
+      </button>
+    </div>
+    <ul class="py-4 space-y-2 font-medium">
+      <li>
+        <a href="#" class="flex items-center p-2 rounded-lg group">
+          <h4>Ser ud som at din kurv er tom...</h4>
+        </a>
+      </li>
+      <li>
+        <div class="max-w-xl">
+          <a href="/bestil"
+            ><Button variant="primary">Find dit abonnement</Button></a
+          >
+        </div>
+      </li>
+    </ul>
   </div>
-  <ul class="py-4 space-y-2 font-medium">
-    <li>
-      <a href="#" class="flex items-center p-2 rounded-lg group">
-        <h4>Ser ud som at din kurv er tom...</h4>
-      </a>
-    </li>
-    <li>
-      <div class="max-w-xl">
-        <a href="/bestil"
-          ><Button variant="primary">Find dit abonnement</Button></a
-        >
-      </div>
-    </li>
-  </ul>
-</div>
 
-<div
-  id="loginDrawer"
-  class="fixed top-20 right-0 z-40 w-64 h-screen bg-graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
->
-  <div class="p-4">
-    <h1 class="text-xl font-bold text-center">Hej</h1>
+  <div
+    id="loginDrawer"
+    class="fixed top-20 right-0 z-40 w-64 h-screen bg-graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
+  >
+    <div class="p-4">
+      <h1 class="text-xl font-bold text-center">Hej</h1>
 
-    <form class="max-w-sm mx-auto">
-      <div class="mb-5">
-        <label for="email" class="block mb-2 text-sm font-medium"></label>
-        <input
-          type="email"
-          id="email"
-          class="bg-graa-100 border border-lilla-950 text-sm rounded-lg block w-full p-2.5"
-          placeholder="Din email"
-          required
-        />
-      </div>
-      <div class="mb-5">
-        <label for="password" class="block mb-2 text-sm font-medium"></label>
-        <input
-          type="password"
-          id="password"
-          class="bg-graa-100 border border-lilla-950 text-sm rounded-lg block w-full p-2.5"
-          required
-          placeholder="Adgangskode"
-        />
-      </div>
-      <div class="flex items-start mb-5">
-        <div class="flex items-center h-5">
+      <form class="max-w-sm mx-auto">
+        <div class="mb-5">
+          <label for="email" class="block mb-2 text-sm font-medium"></label>
           <input
-            id="remember"
-            type="checkbox"
-            value=""
-            class="w-4 h-4 border border-lilla-950 rounded bg-gray-50"
+            type="email"
+            id="email"
+            class="bg-graa-100 border border-lilla-950 text-sm rounded-lg block w-full p-2.5"
+            placeholder="Din email"
             required
           />
         </div>
-        <label for="remember" class="ms-2 text-sm font-medium">Husk mig</label>
-      </div>
-      <div class="text-center">
-        <a href="/konto" class="">
-          <Button variant="primary">Log ind</Button>
-        </a>
-      </div>
-    </form>
-    <p>Har du glemt din adgangskode? <p class="underline">Klik her</p></p>
-    <p>Har du ikke en konto? <p class="underline">Tilmeld dig her</p></p>
+        <div class="mb-5">
+          <label for="password" class="block mb-2 text-sm font-medium"></label>
+          <input
+            type="password"
+            id="password"
+            class="bg-graa-100 border border-lilla-950 text-sm rounded-lg block w-full p-2.5"
+            required
+            placeholder="Adgangskode"
+          />
+        </div>
+        <div class="flex items-start mb-5">
+          <div class="flex items-center h-5">
+            <input
+              id="remember"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 border border-lilla-950 rounded bg-gray-50"
+              required
+            />
+          </div>
+          <label for="remember" class="ms-2 text-sm font-medium">Husk mig</label
+          >
+        </div>
+        <div class="text-center">
+          <a href="/konto" class="">
+            <Button variant="primary">Log ind</Button>
+          </a>
+        </div>
+      </form>
+      <p>Har du glemt din adgangskode? <p class="underline">Klik her</p></p>
+      <p>Har du ikke en konto? <p class="underline">Tilmeld dig her</p></p>
+    </div>
+
+    <button
+      id="closeLoginDrawer"
+      class="text-lilla-950 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
+    >
+      ×</button
+    >
+
+    <script>
+      document
+        .getElementById("hamburgerButton")
+        .addEventListener("click", () => {
+          const mobileMenu = document.getElementById("mobileMenu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("mobileDropdownLink")
+        .addEventListener("click", (e) => {
+          const mobileDropdownMenu =
+            document.getElementById("mobileDropdownMenu");
+          mobileDropdownMenu.classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("naturvinskassenDropdown")
+        .addEventListener("click", (e) => {
+          const dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.classList.toggle("hidden");
+        });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleDrawerButton = document.getElementById("toggleDrawer");
+        const toggleLoginButton = document.getElementById("toggleLogin");
+        const closeDrawerButton = document.getElementById("closeDrawer");
+        const closeLoginButton = document.getElementById("closeLoginDrawer");
+        const drawer = document.getElementById("drawer");
+        const loginDrawer = document.getElementById("loginDrawer");
+
+        toggleDrawerButton.addEventListener("click", (e) => {
+          e.preventDefault();
+          drawer.classList.remove("translate-x-full");
+          drawer.classList.add("translate-x-0");
+        });
+
+        toggleLoginButton.addEventListener("click", () => {
+          loginDrawer.classList.remove("translate-x-full");
+          loginDrawer.classList.add("translate-x-0");
+        });
+        closeDrawerButton.addEventListener("click", () => {
+          drawer.classList.add("translate-x-full");
+          drawer.classList.remove("translate-x-0");
+        });
+
+        closeLoginButton.addEventListener("click", () => {
+          loginDrawer.classList.add("translate-x-full");
+          loginDrawer.classList.remove("translate-x-0");
+        });
+      });
+    </script>
   </div>
-
-  <button
-    id="closeLoginDrawer"
-    class="text-lilla-950 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5"
-  >
-    ×</button
-  >
-
-  <script>
-    document.getElementById("hamburgerButton").addEventListener("click", () => {
-      const mobileMenu = document.getElementById("mobileMenu");
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    document
-      .getElementById("mobileDropdownLink")
-      .addEventListener("click", (e) => {
-        const mobileDropdownMenu =
-          document.getElementById("mobileDropdownMenu");
-        mobileDropdownMenu.classList.toggle("hidden");
-      });
-
-    document
-      .getElementById("naturvinskassenDropdown")
-      .addEventListener("click", (e) => {
-        const dropdownMenu = document.getElementById("dropdownMenu");
-        dropdownMenu.classList.toggle("hidden");
-      });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleDrawerButton = document.getElementById("toggleDrawer");
-      const toggleLoginButton = document.getElementById("toggleLogin");
-      const closeDrawerButton = document.getElementById("closeDrawer");
-      const closeLoginButton = document.getElementById("closeLoginDrawer");
-      const drawer = document.getElementById("drawer");
-      const loginDrawer = document.getElementById("loginDrawer");
-
-      toggleDrawerButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        drawer.classList.remove("translate-x-full");
-        drawer.classList.add("translate-x-0");
-      });
-
-      toggleLoginButton.addEventListener("click", () => {
-        loginDrawer.classList.remove("translate-x-full");
-        loginDrawer.classList.add("translate-x-0");
-      });
-      closeDrawerButton.addEventListener("click", () => {
-        drawer.classList.add("translate-x-full");
-        drawer.classList.remove("translate-x-0");
-      });
-
-      closeLoginButton.addEventListener("click", () => {
-        loginDrawer.classList.add("translate-x-full");
-        loginDrawer.classList.remove("translate-x-0");
-      });
-    });
-  </script>
 </div>
