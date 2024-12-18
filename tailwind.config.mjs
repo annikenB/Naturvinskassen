@@ -72,13 +72,6 @@ export default {
         900: "#5B4233",
         950: "#312119",
       },
-      farvenavn: {
-        hvid: "#FCF8DE",
-        blaa: "#B0C6E0",
-        lilla: "#2B042D",
-        roed: "#DB1F2D",
-        lysgraa: "#EBE3D3",
-      },
     },
 
     fontFamily: {
