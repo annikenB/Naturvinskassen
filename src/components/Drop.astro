@@ -3,7 +3,14 @@ import { Image } from "astro:assets";
 import drop from "../assets/images/drop-01.webp";
 ---
 
-<!-- ---
+<div class="flex justify-center">
+  <Image
+    src={drop}
+    alt="drop"
+    class="max-w-voress hidden md:block dropinview"
+  />
+
+  <!-- ---
 import { Image } from "astro:assets";
 import drop from "../assets/images/drop-01.webp";
 ---
@@ -116,3 +123,4 @@ import drop from "../assets/images/drop-01.webp";
     opacity: 1;
   }
 </style> -->
+</div>
