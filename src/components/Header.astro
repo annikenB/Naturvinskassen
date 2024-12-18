@@ -5,12 +5,14 @@ import login from "../assets/images/login.webp";
 import loginHover from "../assets/images/loginred.webp";
 import cart from "../assets/images/cart.webp";
 import cartHover from "../assets/images/cartred.webp";
+import pil from "../assets/images/v.webp";
+import pilhover from "../assets/images/vhover.webp";
 ---
 
-<div class="z-50 bg-gray-100 fixed">
-  <div class="flex justify-between items-center p-2">
+<div class="z-50 bg-gray-100">
+  <div class="flex justify-between items-center p-2 ml-3">
     <a href="/" class="text-lg font-bold">
-      <h3 class="text-lilla-950 hover:text-roed-600">Naturvinkassen</h3></a
+      <h3 class="text-lilla-950 hover:text-roed-600">Naturvinskassen</h3></a
     >
 
     <button
@@ -45,25 +47,28 @@ import cartHover from "../assets/images/cartred.webp";
       >
 
       <div class="relative">
-        <button id="naturvinskassenDropdown" class="">
-          <h4 class="text-lilla-950 hover:text-roed-600">
-            Om abonnementerne
-            <svg
-              class="inline-block w-2 h-2 ml-1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 4 4 4-4"></path>
-            </svg>
-          </h4>
-        </button>
-
+        <div class="flex">
+          <button
+            id="naturvinskassenDropdown"
+            class="flex items-center gap-2 group"
+          >
+            <h4 class="text-lilla-950 group-hover:text-roed-600">
+              Om abonnementerne
+            </h4>
+            <div class="relative w-6 h-6">
+              <Image
+                src={pil}
+                alt="dropdown"
+                class="absolute inset-0 max-w-5 group-hover:opacity-0 mt-1"
+              />
+              <Image
+                src={pilhover}
+                alt="dropdown hover"
+                class="absolute inset-0 max-w-5 opacity-0 group-hover:opacity-100 mt-1"
+              />
+            </div>
+          </button>
+        </div>
         <div
           id="dropdownMenu"
           class="hidden absolute right-0 mt-2 w-48 bg-graa-200 rounded-lg z-40"
@@ -110,7 +115,7 @@ import cartHover from "../assets/images/cartred.webp";
         />
       </a>
 
-      <a href="#" id="toggleDrawer" class="group cursor-pointer inline-block">
+      <a href="/total" id="toggleDrawer" class="group cursor-pointer inline-block">
         <Image
           src={cart}
           alt="Kurv"
