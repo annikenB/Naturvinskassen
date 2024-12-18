@@ -199,7 +199,7 @@ import mellemkasse from "../assets/images/medium.webp";
         </div>
       </div>
       <form>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+        <div class="flex items-center justify-between m-voresxs">
           <div class="w-full">
             <label for="by" class="block mb-1"> </label>
             <input
@@ -210,26 +210,26 @@ import mellemkasse from "../assets/images/medium.webp";
               required
             />
           </div>
-          <div class="w-full">
-            <label for="floating_last_name" class="block dark:text-white mb-1">
-            </label>
-            <div class="max-w-xl">
-              <a href="/bestil"><Button variant="secondary">Indløs</Button></a>
-            </div>
+          <div class="ml-voresl">
+            <a href="/bestil"><Button variant="secondary">Indløs</Button></a>
           </div>
         </div>
       </form>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5">
-        <p>Subtotal</p>
-        <p>450 dkk</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <p>Fragt</p>
-        <p>Gratis</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <p>Total</p>
-        <p>450 dkk</p>
+      <div class="m-voresxs">
+        <div class="flex items-center justify-between mt-4">
+          <span class="">Subtotal</span>
+          <span class="">450 DKK</span>
+        </div>
+
+        <div class="flex items-center justify-between mt-1">
+          <span class="">Fragt</span>
+          <span class="">Gratis</span>
+        </div>
+
+        <div class="flex items-center justify-between mt-4 pt-4">
+          <span class="font-bold">Total</span>
+          <span class="font-bold">450 DKK</span>
+        </div>
       </div>
     </div>
   </section>
