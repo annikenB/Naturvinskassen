@@ -11,6 +11,7 @@ import hand from "../assets/images/spin.webp";
 import bil from "../assets/images/car.webp";
 import sale from "../assets/images/sale.webp";
 import glas from "../assets/images/glass-01.webp";
+import join from "../assets/images/join.webp";
 import kasse from "../assets/images/deliver.webp";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
@@ -32,7 +33,7 @@ import Drop from "../components/Drop.astro";
     <article class="bg-blaa-300 px-margin">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
         <div class="flex justify-center">
-          <Image src={hand} alt="pil" class="" />
+          <Image src={join} alt="vinkasse" class="" />
         </div>
         <div class="flex flex-col justify-center">
           <h2 class="text-center">JOIN THE CLUB!</h2>
@@ -227,6 +228,12 @@ import Drop from "../components/Drop.astro";
       </div>
     </article>
     <Anmeldelser />
+    <section class="px-margin">
+      <div class="ml-voresm">
+        <h4 class="-rotate-12 pb-28">Lyder det som noget for dig?</h4>
+        <Image src={pil2} alt="CTA-effekt" class="max-w-voresm ml-voresl" />
+      </div>
+    </section>
     <SectionCard />
   </section>
 
