@@ -7,10 +7,10 @@ import cart from "../assets/images/cart.webp";
 import cartHover from "../assets/images/cartred.webp";
 ---
 
-<div class="z-50 bg-gray-100">
-  <div class="flex justify-between items-center p-5">
+<div class="z-50 bg-gray-100 fixed">
+  <div class="flex justify-between items-center p-2">
     <a href="/" class="text-lg font-bold">
-      <h4 class="text-lilla-950 hover:text-roed-600">Naturvinkassen</h4></a
+      <h3 class="text-lilla-950 hover:text-roed-600">Naturvinkassen</h3></a
     >
 
     <button
@@ -32,15 +32,22 @@ import cartHover from "../assets/images/cartred.webp";
       </svg>
     </button>
 
-    <div class="space-x-4 flex items-center hidden md:flex">
+    <div class="space-x-8 flex items-center hidden md:flex">
+      
+      <div class="max-w-xl mx-auto">
+        <a href="/bestil"
+          ><Button variant="primary">Join the club!</Button></a
+        >
+      </div>
+      
       <a href="/omos" class="">
-        <h4 class="text-lilla-950 hover:text-roed-600">HVEM ER VI?</h4></a
+        <h4 class="text-lilla-950 hover:text-roed-600">Hvem er vi?</h4></a
       >
 
       <div class="relative">
         <button id="naturvinskassenDropdown" class="">
           <h4 class="text-lilla-950 hover:text-roed-600">
-            OM KASSENE
+            Om abonnementerne
             <svg
               class="inline-block w-2 h-2 ml-1"
               xmlns="http://www.w3.org/2000/svg"
@@ -116,20 +123,20 @@ import cartHover from "../assets/images/cartred.webp";
           class="hidden group-hover:block max-w-voresm scale-50"
         />
       </a>
-      <a href="/bestil">
-        <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-          Bestil
-        </h4></a
-      >
     </div>
   </div>
 
   <div id="mobileMenu" class="md:hidden hidden bg-gray-100 w-full">
     <ul class="space-y-4 py-4">
       <li>
+        <a href="/bestil"
+          ><Button variant="primary">Join the club!</Button></a
+        >
+    </li>
+      <li>
         <a href="/omos" class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
           ><h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-            Om os
+            Hvem er vi?
           </h4></a
         >
       </li>
@@ -140,7 +147,7 @@ import cartHover from "../assets/images/cartred.webp";
           class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
         >
           <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-            Naturvinskassen
+            Om abonnementerne
           </h4></a
         >
 
@@ -185,13 +192,6 @@ import cartHover from "../assets/images/cartred.webp";
         <a href="#" id="mobileToggleDrawer" class="block px-4 py-2">
           <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
             Kurv
-          </h4></a
-        >
-      </li>
-      <li>
-        <a href="/bestil" class="block px-4 py-2">
-          <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-            Bestil
           </h4></a
         >
       </li>
