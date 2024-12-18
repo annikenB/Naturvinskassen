@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-large;
+    @apply text-lillelarge;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
@@ -12,7 +12,7 @@
   }
 
   h2 {
-    @apply text-medium;
+    @apply text-lillemedium;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
@@ -20,38 +20,75 @@
   }
 
   h3 {
-    @apply text-small;
+    @apply text-lillesmall;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
     @apply text-lilla-950;
   }
   h4 {
-    @apply text-xsmall;
+    @apply text-lillexsmall;
     @apply font-regular;
     @apply font-display;
     @apply uppercase;
     @apply text-lilla-950;
   }
-
-  /* h5{
-    @apply xlfooter;
-    @apply font-regular;
-    @apply font-display;
-    @apply uppercase;
-    @apply text-farvenavn-hvid
-  } */
   p {
-    @apply text-base;
+    @apply text-lillebase;
     @apply font-light;
     @apply font-sans;
     @apply text-farvenavn-lilla;
   }
 
   li {
-    @apply text-base;
+    @apply text-lillebase;
     @apply font-light;
     @apply font-sans;
     @apply text-farvenavn-lilla;
+  }
+  @media (min-width: 768px) {
+    h1 {
+      @apply text-large;
+      @apply font-regular;
+      @apply font-display;
+      @apply uppercase;
+      @apply text-lilla-950;
+    }
+
+    h2 {
+      @apply text-medium;
+      @apply font-regular;
+      @apply font-display;
+      @apply uppercase;
+      @apply text-lilla-950;
+    }
+
+    h3 {
+      @apply text-small;
+      @apply font-regular;
+      @apply font-display;
+      @apply uppercase;
+      @apply text-lilla-950;
+    }
+    h4 {
+      @apply text-xsmall;
+      @apply font-regular;
+      @apply font-display;
+      @apply uppercase;
+      @apply text-lilla-950;
+    }
+    p {
+      @apply text-base;
+      @apply font-light;
+      @apply font-sans;
+      @apply text-farvenavn-lilla;
+    }
+
+    li {
+      @apply text-base;
+      @apply font-light;
+      @apply font-sans;
+      @apply text-farvenavn-lilla;
+    }
   }
 }
