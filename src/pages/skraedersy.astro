@@ -3,15 +3,19 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import pil from "../assets/images/v.webp";
 ---
 
 <MainLayout>
   <h1 class="text-center">Skræddersy dit abonnement</h1>
-  <div class="text-center m-voresxs">
-    <p class="font-bold">
-      Vælg
 
-      <a href="/betal" class="font-light">Betal</a>
+  <div class="text-center">
+    <p class="inline-flex items-center my-voress">
+      <a href="/bestil" class="font-bold">Vælg</a>
+
+      <Image src={pil} alt="pil" class="mx-voress w-4 opacity-100 -rotate-90" />
+
+      <a href="/betal" class="font-regular">Betal</a>
     </p>
   </div>
 
