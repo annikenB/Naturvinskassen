@@ -7,6 +7,8 @@ import Button from "../components/Button.astro";
 import fork from "../assets/images/fork.webp";
 import michelin from "../assets/images/michelin.webp";
 import spark from "../assets/images/spark.webp";
+import team from "../assets/images/team.webp";
+import wish from "../assets/images/thinking.webp";
 import SectionCard from "../components/SectionCard.astro";
 ---
 
@@ -34,7 +36,7 @@ import SectionCard from "../components/SectionCard.astro";
           </p>
         </div>
         <div class="flex justify-center">
-          <p>billede her</p>
+          <Image src={team} alt="Team bag Naturvinskassen" class="rounded" />
         </div>
       </div>
     </section>
@@ -43,7 +45,7 @@ import SectionCard from "../components/SectionCard.astro";
       <div class="max-w-7xl mx-auto px-4 py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="flex justify-center">
-            <p>billede her</p>
+            <Image src={wish} alt="Illustratione om ønsker" class="" />
           </div>
           <div class="">
             <h2 class="">Vores ønske</h2>

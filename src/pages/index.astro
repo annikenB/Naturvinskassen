@@ -12,6 +12,7 @@ import bil from "../assets/images/car.webp";
 import sale from "../assets/images/sale.webp";
 import glas from "../assets/images/glass-01.webp";
 import join from "../assets/images/join.webp";
+import wine from "../assets/images/wine.webp";
 import kasse from "../assets/images/deliver.webp";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
@@ -127,28 +128,32 @@ import Drop from "../components/Drop.astro";
     <div class="flex justify-center">
       <Image src={glas} alt="vinglas" class="max-w-44" />
     </div>
-    <article class="px-margin bg-blaa-300">
-      <div class="">
-        <h2 class="text-center py-voresxs">Hvordan fungerer det så?</h2>
+    <article class="px-margin bg-blaa-300 pb-voresxs">
+      <div class="my-voresm">
+        <h2 class="text-center pt-voresm pb-voress">Hvordan fungerer det så?</h2>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pb-voress"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
         >
-          <div class="order-2">
-            <p>bilde her</p>
-          </div>
+        <div class="order-2">
+          <Image
+            src={wine}
+            alt="vin der hældes op i glas"
+            class="rounded max-w-[50%] mx-auto"
+          />
+        </div>
           <div class="order-1">
-            <h4 class="text-center">Dit abonnement</h4>
-            <p>
+            <h4 class="text-center pb-voresxs">Dit abonnement</h4>
+            <p class="pb-voress">
               Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
               direkte til din dør - hver måned. Fælles for alle flaskerne er, at
               det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
               smager, søger, rejser og smager lidt mere. Alt dette, for at nå
               frem til det vi mener er det perfekte resultat.
             </p>
-            <h4 class="text-center pt-voress">
+            <h4 class="text-center pb-voresxs">
               Hvad får du igennem dit abonnement
             </h4>
-            <p class="pb-voresxs">
+            <p>
               Med til hver måneds levering af naturvinskassen, medfølger:
             </p>
             <ul>
