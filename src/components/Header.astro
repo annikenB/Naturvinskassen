@@ -12,7 +12,7 @@ import pilhover from "../assets/images/vhover.webp";
 <div class="z-50 bg-gray-100">
   <div class="flex justify-between items-center p-2 ml-3">
     <a href="/" class="text-lg font-bold">
-      <h3 class="text-lilla-950 hover:text-roed-600">Naturvinskassen</h3></a
+      <h4 class="text-lilla-950 hover:text-roed-600">Naturvinskassen</h4></a
     >
 
     <button
@@ -35,11 +35,8 @@ import pilhover from "../assets/images/vhover.webp";
     </button>
 
     <div class="space-x-8 flex items-center hidden md:flex">
-      
       <div class="max-w-xl mx-auto">
-        <a href="/bestil"
-          ><Button variant="primary">Join the club!</Button></a
-        >
+        <a href="/bestil"><Button variant="primary">Join the club!</Button></a>
       </div>
 
       <div class="relative">
@@ -48,9 +45,9 @@ import pilhover from "../assets/images/vhover.webp";
             id="naturvinskassenDropdown"
             class="flex items-center gap-2 group"
           >
-            <h4 class="text-lilla-950 group-hover:text-roed-600">
+            <p class="text-lilla-950 group-hover:text-roed-600 navigation">
               Om abonnementerne
-            </h4>
+            </p>
             <div class="relative w-6 h-6">
               <Image
                 src={pil}
@@ -69,27 +66,31 @@ import pilhover from "../assets/images/vhover.webp";
           id="dropdownMenu"
           class="hidden absolute right-0 mt-2 w-48 bg-graa-200 rounded-lg z-40"
         >
-          <ul class="py-2 text-gray-700">
+          <ul class="py-2">
             <li>
-              <a href="/faq" class="block px-4 py-2 hover:text-roed-600">FAQ</a>
+              <a
+                href="/faq"
+                class="block px-4 py-2 hover:text-roed-600 navigation">FAQ</a
+              >
             </li>
             <li>
-              <a href="#" class="block px-4 py-2 hover:text-roed-600"
+              <a href="#" class="block px-4 py-2 hover:text-roed-600 navigation"
                 >Strakslevering</a
               >
             </li>
 
             <li>
-              <a href="#" class="block px-4 py-2 hover:text-roed-600">Kontakt</a
+              <a href="#" class="block px-4 py-2 hover:text-roed-600 navigation"
+                >Kontakt</a
               >
             </li>
             <li>
-              <a href="#" class="block px-4 py-2 hover:text-roed-600"
+              <a href="#" class="block px-4 py-2 hover:text-roed-600 navigation"
                 >Betingelser</a
               >
             </li>
             <li>
-              <a href="#" class="block px-4 py-2 hover:text-roed-600"
+              <a href="#" class="block px-4 py-2 hover:text-roed-600 navigation"
                 >Find dit abonnement</a
               >
             </li>
@@ -97,7 +98,9 @@ import pilhover from "../assets/images/vhover.webp";
         </div>
       </div>
       <a href="/omos" class="">
-        <h4 class="text-lilla-950 hover:text-roed-600">Hvem er vi?</h4></a
+        <p class="text-lilla-950 hover:text-roed-600 navigation">
+          Hvem er vi?
+        </p></a
       >
       <a href="#" id="toggleLogin" class="group cursor-pointer inline-block">
         <Image
@@ -113,7 +116,11 @@ import pilhover from "../assets/images/vhover.webp";
         />
       </a>
 
-      <a href="/total" id="toggleDrawer" class="group cursor-pointer inline-block">
+      <a
+        href="/total"
+        id="toggleDrawer"
+        class="group cursor-pointer inline-block"
+      >
         <Image
           src={cart}
           alt="Kurv"
@@ -129,54 +136,37 @@ import pilhover from "../assets/images/vhover.webp";
     </div>
   </div>
 
-  <div id="mobileMenu" class="md:hidden hidden bg-gray-100 w-full">
-    <ul class="space-y-4 py-4">
+  <div id="mobileMenu" class="md:hidden hidden bg-graa-200 w-full">
+    <ul class="space-y-4 py-4 navigation">
       <li>
-        <a href="/bestil"
-          ><Button variant="primary">Join the club!</Button></a
-        >
-    </li>
+        <a href="/bestil"><Button variant="primary">Join the club!</Button></a>
+      </li>
       <li>
-        <a href="/omos" class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
-          ><h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-            Hvem er vi?
-          </h4></a
+        <a href="/omos" class="block px-4 py-2"
+          ><p class="hover:text-roed-600 navigation">Hvem er vi?</p></a
         >
       </li>
       <li>
-        <a
-          href="#"
-          id="mobileDropdownLink"
-          class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
-        >
-          <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-            Om abonnementerne
-          </h4></a
+        <a href="#" id="mobileDropdownLink" class="block px-4 py-2">
+          <p class="hover:text-roed-600 navigation">Om abonnementerne</p></a
         >
 
-        <div
-          id="mobileDropdownMenu"
-          class="hidden bg-farvenavn-lysgraa rounded-lg"
-        >
+        <div id="mobileDropdownMenu" class="hidden bg-graa-200 rounded-lg">
           <ul class="space-y-2 py-2 text-sm">
             <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                >Strakslevering</a
-              >
+              <a href="#" class="block px-4 py-2 navigation">Strakslevering</a>
             </li>
             <li>
-              <a href="/faq" class="block px-4 py-2 hover:bg-gray-100">FAQ</a>
+              <a href="/faq" class="block px-4 py-2 navigation">FAQ</a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kontakt</a>
+              <a href="#" class="block px-4 py-2 navigation">Kontakt</a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                >Betingelser</a
-              >
+              <a href="#" class="block px-4 py-2 navigation">Betingelser</a>
             </li>
             <li>
-              <a href="bestil" class="block px-4 py-2 hover:bg-gray-100"
+              <a href="bestil" class="block px-4 py-2 navigation"
                 >Find dit abonnement</a
               >
             </li>
@@ -184,18 +174,13 @@ import pilhover from "../assets/images/vhover.webp";
         </div>
       </li>
       <li>
-        <a
-          href="/konto"
-          class="block px-4 py-2 text-gray-900 hover:bg-gray-200"
-        >
-          <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">Login</h4>
+        <a href="/konto" class="block px-4 py-2">
+          <p class="navigation hover:text-farvenavn-roed">Login</p>
         </a>
       </li>
       <li>
         <a href="#" id="mobileToggleDrawer" class="block px-4 py-2">
-          <h4 class="text-farvenavn-lilla hover:text-farvenavn-roed">
-            Kurv
-          </h4></a
+          <p class="navigation hover:text-farvenavn-roed">Kurv</p></a
         >
       </li>
     </ul>
@@ -204,10 +189,10 @@ import pilhover from "../assets/images/vhover.webp";
 
 <div
   id="drawer"
-  class="fixed top-20 right-0 z-40 w-64 h-screen bg--graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
+  class="fixed top-20 right-0 z-40 w-64 h-screen bg-graa-200 transform translate-x-full transition-transform duration-300 ease-in-out"
 >
   <div class="p-4">
-    <h5 class="text-base text-lilla-950 font-semibold uppercase">Kurv(0)</h5>
+    <p class="">Kurv(0)</p>
 
     <button
       id="closeDrawer"
@@ -219,7 +204,7 @@ import pilhover from "../assets/images/vhover.webp";
   <ul class="py-4 space-y-2 font-medium">
     <li>
       <a href="#" class="flex items-center p-2 rounded-lg group">
-        <h3>Ser ud som at din kurv er tom...</h3>
+        <h4>Ser ud som at din kurv er tom...</h4>
       </a>
     </li>
     <li>
