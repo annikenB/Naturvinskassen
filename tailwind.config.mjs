@@ -85,7 +85,7 @@ export default {
       lillexlarge: ["3rem", { lineHeight: "3.5rem" }],
       lillelarge: ["2rem", { lineHeight: "2.5rem" }],
       lillemedium: ["1.5rem", { lineHeight: "4rem" }],
-      // lillesmall: ["1rem", { lineHeight: "2.5rem" }],
+      // lillesmall: ["1rem", { lineH eight: "2.5rem" }],
       // lillexsmall: ["1.2rem", { lineHeight: "2.5rem" }],
       lillexlfooter: ["4rem", { lineHeight: "4rem" }],
       base: ["1rem", { lineHeight: "1.5rem" }],
@@ -96,7 +96,7 @@ export default {
       small: ["2rem", { lineHeight: "2rem" }],
       xsmall: ["1rem", { lineHeight: "1.5rem" }],
       xlfooter: ["12rem", { lineHeight: "12rem" }],
-      navtext: ["1.5rem", { lineHeight: "1.5rem" }],
+      navtext: ["1.25rem", { lineHeight: "1.25rem" }],
     },
 
     fontWeight: {
