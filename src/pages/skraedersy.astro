@@ -75,7 +75,7 @@ import { Image } from "astro:assets";
               <input
                 type="text"
                 id="counter-input"
-                value="0"
+                value="1"
                 class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
               />
 
@@ -96,9 +96,32 @@ import { Image } from "astro:assets";
       >
         <span class="text-lg font-medium">Orange</span>
         <div class="flex items-center space-x-2">
-          <button class="px-2 py-1 rounded bg-gray-200">-</button>
-          <span class="text-lg font-medium">2</span>
-          <button class="px-2 py-1 rounded bg-gray-200">+</button>
+          <form class="max-w-xs mx-auto bg-white">
+            <div class="relative flex items-center justify-center space-x-2">
+              <button
+                type="button"
+                id="decrement-button"
+                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+              >
+                &minus;
+              </button>
+
+              <input
+                type="text"
+                id="counter-input"
+                value="1"
+                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+              />
+
+              <button
+                type="button"
+                id="increment-button"
+                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+              >
+                &plus;
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -107,13 +130,32 @@ import { Image } from "astro:assets";
       >
         <span class="text-lg font-medium">Rose</span>
         <div class="flex items-center space-x-2">
-          <button class="px-2 py-1 rounded bg-gray-200 hover:bg-gray-400"
-            >-</button
-          >
-          <span class="text-lg font-medium">0</span>
-          <button class="px-2 py-1 rounded bg-gray-200 hover:bg-gray-400"
-            >+</button
-          >
+          <form class="max-w-xs mx-auto bg-white">
+            <div class="relative flex items-center justify-center space-x-2">
+              <button
+                type="button"
+                id="decrement-button"
+                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+              >
+                &minus;
+              </button>
+
+              <input
+                type="text"
+                id="counter-input"
+                value="0"
+                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+              />
+
+              <button
+                type="button"
+                id="increment-button"
+                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+              >
+                &plus;
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -122,9 +164,32 @@ import { Image } from "astro:assets";
       >
         <span class="text-lg font-medium">Bobler</span>
         <div class="flex items-center space-x-2">
-          <button class="px-2 py-1 rounded bg-gray-200">-</button>
-          <span class="text-lg font-medium">1</span>
-          <button class="px-2 py-1 rounded bg-gray-200">+</button>
+          <form class="max-w-xs mx-auto bg-white">
+            <div class="relative flex items-center justify-center space-x-2">
+              <button
+                type="button"
+                id="decrement-button"
+                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+              >
+                &minus;
+              </button>
+
+              <input
+                type="text"
+                id="counter-input"
+                value="1"
+                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+              />
+
+              <button
+                type="button"
+                id="increment-button"
+                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+              >
+                &plus;
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -133,46 +198,69 @@ import { Image } from "astro:assets";
       >
         <span class="text-lg font-medium">Suprise mig</span>
         <div class="flex items-center space-x-2">
-          <button class="px-2 py-1 rounded bg-gray-200">-</button>
-          <span class="text-lg font-medium">0</span>
-          <button class="px-2 py-1 rounded bg-gray-200">+</button>
+          <form class="max-w-xs mx-auto bg-white">
+            <div class="relative flex items-center justify-center space-x-2">
+              <button
+                type="button"
+                id="decrement-button"
+                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+              >
+                &minus;
+              </button>
+
+              <input
+                type="text"
+                id="counter-input"
+                value="1"
+                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+              />
+
+              <button
+                type="button"
+                id="increment-button"
+                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+              >
+                &plus;
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
+
+      <div class="flex items-center justify-between border-gray-500 mt-6 pt-4">
+        <span class="text-lg m-voresxs font-semibold">Total</span>
+        <span class="text-lg m-voresxs font-semibold">600 DKK</span>
       </div>
     </div>
 
-    <div class="flex items-center justify-between border-gray-500 mt-6 pt-4">
-      <span class="text-lg m-voresxs font-semibold">Total</span>
-      <span class="text-lg m-voresxs font-semibold">600 DKK</span>
+    <div class="flex justify-end mt-voresxs mr-voresl">
+      <a href="/bestil">
+        <Button variant="primary">Betale</Button>
+      </a>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const decrementButton = document.getElementById("decrement-button");
+        const incrementButton = document.getElementById("increment-button");
+        const counterInput = document.getElementById("counter-input");
+
+        decrementButton.addEventListener("click", () => {
+          let currentValue = parseInt(counterInput.value) || 0;
+          if (currentValue > 0) {
+            counterInput.value = currentValue - 1;
+          }
+        });
+
+        incrementButton.addEventListener("click", () => {
+          let currentValue = parseInt(counterInput.value) || 0;
+          counterInput.value = currentValue + 1;
+        });
+
+        counterInput.addEventListener("input", (e) => {
+          e.target.value = e.target.value.replace(/[^0-9]/g, "");
+        });
+      });
+    </script>
   </section>
-
-  <div class="flex justify-end mt-voresxs mr-voresl">
-    <a href="/bestil">
-      <Button variant="primary">Betale</Button>
-    </a>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const decrementButton = document.getElementById("decrement-button");
-      const incrementButton = document.getElementById("increment-button");
-      const counterInput = document.getElementById("counter-input");
-
-      decrementButton.addEventListener("click", () => {
-        let currentValue = parseInt(counterInput.value) || 0;
-        if (currentValue > 0) {
-          counterInput.value = currentValue - 1;
-        }
-      });
-
-      incrementButton.addEventListener("click", () => {
-        let currentValue = parseInt(counterInput.value) || 0;
-        counterInput.value = currentValue + 1;
-      });
-
-      counterInput.addEventListener("input", (e) => {
-        e.target.value = e.target.value.replace(/[^0-9]/g, "");
-      });
-    });
-  </script>
 </MainLayout>
