@@ -37,14 +37,14 @@
     @apply text-lillebase;
     @apply font-light;
     @apply font-sans;
-    @apply text-farvenavn-lilla;
+    @apply text-lilla-950;
   }
 
   li {
     @apply text-lillebase;
     @apply font-light;
     @apply font-sans;
-    @apply text-farvenavn-lilla;
+    @apply text-text-lilla-950;
   }
   @media (min-width: 768px) {
     h1 {
@@ -81,14 +81,14 @@
       @apply text-base;
       @apply font-light;
       @apply font-sans;
-      @apply text-farvenavn-lilla;
+      @apply text-lilla-950;
     }
 
     li {
       @apply text-base;
       @apply font-light;
       @apply font-sans;
-      @apply text-farvenavn-lilla;
+      @apply text-lilla-950;
     }
   }
 }
