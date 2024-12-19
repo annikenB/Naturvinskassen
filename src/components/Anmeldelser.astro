@@ -167,49 +167,59 @@ import star from "../assets/images/star.webp";
       </svg>
     </button>
 
-    <div class="text-center">
+    <div class="text-center hidden md:block">
       <a
         href="https://dk.trustpilot.com/review/naturvinskassen.dk"
         target="_blank"
       >
         <Button variant="secondary">Se alle Trustpilot anmeldelser</Button>
       </a>
+      <div class="text-center md:hidden block">
+        <a
+          href="https://dk.trustpilot.com/review/naturvinskassen.dk"
+          target="_blank"
+        >
+          <Button variant="mobilesecondary"
+            >Se alle Trustpilot anmeldelser</Button
+          >
+        </a>
+      </div>
     </div>
+
+    <script>
+      let currentIndex = 0;
+      const itemsPerView = 4;
+      const carouselItems = document.getElementById("carouselItems");
+      const totalItems = carouselItems.children[0].children.length;
+
+      const prevButton = document.getElementById("prev");
+      const nextButton = document.getElementById("next");
+
+      function updateCarousel() {
+        const offset = (-currentIndex * 100) / itemsPerView;
+        carouselItems.style.transform = `translateX(${offset}%)`;
+      }
+
+      prevButton.addEventListener("click", () => {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateCarousel();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = Math.min(
+          currentIndex + 1,
+          Math.floor(totalItems / itemsPerView) - 1
+        );
+        updateCarousel();
+      });
+
+      updateCarousel();
+    </script>
   </div>
-
-  <script>
-    let currentIndex = 0;
-    const itemsPerView = 4;
-    const carouselItems = document.getElementById("carouselItems");
-    const totalItems = carouselItems.children[0].children.length;
-
-    const prevButton = document.getElementById("prev");
-    const nextButton = document.getElementById("next");
-
-    function updateCarousel() {
-      const offset = (-currentIndex * 100) / itemsPerView;
-      carouselItems.style.transform = `translateX(${offset}%)`;
+  <style>
+    .stjerne {
+      width: auto;
+      height: 30px;
     }
-
-    prevButton.addEventListener("click", () => {
-      currentIndex = Math.max(currentIndex - 1, 0);
-      updateCarousel();
-    });
-
-    nextButton.addEventListener("click", () => {
-      currentIndex = Math.min(
-        currentIndex + 1,
-        Math.floor(totalItems / itemsPerView) - 1
-      );
-      updateCarousel();
-    });
-
-    updateCarousel();
-  </script>
+  </style>
 </section>
-<style>
-  .stjerne {
-    width: auto;
-    height: 30px;
-  }
-</style>

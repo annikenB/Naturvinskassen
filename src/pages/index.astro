@@ -48,7 +48,12 @@ import Drop from "../components/Drop.astro";
               Du kan vælge mellem 2-6 flasker pr/mnd til en pris fra kun 300dkk.
             </p>
           </p>
-          <div class="max-w-xl mx-auto">
+          <div class="max-w-xl mx-auto block md:hidden">
+            <a href="/bestil"
+              ><Button variant="mobileprimary">Find dit abonnement</Button></a
+            >
+          </div>
+          <div class="max-w-xl mx-auto md:block hidden">
             <a href="/bestil"
               ><Button variant="primary">Find dit abonnement</Button></a
             >
