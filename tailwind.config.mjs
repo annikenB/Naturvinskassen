@@ -34,7 +34,7 @@ export default {
         950: "#2B042D",
       },
       blaa: {
-        50: "#F3F7Fb",
+        50: "#F3F7FB",
         100: "#E5EBF4",
         200: "#D0DDED",
         300: "#B0C6E0",
@@ -123,6 +123,7 @@ export default {
         DEFAULT: "1.25rem",
         image: "20px",
         card: "42px",
+        form: "0.5rem",
         none: "0px",
       },
     },
