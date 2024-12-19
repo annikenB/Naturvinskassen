@@ -10,7 +10,7 @@ import kryds from "../assets/images/x.webp";
 </head>
 
 <article
-  id="newsletter-popup"
+  id="plus-popup"
   class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden"
 >
   <div class="absolute inset-0 bg-opacity-50 backdrop-blur-sm z-40 mt-voresm">
@@ -35,19 +35,11 @@ import kryds from "../assets/images/x.webp";
         />
       </button>
 
-      <h2 class="text-center font-bold my-voresxs">JOIN THE CLUB!</h2>
-      <p class="mb-4 text-center text-lg">Spar 10% på din første vinkasse</p>
+      <h2 class="text-center font-bold my-voresxs">Hov, er du over 18 år?</h2>
       <div class="w-full">
-        <label for="by" class="block mb-1 text-sm"> </label>
-        <input
-          type="text"
-          id="by"
-          class="bg-gul-50 w-full border border-lilla-950 rounded-xl p-3"
-          placeholder="Din Email"
-          required
-        />
         <div class="max-w-xl mx-auto text-center mt-4 pb-voresxs">
-          <a href="/"><Button variant="secondary">Tilmeld</Button></a>
+          <a href="/"><Button variant="secondary">Ja</Button></a>
+          <a href="/"><Button variant="secondary">Nej</Button></a>
         </div>
       </div>
     </div>
@@ -55,12 +47,12 @@ import kryds from "../assets/images/x.webp";
 
   <script>
     window.onload = () => {
-      const popup = document.getElementById("newsletter-popup");
+      const popup = document.getElementById("plus-popup");
       const closeButton = document.getElementById("close-popup-btn");
 
       setTimeout(() => {
         popup.classList.remove("hidden");
-      }, 10000);
+      }, 10);
 
       closeButton.addEventListener("click", () => {
         popup.classList.add("hidden");
