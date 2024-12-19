@@ -14,6 +14,7 @@ import glas from "../assets/images/glass-01.webp";
 import join from "../assets/images/join.webp";
 import wine from "../assets/images/wine.webp";
 import kasse from "../assets/images/deliver.webp";
+import star from "../assets/images/star.webp";
 import Card from "../components/Card.astro";
 import Heroindex from "../components/Heroindex.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
@@ -37,14 +38,15 @@ import Drop from "../components/Drop.astro";
           <Image src={join} alt="vinkasse" class="p-10" />
         </div>
         <div class="flex flex-col justify-center p-28">
-          <h2 class="text-center ">JOIN THE CLUB!</h2>
+          <h2 class="text-center">JOIN THE CLUB!</h2>
           <p class="my-voresxs">
             Modtag nøje udvalgte flasker med naturvin hver måned og udbred dine
             smagsoplevelser og viden omkring naturvin. Kom tæt på vinbønderne og
             få et autentisk indblik i den naturlige vinverden, måned efter
             måned.
-            <p class="pb-voresxs">Du kan vælge mellem 2-6 flasker pr/mnd til en pris fra kun
-              300dkk.</p>
+            <p class="pb-voresxs">
+              Du kan vælge mellem 2-6 flasker pr/mnd til en pris fra kun 300dkk.
+            </p>
           </p>
           <div class="max-w-xl mx-auto">
             <a href="/bestil"
@@ -61,13 +63,6 @@ import Drop from "../components/Drop.astro";
       </div>
       <h1 class="text-center pb-voresl">Hvorfor naturvinskassen?</h1>
       <Drop />
-      <!-- <div class="flex justify-center">
-        <Image
-          src={drop}
-          alt="drop"
-          class="max-w-voress hidden md:block dropinview"
-        />
-      </div> -->
       <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
         <div class="mx-auto">
           <div class="flex justify-center">
@@ -79,9 +74,29 @@ import Drop from "../components/Drop.astro";
             selvfølgelig til alle afkroge af Danmark, uden undtagelser.
           </p>
           <ul class="mx-voress">
-            <li>Ingen binding.</li>
-            <li>Sæt på pause når du ønsker.</li>
-            <li>Fri fragt.</li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />
+              Ingen binding
+            </li>
+
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />Sæt på pause når du ønsker.
+            </li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />Fri fragt.
+            </li>
           </ul>
         </div>
         <div></div>
@@ -99,9 +114,27 @@ import Drop from "../components/Drop.astro";
             fordele:
           </p>
           <ul class="mx-voress">
-            <li>10% på køb over 500 i butik/webshop.</li>
-            <li>Månedlige medlemstilbud.</li>
-            <li>Forkøbsret på allokationsvine.</li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />10% på køb over 500 i butik/webshop.
+            </li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />Månedlige medlemstilbud.
+            </li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />Forkøbsret på allokationsvine.
+            </li>
           </ul>
         </div>
       </div>
@@ -117,9 +150,27 @@ import Drop from "../components/Drop.astro";
             se frem til:
           </p>
           <ul class="mx-voress">
-            <li>Nøje udvalgte vine, hver måned</li>
-            <li>Udførlige vinbeskrivelser</li>
-            <li>Jubilæumsgaver</li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />Nøje udvalgte vine, hver måned
+            </li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />Udførlige vinbeskrivelser
+            </li>
+            <li>
+              <img
+                class="star"
+                src="src/assets/images/star.webp"
+                alt="Punktikon"
+              />Jubilæumsgaver
+            </li>
           </ul>
         </div>
         <div></div>
@@ -130,17 +181,17 @@ import Drop from "../components/Drop.astro";
     </div>
     <article class="px-margin bg-blaa-300 pb-voresxs">
       <div class="my-voresm">
-        <h2 class="text-center pt-voresm pb-voress">Hvordan fungerer det så?</h2>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
-        >
-        <div class="order-2">
-          <Image
-            src={wine}
-            alt="vin der hældes op i glas"
-            class="rounded max-w-[50%] mx-auto"
-          />
-        </div>
+        <h2 class="text-center pt-voresm pb-voress">
+          Hvordan fungerer det så?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="order-2">
+            <Image
+              src={wine}
+              alt="vin der hældes op i glas"
+              class="rounded max-w-[50%] mx-auto"
+            />
+          </div>
           <div class="order-1">
             <h4 class="text-center pb-voresxs">Dit abonnement</h4>
             <p class="pb-voress">
@@ -153,25 +204,61 @@ import Drop from "../components/Drop.astro";
             <h4 class="text-center pb-voresxs">
               Hvad får du igennem dit abonnement
             </h4>
-            <p>
-              Med til hver måneds levering af naturvinskassen, medfølger:
-            </p>
+            <p>Med til hver måneds levering af naturvinskassen, medfølger:</p>
             <ul>
               <li>
+                <img
+                  class="star"
+                  src="src/assets/images/star.webp"
+                  alt="Punktikon"
+                />
                 Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
                 direkte til din dør
               </li>
-              <li>Fri fragt og ingen betingelser</li>
-              <li>Beskrivelser af vinene og personerne bag produktionen</li>
               <li>
-                Skræddersyede “kassetilbud”, kun til medlemmer af
-                Naturvinskassen
+                <img
+                  class="star"
+                  src="src/assets/images/star.webp"
+                  alt="Punktikon"
+                />Fri fragt og ingen betingelser
               </li>
-              <li>Jubilæumsgaver</li>
               <li>
+                <img
+                  class="star"
+                  src="src/assets/images/star.webp"
+                  alt="Punktikon"
+                />Beskrivelser af vinene og personerne bag produktionen
+              </li>
+              <li>
+                <img
+                  class="star"
+                  src="src/assets/images/star.webp"
+                  alt="Punktikon"
+                />
+                Skræddersyede “kassetilbud”, kun til medlemmer af Naturvinskassen
+              </li>
+              <li>
+                <img
+                  class="star"
+                  src="src/assets/images/star.webp"
+                  alt="Punktikon"
+                />Jubilæumsgaver
+              </li>
+              <li>
+                <img
+                  class="star"
+                  src="src/assets/images/star.webp"
+                  alt="Punktikon"
+                />
                 Rabat på køb af vin i vores fysiske butik og på vores webshop
               </li>
-              <li>Forkøbsret på allokationsvine</li>
+              <li>
+                <img
+                  class="star"
+                  src="src/assets/images/star.webp"
+                  alt="Punktikon"
+                />Forkøbsret på allokationsvine
+              </li>
             </ul>
           </div>
         </div>
@@ -258,4 +345,26 @@ import Drop from "../components/Drop.astro";
 
   // });
 </script> -->
+  <script>
+    import { inView, animate } from "motion";
+    inView(".star", () => {
+      animate(
+        ".star",
+        { rotate: 360 },
+        { duration: 5, repeat: Infinity, easing: "linear" }
+      );
+    });
+  </script>
 </MainLayout>
+<style>
+  .star {
+    width: auto;
+    height: 20px;
+    padding-right: 1rem;
+    transform-origin: 50% 50%;
+  }
+  li {
+    display: flex;
+    align-items: center;
+  }
+</style>
