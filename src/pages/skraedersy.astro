@@ -233,23 +233,21 @@ import sy from "../assets/images/sy.webp";
       </div>
 
       <div class="flex items-center justify-between border-gray-500 mt-6 pt-4">
-        <span class="text-lg m-voresxs font-semibold">Total</span>
-        <span class="text-lg m-voresxs font-semibold">600 DKK</span>
+        <span class="navigation">Total</span>
+        <span class="navigation">600 DKK</span>
       </div>
     </div>
-
-    <div class="flex justify-end mt-voresxs mr-voresl md:block hidden">
-      <a href="/bestil">
-        <Button variant="primary">Betale</Button>
-      </a>
-    </div>
-
-    <div class="flex justify-end mt-voresxs mr-voresl md:hidden block">
-      <a href="/bestil">
-        <Button variant="mobileprimary">Betale</Button>
-      </a>
-    </div>
   </section>
+  <div class="mt-voresxs mx-auto md:block hidden">
+    <a href="/bestil">
+      <Button variant="primary">Tilføj til kurv</Button>
+    </a>
+  </div>
+  <div class="mt-voresxs mx-auto md:hidden block">
+    <a href="/bestil">
+      <Button variant="mobileprimary">Tilføj til kurv</Button>
+    </a>
+  </div>
   <div class="mx-auto max-w-44 mt-voress">
     <Image src={sy} alt="mand der syr" class="" />
   </div>
