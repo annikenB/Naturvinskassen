@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import logomanlight from "../assets/images/logomanlight.webp";
 import Button from "../components/Button.astro";
+import kryds from "../assets/images/x.webp";
 ---
 
 <head>
@@ -10,22 +11,31 @@ import Button from "../components/Button.astro";
 
 <article
   id="newsletter-popup"
-  class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden "
+  class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden m-10 border-2 border-lilla-950"
 >
   <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40">
   </div>
 
   <div
-    class="bg-gul-100 p-0 max-w-4xl mx-auto relative flex rounded-3xl overflow-hidden z-50"
+    class="bg-gul-100 p-0 max-w-5xl mx-auto relative flex rounded-3xl overflow-hidden z-50 border-2"
   >
     <div class="flex-1 flex justify-center items-center bg-blaa-300">
       <Image src={logomanlight} alt="pil" class="w-32 h-38" />
     </div>
 
     <div class="flex-1 flex flex-col justify-center items-center bg-gul-50 p-6">
-      <button class="absolute top-4 right-4 text-2xl" id="close-popup-btn">
-        ×
-      </button>
+      <button
+        id="close-popup-btn"
+        class="text-lilla-950 bg-transparent rounded-lg text-sm absolute top-2.5 right-2.5 group"
+        >
+        <Image
+        src={kryds}
+        alt="luk"
+        class="w-6 opacity-100 group-hover:opacity-0 transition-opacity"
+        />
+        </button>
+
+      
       <h2 class="text-center text-2xl font-bold my-voress">JOIN THE CLUB!</h2>
       <p class="my-4 text-center text-lg">Spar 10% på din første vinkasse</p>
       <div class="w-full">
@@ -37,8 +47,8 @@ import Button from "../components/Button.astro";
           placeholder="Din Email"
           required
         />
-        <div class="max-w-xl mx-auto text-center mt-4">
-          <a href="/"><Button variant="secondary">Bliv medlem</Button></a>
+        <div class="max-w-xl mx-auto text-center mt-4 pb-voresxs">
+          <a href="/"><Button variant="secondary">Tilmeld</Button></a>
         </div>
       </div>
     </div>
