@@ -75,7 +75,7 @@ import Drop from "../components/Drop.astro";
 
 
 
- <!-- Sektion, hvor billedet skal vises -->
+ <!-- dråbe start-->
  <div id="special-section" class=" relative">
 
 
@@ -119,44 +119,57 @@ import Drop from "../components/Drop.astro";
     </div>
     <div></div>
   </div>
-  <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-    <div></div>
-    <div>
-    </div>
-      <div class="flex justify-center">
-        <Image src={sale} alt="mand med skilt" class="w-44 pb-voress" />
+    <div class="md:grid grid-cols-2 mb-voresm mx-margin">
+      <div></div>
+      <div>
+        <div class="mb-voresm md:mb-0 px-4">
+          <div>
+            <div class="flex justify-center mb-voress">
+              <Image
+                src={sale}
+                alt="mand med skilt"
+                class="w-44 pb-voress"
+              />
+            </div>
+            <h3 class="text-center">Medlemsfordele</h3>
+            <p class="py-voresxs">
+              Vi sætter rigtig stor pris på vores medlemmer. Det synes vi skal
+              værdsættes. Derfor kan man som abonnent, se frem til følgende
+              fordele:
+            </p>
+            <ul class="mx-voress">
+              <li class="py-1">
+                <img
+                  class="star"
+                  src="/src/assets/images/star.webp"
+                  alt="Punktikon"
+                />10% på køb over 500 i butik/webshop.
+              </li>
+              <li class="py-1">
+                <img
+                  class="star"
+                  src="/src/assets/images/star.webp"
+                  alt="Punktikon"
+                />Månedlige medlemstilbud.
+              </li>
+              <li class="py-1">
+                <img
+                  class="star"
+                  src="/src/assets/images/star.webp"
+                  alt="Punktikon"
+                />Forkøbsret på allokationsvine.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <h3 class="text-center">Medlemsfordele</h3>
-      <p class="py-voresxs mx-voress">
-        Vi sætter rigtig stor pris på vores medlemmer. Det synes vi skal
-        værdsættes. Derfor kan man som abonnent, se frem til følgende
-        fordele:
-      </p>
-      <ul class="mx-voress">
-        <li class="py-1">
-          <img
-            class="star"
-            src="/src/assets/images/star.webp"
-            alt="Punktikon"
-          />10% på køb over 500 i butik/webshop.
-        </li>
-        <li class="py-1">
-          <img
-            class="star"
-            src="/src/assets/images/star.webp"
-            alt="Punktikon"
-          />Månedlige medlemstilbud.
-        </li>
-        <li class="py-1">
-          <img
-            class="star"
-            src="/src/assets/images/star.webp"
-            alt="Punktikon"
-          />Forkøbsret på allokationsvine.
-        </li>
-      </ul>
     </div>
-  </div>
+    
+
+
+
+  </div> 
+  <!-- dråbe slut over-->
   <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
     <div>
       <div class="flex justify-center">
