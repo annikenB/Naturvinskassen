@@ -345,12 +345,23 @@ import Drop from "../components/Drop.astro";
 
   // });
 </script> -->
+  <script>
+    import { inView, animate } from "motion";
+    inView(".star", () => {
+      animate(
+        ".star",
+        { rotate: 360 },
+        { duration: 5, repeat: Infinity, easing: "linear" }
+      );
+    });
+  </script>
 </MainLayout>
 <style>
   .star {
     width: auto;
     height: 20px;
     padding-right: 1rem;
+    transform-origin: 50% 50%;
   }
   li {
     display: flex;
