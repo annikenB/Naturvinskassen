@@ -35,7 +35,7 @@ import Drop from "../components/Drop.astro";
     <article class="bg-blaa-300 px-margin">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
         <div class="flex justify-center">
-          <Image src={join} alt="vinkasse" class="p-10 ml-voress" />
+          <Image src={join} alt="vinkasse" class="p-10" />
         </div>
         <div class="flex flex-col justify-center p-28">
           <h2 class="text-center">JOIN THE CLUB!</h2>
@@ -115,229 +115,224 @@ import Drop from "../components/Drop.astro";
           </p>
           <ul class="mx-voress">
             <li class="py-1">
-              <li class="py-1">
-                <img
-                  class="star"
-                  src="/src/assets/images/star.webp"
-                  alt="Punktikon"
-                />10% på køb over 500 DKK i butik/webshop.
-              </li>
-              <li class="py-1">
-                <img
-                  class="star"
-                  src="/src/assets/images/star.webp"
-                  alt="Punktikon"
-                />Månedlige medlemstilbud.
-              </li>
-              <li class="py-1">
-                <img
-                  class="star"
-                  src="/src/assets/images/star.webp"
-                  alt="Punktikon"
-                />Forkøbsret på allokationsvine.
-              </li>
+              <img
+                class="star"
+                src="/src/assets/images/star.webp"
+                alt="Punktikon"
+              />10% på køb over 500 i butik/webshop.
+            </li>
+            <li class="py-1">
+              <img
+                class="star"
+                src="/src/assets/images/star.webp"
+                alt="Punktikon"
+              />Månedlige medlemstilbud.
+            </li>
+            <li class="py-1">
+              <img
+                class="star"
+                src="/src/assets/images/star.webp"
+                alt="Punktikon"
+              />Forkøbsret på allokationsvine.
             </li>
           </ul>
         </div>
-        <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-          <div>
-            <div class="flex justify-center">
-              <Image src={kasse} alt="kasse med vin" class="w-64 pb-voress" />
-            </div>
-            <h3 class="text-center">Fra os til jer</h3>
-            <p class="py-voresxs mx-voress">
-              Vores vurdering er, at desto flere goder der er ved et abonnement,
-              desto sjovere er det at være med. Derfor kan man som abonnent,
-              også se frem til:
-            </p>
-            <ul class="mx-voress">
-              <li class="py-1">
-                <img
-                  class="star"
-                  src="/src/assets/images/star.webp"
-                  alt="Punktikon"
-                />Nøje udvalgte vine, hver måned
-              </li>
-              <li class="py-1">
-                <img
-                  class="star"
-                  src="/src/assets/images/star.webp"
-                  alt="Punktikon"
-                />Udførlige vinbeskrivelser
-              </li>
-              <li class="py-1">
-                <img
-                  class="star"
-                  src="/src/assets/images/star.webp"
-                  alt="Punktikon"
-                />Jubilæumsgaver
-              </li>
-            </ul>
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div>
+          <div class="flex justify-center">
+            <Image src={kasse} alt="kasse med vin" class="w-64 pb-voress" />
           </div>
-          <div></div>
+          <h3 class="text-center">Fra os til jer</h3>
+          <p class="py-voresxs mx-voress">
+            Vores vurdering er, at desto flere goder der er ved et abonnement,
+            desto sjovere er det at være med. Derfor kan man som abonnent, også
+            se frem til:
+          </p>
+          <ul class="mx-voress">
+            <li class="py-1">
+              <img
+                class="star"
+                src="/src/assets/images/star.webp"
+                alt="Punktikon"
+              />Nøje udvalgte vine, hver måned
+            </li>
+            <li class="py-1">
+              <img
+                class="star"
+                src="/src/assets/images/star.webp"
+                alt="Punktikon"
+              />Udførlige vinbeskrivelser
+            </li>
+            <li class="py-1">
+              <img
+                class="star"
+                src="/src/assets/images/star.webp"
+                alt="Punktikon"
+              />Jubilæumsgaver
+            </li>
+          </ul>
+        </div>
+        <div></div>
+      </div>
+    </article>
+    <div class="flex justify-center">
+      <Image src={glas} alt="vinglas" class="max-w-44" />
+    </div>
+    <article class="px-margin bg-blaa-300 pb-voresxs">
+      <div class="my-voresm">
+        <h2 class="text-center pt-voresm pb-voress">
+          Hvordan fungerer det så?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="order-2">
+            <Image
+              src={wine}
+              alt="vin der hældes op i glas"
+              class="rounded max-w-[50%] mx-auto"
+            />
+          </div>
+          <div class="order-1">
+            <h4 class="text-center pb-voresxs">Dit abonnement</h4>
+            <p class="pb-voress">
+              Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
+              direkte til din dør - hver måned. Fælles for alle flaskerne er, at
+              det er nogle vine og nogle vinbønder, som vi har meget kært. Vi
+              smager, søger, rejser og smager lidt mere. Alt dette, for at nå
+              frem til det vi mener er det perfekte resultat.
+            </p>
+            <h4 class="text-center pb-voresxs">
+              Hvad får du igennem dit abonnement
+            </h4>
+            <p>Med til hver måneds levering af naturvinskassen, medfølger:</p>
+            <nav>
+              <ul>
+                <li class="py-1">
+                  <img
+                    class="star"
+                    src="/src/assets/images/star.webp"
+                    alt="Punktikon"
+                  />
+                  Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
+                  direkte til din dør
+                </li>
+                <li class="py-1">
+                  <img
+                    class="star"
+                    src="/src/assets/images/star.webp"
+                    alt="Punktikon"
+                  />Fri fragt og ingen betingelser
+                </li>
+                <li class="py-1">
+                  <img
+                    class="star"
+                    src="/src/assets/images/star.webp"
+                    alt="Punktikon"
+                  />Beskrivelser af vinene og personerne bag produktionen
+                </li>
+                <li class="py-1">
+                  <img
+                    class="star"
+                    src="/src/assets/images/star.webp"
+                    alt="Punktikon"
+                  />
+                  Skræddersyede “kassetilbud”, kun til medlemmer af Naturvinskassen
+                </li>
+                <li class="py-1">
+                  <img
+                    class="star"
+                    src="/src/assets/images/star.webp"
+                    alt="Punktikon"
+                  />Jubilæumsgaver
+                </li>
+                <li class="py-1">
+                  <img
+                    class="star"
+                    src="/src/assets/images/star.webp"
+                    alt="Punktikon"
+                  />
+                  Rabat på køb af vin i vores fysiske butik og på vores webshop
+                </li>
+                <li class="py-2">
+                  <img
+                    class="star"
+                    src="/src/assets/images/star.webp"
+                    alt="Punktikon"
+                  />Forkøbsret på allokationsvine
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-      <div class="flex justify-center">
-        <Image src={glas} alt="vinglas" class="max-w-44" />
-      </div>
-      <article class="px-margin bg-blaa-300 pb-voresxs">
-        <div class="my-voresm">
-          <h2 class="text-center pt-voresm pb-voress">
-            Hvordan fungerer det så?
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div class="order-2">
-              <Image
-                src={wine}
-                alt="vin der hældes op i glas"
-                class="rounded max-w-[50%] mx-auto"
-              />
-            </div>
-            <div class="order-1">
-              <h4 class="text-center pb-voresxs">Dit abonnement</h4>
-              <p class="pb-voress">
-                Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
-                direkte til din dør - hver måned. Fælles for alle flaskerne er,
-                at det er nogle vine og nogle vinbønder, som vi har meget kært.
-                Vi smager, søger, rejser og smager lidt mere. Alt dette, for at
-                nå frem til det vi mener er det perfekte resultat.
-              </p>
-              <h4 class="text-center pb-voresxs">
-                Hvad får du igennem dit abonnement
-              </h4>
-              <p>Med til hver måneds levering af naturvinskassen, medfølger:</p>
-              <nav>
-                <ul>
-                  <li class="py-1">
-                    <img
-                      class="star"
-                      src="/src/assets/images/star.webp"
-                      alt="Punktikon"
-                    />
-                    Uforglemmeligt gode vine, håndplukkede af os bag Naturvinskassen
-                    direkte til din dør
-                  </li>
-                  <li class="py-1">
-                    <img
-                      class="star"
-                      src="/src/assets/images/star.webp"
-                      alt="Punktikon"
-                    />Fri fragt og ingen betingelser
-                  </li>
-                  <li class="py-1">
-                    <img
-                      class="star"
-                      src="/src/assets/images/star.webp"
-                      alt="Punktikon"
-                    />Beskrivelser af vinene og personerne bag produktionen
-                  </li>
-                  <li class="py-1">
-                    <img
-                      class="star"
-                      src="/src/assets/images/star.webp"
-                      alt="Punktikon"
-                    />
-                    Skræddersyede “kassetilbud”, kun til medlemmer af Naturvinskassen
-                  </li>
-                  <li class="py-1">
-                    <img
-                      class="star"
-                      src="/src/assets/images/star.webp"
-                      alt="Punktikon"
-                    />Jubilæumsgaver
-                  </li>
-                  <li class="py-1">
-                    <img
-                      class="star"
-                      src="/src/assets/images/star.webp"
-                      alt="Punktikon"
-                    />
-                    Rabat på køb af vin i vores fysiske butik og på vores webshop
-                  </li>
-                  <li class="py-2">
-                    <img
-                      class="star"
-                      src="/src/assets/images/star.webp"
-                      alt="Punktikon"
-                    />Forkøbsret på allokationsvine
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="px-margin pb-voress">
-        <h2 class="text-center py-voress">Hvad er naturvin egentlig?</h2>
-        <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-          <div></div>
-          <div>
-            <div class="flex justify-center">
-              <Image
-                src={gift}
-                alt="giftflaske"
-                class="max-w-voresl pb-voress"
-              />
-            </div>
-            <h3 class="text-center">Ingen syntetiske stoffer</h3>
-            <p class="py-voresxs">
-              Naturvin laves med minimal intervention og uden syntetiske
-              stoffer, modsat konventionel vin. Dette giver en mere rustik og
-              naturlig karakter til vinen. Konventionel vin bruger kemiske
-              hjælpemidler og tilsætningsstoffer for at sikre en ensartet og
-              forudsigelig smag. Altså er naturvin uden manipulation
-            </p>
-          </div>
-        </div>
-        <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-          <div>
-            <div class="flex justify-center">
-              <Image src={bobler} alt="vin" class="max-w-voresm pb-voress" />
-            </div>
-            <h3 class="text-center">Giver Sprælske tendenser</h3>
-            <p class="py-voresxs">
-              Når vin forbliver vin, og ikke et produkt af tilsætningsstoffer og
-              andet gift, kan der opstå magiske tilstande. Vinen er et resultat
-              af naturen og den naturlige udvikling. Den kan give anledning til
-              sprælske tendenser, men bestemt også anledning til elegance,
-              renhed og kompleksitet. Det er vin der giver stof til eftertanke,
-              tid til eftertænksomhed, og dansetrin du ikke havde den fjerneste
-              idé om, at du havde.
-            </p>
-          </div>
-          <div></div>
-        </div>
-        <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
-          <div></div>
-          <div>
-            <div class="flex justify-center">
-              <Image src={hand} alt="vinglas" class="max-w-44 pb-voress" />
-            </div>
-            <h3 class="text-center">Vinen bliver levende</h3>
-            <p class="py-voresxs">
-              Fællesnævneren for alt den vin vi arbejder med, er først og
-              fremmest at det skal smage godt! Ligeså vigtigt er det, at det er
-              lavet med så lidt intervention og tilsætnin som muligt. Faktisk
-              endda helst helt uden! Det er vigtigt for os, at vinen taler for
-              sig selv, og dermed ikke bakkes op af et væld af
-              tilsætningsstoffer. På den måde bliver vinen levende, personlig og
-              ærlig. Det synes vi, er enormt afgørende.
-            </p>
-          </div>
-        </div>
-      </article>
-      <Anmeldelser />
-      <section class="px-margin">
-        <div class="ml-voresm">
-          <h4 class="-rotate-12 pb-28">Lyder det som noget for dig?</h4>
-          <Image src={pil2} alt="CTA-effekt" class="max-w-voresm ml-voresl" />
-        </div>
-      </section>
-      <SectionCard />
     </article>
 
-    <!-- <script>
+    <article class="px-margin pb-voress">
+      <h2 class="text-center py-voress">Hvad er naturvin egentlig?</h2>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div></div>
+        <div>
+          <div class="flex justify-center">
+            <Image src={gift} alt="giftflaske" class="max-w-voresl pb-voress" />
+          </div>
+          <h3 class="text-center">Ingen syntetiske stoffer</h3>
+          <p class="py-voresxs">
+            Naturvin laves med minimal intervention og uden syntetiske stoffer,
+            modsat konventionel vin. Dette giver en mere rustik og naturlig
+            karakter til vinen. Konventionel vin bruger kemiske hjælpemidler og
+            tilsætningsstoffer for at sikre en ensartet og forudsigelig smag.
+            Altså er naturvin uden manipulation
+          </p>
+        </div>
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div>
+          <div class="flex justify-center">
+            <Image src={bobler} alt="vin" class="max-w-voresm pb-voress" />
+          </div>
+          <h3 class="text-center">Giver Sprælske tendenser</h3>
+          <p class="py-voresxs">
+            Når vin forbliver vin, og ikke et produkt af tilsætningsstoffer og
+            andet gift, kan der opstå magiske tilstande. Vinen er et resultat af
+            naturen og den naturlige udvikling. Den kan give anledning til
+            sprælske tendenser, men bestemt også anledning til elegance, renhed
+            og kompleksitet. Det er vin der giver stof til eftertanke, tid til
+            eftertænksomhed, og dansetrin du ikke havde den fjerneste idé om, at
+            du havde.
+          </p>
+        </div>
+        <div></div>
+      </div>
+      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+        <div></div>
+        <div>
+          <div class="flex justify-center">
+            <Image src={hand} alt="vinglas" class="max-w-44 pb-voress" />
+          </div>
+          <h3 class="text-center">Vinen bliver levende</h3>
+          <p class="py-voresxs">
+            Fællesnævneren for alt den vin vi arbejder med, er først og fremmest
+            at det skal smage godt! Ligeså vigtigt er det, at det er lavet med
+            så lidt intervention og tilsætnin som muligt. Faktisk endda helst
+            helt uden! Det er vigtigt for os, at vinen taler for sig selv, og
+            dermed ikke bakkes op af et væld af tilsætningsstoffer. På den måde
+            bliver vinen levende, personlig og ærlig. Det synes vi, er enormt
+            afgørende.
+          </p>
+        </div>
+      </div>
+    </article>
+    <Anmeldelser />
+    <section class="px-margin">
+      <div class="ml-voresm">
+        <h4 class="-rotate-12 pb-28">Lyder det som noget for dig?</h4>
+        <Image src={pil2} alt="CTA-effekt" class="max-w-voresm ml-voresl" />
+      </div>
+    </section>
+    <SectionCard />
+  </section>
+
+  <!-- <script>
   import { inView, scroll } from "motion";
 
   inView(".dropinview", ({ target, inView }) => {
@@ -352,16 +347,15 @@ import Drop from "../components/Drop.astro";
 
   // });
 </script> -->
-  </section>
-  <style>
-    .star {
-      width: auto;
-      height: 20px;
-      padding-right: 1rem;
-    }
-    li {
-      display: flex;
-      align-items: center;
-    }
-  </style>
 </MainLayout>
+<style>
+  .star {
+    width: auto;
+    height: 20px;
+    padding-right: 1rem;
+  }
+  li {
+    display: flex;
+    align-items: center;
+  }
+</style>
