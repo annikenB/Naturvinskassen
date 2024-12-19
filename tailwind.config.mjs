@@ -118,7 +118,7 @@ export default {
         voresxs: "24px",
         voress: "44px",
         voresm: "68px",
-        voresml: "85px",
+        voresml: "110px",
         voresl: "116px",
       },
       borderRadius: {
