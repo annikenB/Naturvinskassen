@@ -249,33 +249,31 @@ import sy from "../assets/images/sy.webp";
         <Button variant="mobileprimary">Betale</Button>
       </a>
     </div>
-    <section>
-      <div>
-        <Image src={sy} alt="mand der syr" class="" />
-      </div>
-    </section>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const decrementButton = document.getElementById("decrement-button");
-        const incrementButton = document.getElementById("increment-button");
-        const counterInput = document.getElementById("counter-input");
-
-        decrementButton.addEventListener("click", () => {
-          let currentValue = parseInt(counterInput.value) || 0;
-          if (currentValue > 0) {
-            counterInput.value = currentValue - 1;
-          }
-        });
-
-        incrementButton.addEventListener("click", () => {
-          let currentValue = parseInt(counterInput.value) || 0;
-          counterInput.value = currentValue + 1;
-        });
-
-        counterInput.addEventListener("input", (e) => {
-          e.target.value = e.target.value.replace(/[^0-9]/g, "");
-        });
-      });
-    </script>
   </section>
+  <div class="mb:mx-margin mx-mobilemargin">
+    <Image src={sy} alt="mand der syr" class="" />
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const decrementButton = document.getElementById("decrement-button");
+      const incrementButton = document.getElementById("increment-button");
+      const counterInput = document.getElementById("counter-input");
+
+      decrementButton.addEventListener("click", () => {
+        let currentValue = parseInt(counterInput.value) || 0;
+        if (currentValue > 0) {
+          counterInput.value = currentValue - 1;
+        }
+      });
+
+      incrementButton.addEventListener("click", () => {
+        let currentValue = parseInt(counterInput.value) || 0;
+        counterInput.value = currentValue + 1;
+      });
+
+      counterInput.addEventListener("input", (e) => {
+        e.target.value = e.target.value.replace(/[^0-9]/g, "");
+      });
+    });
+  </script>
 </MainLayout>
