@@ -1,9 +1,11 @@
 ---
 import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import star from "../assets/images/star.webp";
 ---
 
 <section class="relative w-full pb-voresm mx-auto bg-blaa-300">
-  <h2 class="text-center text-2xl font-bold text-white pt-voresm">Anmeldelser</h2>
+  <h2 class="text-center pt-voresm">Anmeldelser</h2>
 
   <div class="relative w-full overflow-hidden">
     <div
@@ -11,92 +13,126 @@ import Button from "../components/Button.astro";
       class="flex transition-transform duration-700 ease-in-out gap-8"
     >
       <div class="flex gap-6 w-max">
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80 ml-voresm">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★★</h4>
+        <div class="flex flex-col rounded-form p-8 w-80 ml-voresm">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">NEMT OG GODT</h4>
+          <h4 class="mb-4">NEMT OG GODT</h4>
 
-          <p class="text-gray-600 text-sm">
+          <p class="">
             Vi har brugt Naturvinskassen gennem flere år og elsker det hver
             gang.
           </p>
         </div>
 
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★★</h4>
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">VI ELSKER DET!</h4>
+          <h4 class="mb-4">VI ELSKER DET!</h4>
 
-          <p class="text-gray-600 text-sm">
-            Mega god vin og rigtig god service!
-          </p>
+          <p class="">Mega god vin og rigtig god service!</p>
         </div>
 
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★☆</h4>
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">RIGTIG GOD VIN</h4>
+          <h4 class="mb-4">RIGTIG GOD VIN</h4>
 
-          <p class="text-gray-600 text-sm">
-            Vi får altid mange forskellige interessante naturvine!
-          </p>
+          <p class="">Vi får altid mange forskellige interessante naturvine!</p>
         </div>
 
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★★</h4>
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">GLÆDER OS HVER GANG</h4>
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
 
-          <p class="text-gray-600 text-sm">
-            Vi ser alltid frem til vores levering.
-          </p>
+          <p class="">Vi ser alltid frem til vores levering.</p>
         </div>
 
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★☆</h4>
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">GLÆDER OS HVER GANG</h4>
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
 
-          <p class="text-gray-600 text-sm">
-            Vi ser alltid frem til vores levering.
-          </p>
+          <p class="">Vi ser alltid frem til vores levering.</p>
         </div>
 
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★★</h4>
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">GLÆDER OS HVER GANG</h4>
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
 
-          <p class="text-gray-600 text-sm">
-            Vi ser alltid frem til vores levering.
-          </p>
+          <p class="">Vi ser alltid frem til vores levering.</p>
         </div>
 
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★★</h4>
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">GLÆDER OS HVER GANG</h4>
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
 
-          <p class="text-gray-600 text-sm">
-            Vi ser alltid frem til vores levering.
-          </p>
+          <p class="">Vi ser alltid frem til vores levering.</p>
         </div>
 
-        <div class="flex flex-col bg-white rounded-lg p-8 w-80">
-          <h4 class="text-yellow-500 font-bold text-2xl mb-4">★★★★★</h4>
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
 
-          <h4 class="text-xl font-bold mb-4">GLÆDER OS HVER GANG</h4>
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
 
-          <p class="text-gray-600 text-sm">
-            Vi ser alltid frem til vores levering.
-          </p>
+          <p class="">Vi ser alltid frem til vores levering.</p>
         </div>
       </div>
     </div>
 
     <button
       id="prev"
-      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white text-black p-3 rounded-full cursor-pointer hover:bg-gray-200"
+      class="absolute top-1/2 left-2 transform -translate-y-1/2 p-3 rounded-full"
     >
       <svg
         class="w-6 h-6"
@@ -114,7 +150,7 @@ import Button from "../components/Button.astro";
     </button>
     <button
       id="next"
-      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white text-black p-3 rounded-full cursor-pointer hover:bg-gray-200"
+      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white text-black p-3 rounded-full"
     >
       <svg
         class="w-6 h-6"
@@ -171,3 +207,9 @@ import Button from "../components/Button.astro";
     updateCarousel();
   </script>
 </section>
+<style>
+  .stjerne {
+    width: auto;
+    height: 30px;
+  }
+</style>
