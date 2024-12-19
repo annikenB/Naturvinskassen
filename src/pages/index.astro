@@ -70,9 +70,144 @@ import Drop from "../components/Drop.astro";
         <Image src={spilling} alt="mand der spiller vin" class="max-w-voresl" />
       </div>
       <h1 class="text-center pb-voresl">Hvorfor naturvinskassen?</h1>
-      <Drop />
+      <!-- <Drop /> -->
 
-      <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+
+
+
+ <!-- Sektion, hvor billedet skal vises -->
+ <div id="special-section" class=" relative">
+
+
+
+
+  <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+    <div class="mx-auto">
+      <div class="flex justify-center">
+        <Image src={bil} alt="bil" class="w-64 pb-voress" />
+      </div>
+      <h3 class="text-center">Fri levering & ingen binding</h3>
+      <p class="py-voresxs mx-voress">
+        Naturvin leveret til dig, fragtfrit hver måned! Vi leverer
+        selvfølgelig til alle afkroge af Danmark, uden undtagelser.
+      </p>
+      <ul class="mx-voress">
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />
+          Ingen binding
+        </li>
+
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />Sæt på pause når du ønsker.
+        </li>
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />Fri fragt.
+        </li>
+      </ul>
+    </div>
+    <div></div>
+  </div>
+  <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+    <div></div>
+    <div>
+      <div class="flex justify-center">
+        <Image src={sale} alt="mand med skilt" class="w-44 pb-voress" />
+      </div>
+      <h3 class="text-center">Medlemsfordele</h3>
+      <p class="py-voresxs mx-voress">
+        Vi sætter rigtig stor pris på vores medlemmer. Det synes vi skal
+        værdsættes. Derfor kan man som abonnent, se frem til følgende
+        fordele:
+      </p>
+      <ul class="mx-voress">
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />10% på køb over 500 i butik/webshop.
+        </li>
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />Månedlige medlemstilbud.
+        </li>
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />Forkøbsret på allokationsvine.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
+    <div>
+      <div class="flex justify-center">
+        <Image src={kasse} alt="kasse med vin" class="w-64 pb-voress" />
+      </div>
+      <h3 class="text-center">Fra os til jer</h3>
+      <p class="py-voresxs mx-voress">
+        Vores vurdering er, at desto flere goder der er ved et abonnement,
+        desto sjovere er det at være med. Derfor kan man som abonnent, også
+        se frem til:
+      </p>
+      <ul class="mx-voress">
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />Nøje udvalgte vine, hver måned
+        </li>
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />Udførlige vinbeskrivelser
+        </li>
+        <li class="py-1">
+          <img
+            class="star"
+            src="/src/assets/images/star.webp"
+            alt="Punktikon"
+          />Jubilæumsgaver
+        </li>
+      </ul>
+    </div>
+    <div></div>
+  </div>
+
+
+  
+</div>
+
+<!-- Fast centreret billede -->
+<a id="fixedImage" class="fixed inset-0 flex items-center justify-center top-[60%]">
+  <Image src={drop} alt="dråbe" class="w-14 h-auto bottom-4" />
+</a>
+
+
+
+
+
+      <!-- <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
         <div class="mx-auto">
           <div class="flex justify-center">
             <Image src={bil} alt="bil" class="w-64 pb-voress" />
@@ -183,7 +318,10 @@ import Drop from "../components/Drop.astro";
           </ul>
         </div>
         <div></div>
-      </div>
+      </div> -->
+
+
+      
     </article>
     <div class="flex justify-center">
       <Image src={glas} alt="vinglas" class="max-w-44" />
@@ -198,7 +336,7 @@ import Drop from "../components/Drop.astro";
             <Image
               src={wine}
               alt="vin der hældes op i glas"
-              class="rounded max-w-[60%] mx-auto"
+              class="rounded max-w-[55%] mx-auto"
             />
           </div>
           <div class="order-1 px-voresxs">
@@ -340,6 +478,26 @@ import Drop from "../components/Drop.astro";
     </section>
     <SectionCard />
   </section>
+
+
+
+  <script>
+    const fixedImage = document.getElementById('fixedImage');
+    const section = document.getElementById('special-section');
+
+    // Tjekker sektionens position, mens brugeren scroller
+    window.addEventListener('scroll', () => {
+      const sectionRect = section.getBoundingClientRect();
+
+      // Hvis sektionen er synlig på skærmen, vis billedet
+      if (sectionRect.top <= window.innerHeight && sectionRect.bottom >= 0) {
+        fixedImage.style.display = 'flex'; // Viser billedet
+      } else {
+        fixedImage.style.display = 'none'; // Skjuler billedet
+      }
+    });
+  </script>
+
 
   <!-- <script>
   import { inView, scroll } from "motion";
