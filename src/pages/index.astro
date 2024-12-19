@@ -13,6 +13,7 @@ import sale from "../assets/images/sale.webp";
 import glas from "../assets/images/glass-01.webp";
 import join from "../assets/images/join.webp";
 import wine from "../assets/images/wine.webp";
+import lillepil from "../assets/images/v.webp";
 import kasse from "../assets/images/deliver.webp";
 import star from "../assets/images/star.webp";
 import Card from "../components/Card.astro";
@@ -23,7 +24,9 @@ import NyhetsbrevPopup from "../components/NyhetsbrevPopup.astro";
 import SectionCard from "../components/SectionCard.astro";
 import Drop from "../components/Drop.astro";
 ---
-
+<a href="#top" class="fixed bottom-4 right-4">
+  <Image src={lillepil} alt="til toppen" class="w-10 h-8 hover:opacity-100 transition-opacity rotate-180 opacity-50" />
+</a>
 <NyhetsbrevPopup />
 
 <MainLayout title="NATURVINSKASSEN">
@@ -68,6 +71,7 @@ import Drop from "../components/Drop.astro";
       </div>
       <h1 class="text-center pb-voresl">Hvorfor naturvinskassen?</h1>
       <Drop />
+
       <div class="md:grid grid-cols-2 mb-voresm md:mb-0">
         <div class="mx-auto">
           <div class="flex justify-center">
@@ -194,10 +198,10 @@ import Drop from "../components/Drop.astro";
             <Image
               src={wine}
               alt="vin der hældes op i glas"
-              class="rounded max-w-[50%] mx-auto"
+              class="rounded max-w-[60%] mx-auto"
             />
           </div>
-          <div class="order-1">
+          <div class="order-1 px-voresxs">
             <h4 class="text-center pb-voresxs">Dit abonnement</h4>
             <p class="pb-voress">
               Som medlem, vil du hver måned modtage et nøje udvalg af naturvin
@@ -315,7 +319,7 @@ import Drop from "../components/Drop.astro";
             <Image src={hand} alt="vinglas" class="max-w-44 pb-voress" />
           </div>
           <h3 class="text-center">Vinen bliver levende</h3>
-          <p class="py-voresxs">
+          <p class="pt-voresxs pb-voresl">
             Fællesnævneren for alt den vin vi arbejder med, er først og fremmest
             at det skal smage godt! Ligeså vigtigt er det, at det er lavet med
             så lidt intervention og tilsætnin som muligt. Faktisk endda helst
