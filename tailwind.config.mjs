@@ -61,7 +61,7 @@ export default {
       },
       graa: {
         50: "#F9F7F3",
-        100: "#F2eEDE2",
+        100: "#F2EEDE2",
         200: "#EBE3D3",
         300: "#D3C09E",
         400: "#C0A277",
@@ -110,25 +110,6 @@ export default {
       DEFAULT: "2px",
       mobile: "1px",
     },
-
-    /* Borders - borderstørrelser herunder */
-    // borderWidth: {
-    //     DEFAULT: '1px',
-    //     0: '0px',
-    //     2: '2px',
-    // },
-
-    /* Border radius størrelser herunder */
-    // borderRadius: {
-    //     DEFAULT: '1.25rem',
-    //     none: '0px',
-    // },
-
-    /* Border radius størrelser herunder */
-    // borderRadius: {
-    //     DEFAULT: '1.25rem',
-    //     none: '0px',
-    // },
 
     extend: {
       spacing: {
