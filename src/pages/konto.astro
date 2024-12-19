@@ -9,7 +9,7 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Din konto">
-  <h1 class="text-center py-voresl">Administerér dit abonnement</h1>
+  <h1 class="text-center">Administerér dit abonnement</h1>
 
   <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 m-margin">
     <div>
@@ -23,174 +23,174 @@ import Button from "../components/Button.astro";
           <p class="text-lg leading-relaxed mt-voresxs">3 Flasker pr. måned</p>
         </div>
       </div>
-      <div class="max-w-4xl mx-auto my-8 p-voresm bg-blaa-300 rounded-card">
-        <h2 class="text-center mb-voresxs">Administerer</h2>
-        <div class="space-y-4">
-          <div class="faq-item">
-            <button
-              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
-              id="faq1Button"
-            >
-              Administrer betalingsmåde
-              <div class="relative w-4 h-4 ml-voresl">
-                <Image
-                  src={pil}
-                  alt="pil"
-                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
-                />
+    </div>
+    <div class="max-w-4xl mx-auto my-8 p-voresm bg-blaa-300 rounded-card">
+      <h2 class="text-center mb-voresxs">Administerer</h2>
+      <div class="space-y-4">
+        <div class="faq-item">
+          <button
+            class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+            id="faq1Button"
+          >
+            Administrer betalingsmåde
+            <div class="relative w-4 h-4 ml-voresl">
+              <Image
+                src={pil}
+                alt="pil"
+                class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+              />
 
-                <Image
-                  src={pilhover}
-                  alt="pil hover"
-                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
-                />
-              </div>
-            </button>
-            <div id="faq1Answer" class="faq-answer hidden px-4 py-2">
-              <p>skift kort her.</p>
+              <Image
+                src={pilhover}
+                alt="pil hover"
+                class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+              />
             </div>
+          </button>
+          <div id="faq1Answer" class="faq-answer hidden px-4 py-2">
+            <p>skift kort her.</p>
           </div>
+        </div>
 
-          <div class="faq-item border-t border-b-1 border-lilla-950">
-            <button
-              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
-              id="faq2Button"
-            >
-              Skift abonnement
-              <div class="relative w-4 h-4 ml-voresl">
-                <Image
-                  src={pil}
-                  alt="pil"
-                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
-                />
-                <Image
-                  src={pilhover}
-                  alt="pil hover"
-                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
-                />
-              </div>
-            </button>
-            <div id="faq2Answer" class="faq-answer hidden py-2">
-              <p>Se andre abonnement her</p>
+        <div class="faq-item border-t border-b-1 border-lilla-950">
+          <button
+            class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+            id="faq2Button"
+          >
+            Skift abonnement
+            <div class="relative w-4 h-4 ml-voresl">
+              <Image
+                src={pil}
+                alt="pil"
+                class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+              />
+              <Image
+                src={pilhover}
+                alt="pil hover"
+                class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+              />
             </div>
+          </button>
+          <div id="faq2Answer" class="faq-answer hidden py-2">
+            <p>Se andre abonnement her</p>
           </div>
-          <div class="faq-item border-t border-b-1 border-lilla-950">
-            <button
-              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
-              id="faq3Button"
-            >
-              Administrer adresse
-              <div class="relative w-4 h-4 ml-voresl">
-                <Image
-                  src={pil}
-                  alt="pil"
-                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
-                />
-                <Image
-                  src={pilhover}
-                  alt="pil hover"
-                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
-                />
-              </div>
-            </button>
-            <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
-              <p>Ændre her.</p>
+        </div>
+        <div class="faq-item border-t border-b-1 border-lilla-950">
+          <button
+            class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+            id="faq3Button"
+          >
+            Administrer adresse
+            <div class="relative w-4 h-4 ml-voresl">
+              <Image
+                src={pil}
+                alt="pil"
+                class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+              />
+              <Image
+                src={pilhover}
+                alt="pil hover"
+                class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+              />
             </div>
+          </button>
+          <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
+            <p>Ændre her.</p>
           </div>
+        </div>
 
-          <div class="faq-item border-t border-b-1 border-lilla-950">
-            <button
-              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
-              id="faq4Button"
-            >
-              Tilføj et abonnement
-              <div class="relative w-4 h-4 ml-voresl">
-                <Image
-                  src={pil}
-                  alt="pil"
-                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
-                />
-                <Image
-                  src={pilhover}
-                  alt="pil hover"
-                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
-                />
-              </div>
-            </button>
-            <div id="faq4Answer" class="faq-answer hidden px-4 py-2">
-              <p>Ændre dit abonnement her.</p>
+        <div class="faq-item border-t border-b-1 border-lilla-950">
+          <button
+            class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+            id="faq4Button"
+          >
+            Tilføj et abonnement
+            <div class="relative w-4 h-4 ml-voresl">
+              <Image
+                src={pil}
+                alt="pil"
+                class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+              />
+              <Image
+                src={pilhover}
+                alt="pil hover"
+                class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+              />
             </div>
+          </button>
+          <div id="faq4Answer" class="faq-answer hidden px-4 py-2">
+            <p>Ændre dit abonnement her.</p>
           </div>
-          <div class="faq-item border-t border-b-1 border-lilla-950">
-            <button
-              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
-              id="faq5Button"
-            >
-              Sæt abonnement på pause
-              <div class="relative w-4 h-4 ml-voresl">
-                <Image
-                  src={pil}
-                  alt="pil"
-                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
-                />
-                <Image
-                  src={pilhover}
-                  alt="pil hover"
-                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
-                />
-              </div>
-            </button>
-            <div id="faq5Answer" class="faq-answer hidden px-4 py-2">
-              <p>Sæt det på pause her!</p>
+        </div>
+        <div class="faq-item border-t border-b-1 border-lilla-950">
+          <button
+            class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+            id="faq5Button"
+          >
+            Sæt abonnement på pause
+            <div class="relative w-4 h-4 ml-voresl">
+              <Image
+                src={pil}
+                alt="pil"
+                class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+              />
+              <Image
+                src={pilhover}
+                alt="pil hover"
+                class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+              />
             </div>
+          </button>
+          <div id="faq5Answer" class="faq-answer hidden px-4 py-2">
+            <p>Sæt det på pause her!</p>
           </div>
+        </div>
 
-          <div class="faq-item border-t border-b-1 border-lilla-950">
-            <button
-              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
-              id="faq6Button"
-            >
-              Afmeld
-              <div class="relative w-4 h-4 ml-voresl">
-                <Image
-                  src={pil}
-                  alt="pil"
-                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
-                />
-                <Image
-                  src={pilhover}
-                  alt="pil hover"
-                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
-                />
-              </div>
-            </button>
-            <div id="faq6Answer" class="faq-answer hidden px-4 py-2">
-              <p class="max-w-xs">Afmeld dig her</p>
+        <div class="faq-item border-t border-b-1 border-lilla-950">
+          <button
+            class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+            id="faq6Button"
+          >
+            Afmeld
+            <div class="relative w-4 h-4 ml-voresl">
+              <Image
+                src={pil}
+                alt="pil"
+                class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+              />
+              <Image
+                src={pilhover}
+                alt="pil hover"
+                class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+              />
             </div>
+          </button>
+          <div id="faq6Answer" class="faq-answer hidden px-4 py-2">
+            <p class="max-w-xs">Afmeld dig her</p>
           </div>
         </div>
       </div>
-
-      <script type="module" client:load>
-        function toggleAnswer(buttonId, answerId) {
-          const button = document.getElementById(buttonId);
-          const answer = document.getElementById(answerId);
-          const arrow = button.querySelector(".faq-arrow");
-
-          answer.classList.toggle("hidden");
-          arrow.innerHTML = answer.classList.contains("hidden")
-            ? "&#9660;"
-            : "&#9650;";
-        }
-
-        for (let i = 1; i <= 11; i++) {
-          const buttonId = `faq${i}Button`;
-          const answerId = `faq${i}Answer`;
-          document.getElementById(buttonId).addEventListener("click", () => {
-            toggleAnswer(buttonId, answerId);
-          });
-        }
-      </script>
     </div>
+
+    <script type="module" client:load>
+      function toggleAnswer(buttonId, answerId) {
+        const button = document.getElementById(buttonId);
+        const answer = document.getElementById(answerId);
+        const arrow = button.querySelector(".faq-arrow");
+
+        answer.classList.toggle("hidden");
+        arrow.innerHTML = answer.classList.contains("hidden")
+          ? "&#9660;"
+          : "&#9650;";
+      }
+
+      for (let i = 1; i <= 11; i++) {
+        const buttonId = `faq${i}Button`;
+        const answerId = `faq${i}Answer`;
+        document.getElementById(buttonId).addEventListener("click", () => {
+          toggleAnswer(buttonId, answerId);
+        });
+      }
+    </script>
   </section>
 </MainLayout>
