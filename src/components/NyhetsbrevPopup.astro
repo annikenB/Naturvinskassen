@@ -11,13 +11,13 @@ import kryds from "../assets/images/x.webp";
 
 <article
   id="newsletter-popup"
-  class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden border-2 border-lilla-950"
+  class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden"
 >
   <div class="absolute inset-0 bg-opacity-50 backdrop-blur-sm z-40 mt-voresm">
   </div>
 
   <div
-    class="bg-gul-100 p-0 max-w-5xl mx-auto relative flex rounded-3xl overflow-hidden z-50 border-2"
+    class="bg-gul-100 p-0 max-w-5xl mx-auto relative flex rounded-3xl overflow-hidden z-50 border border-lilla-950"
   >
     <div class="flex-1 flex justify-center items-center bg-blaa-300">
       <Image src={logomanlight} alt="pil" class="w-32 h-38" />
@@ -27,15 +27,14 @@ import kryds from "../assets/images/x.webp";
       <button
         id="close-popup-btn"
         class="text-lilla-950 bg-transparent rounded-lg text-sm absolute top-2.5 right-2.5 group"
-        >
+      >
         <Image
-        src={kryds}
-        alt="luk"
-        class="w-6 opacity-100 group-hover:opacity-0 transition-opacity"
+          src={kryds}
+          alt="luk"
+          class="w-6 opacity-100 group-hover:opacity-0 transition-opacity"
         />
-        </button>
+      </button>
 
-      
       <h2 class="text-center text-2xl font-bold my-voress">JOIN THE CLUB!</h2>
       <p class="my-4 text-center text-lg">Spar 10% på din første vinkasse</p>
       <div class="w-full">
