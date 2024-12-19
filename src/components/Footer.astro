@@ -1,34 +1,35 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/images/logomanlight.webp";
+import logofooter from "../assets/images/logofooter.webp";
 import Button from "../components/Button.astro";
 ---
 
-<section class="p-6 bg-roed-600 rounded-t-3xl mt-voresl h-full">
+<section class="px-voress bg-roed-600 rounded-t-3xl mt-voresl h-full">
   <section class="md:grid grid-cols-4 justify-between gap-4">
     <nav>
       <h3 class="mt-voresxs text-gul-50 mb-voresxs">Kontakt</h3>
       <ul>
-        <li class="text-gul-50">Borggade 16, 8000 Aarhus C</li>
-        <li class="text-gul-50">+45 40 38 40 12</li>
-        <li class="text-gul-50">
+        <li class="text-gul-50 pb-2">Borggade 16, 8000 Aarhus C</li>
+        <li class="text-gul-50 pb-2">+45 40 38 40 12</li>
+        <li class="text-gul-50 hover:font-semibold pb-2">
           <a href="mailto:info@reduktivt.com">info@reduktivt.com</a>
         </li>
-        <li class="text-gul-50">CVR: 3984978</li>
-        <li class="text-gul-50">Coptright 2024© by TK Webbureau</li>
-        <li class="text-gul-50"><a href="/faq">FAQ</a></li>
+        <li class="text-gul-50 pb-2">CVR: 3984978</li>
+        <li class="text-gul-50 pb-2">Coptright 2024© by TK Webbureau</li>
+        <li class="text-gul-50 hover:font-semibold pb-2"><a href="/faq">FAQ</a></li>
       </ul>
     </nav>
 
     <nav>
       <h3 class="mt-voresxs text-gul-50 mb-voresxs text-gul-50">Formalitet</h3>
       <ul>
-        <li class="text-gul-50">Vi spørger om ID før køb</li>
-        <li class="text-gul-50">Privatpolitik</li>
-        <li class="text-gul-50">Handelsbetingelser</li>
-        <li class="text-gul-50">Abonnementsbetingelser</li>
-        <li class="text-gul-50">Artikler</li>
-        <li class="text-gul-50">Betalingsmuligheder</li>
+        <li class="text-gul-50 hover:font-semibold pb-2">Vi spørger om ID før køb</li>
+        <li class="text-gul-50 hover:font-semibold pb-2">Privatpolitik</li>
+        <li class="text-gul-50 hover:font-semibold pb-2">Handelsbetingelser</li>
+        <li class="text-gul-50 hover:font-semibold pb-2">Abonnementsbetingelser</li>
+        <li class="text-gul-50 hover:font-semibold pb-2">Artikler</li>
+        <li class="text-gul-50 hover:font-semibold pb-2">Betalingsmuligheder</li>
       </ul>
     </nav>
 
@@ -71,8 +72,8 @@ import Button from "../components/Button.astro";
           </a>
         </li>
 
-        <li class="text-gul-50"><a href="/konto">Login på din konto</a></li>
-        <li class="text-gul-50">Tilføj dig nyhetsbrev her</li>
+        <li class="text-gul-50 hover:font-semibold"><a href="/konto">Login på din konto</a></li>
+        <li class="text-gul-50 ">Tilmeld dig nyhedsbrev her!</li>
         <li class="text-gul-50">
           <div class="flex items-center justify-between">
             <label for="by" class="block mb-1 text-sm"></label>
@@ -92,13 +93,11 @@ import Button from "../components/Button.astro";
     </nav>
 
     <nav>
-      <Image src={logo} alt="pil" class="max-w-voresl mx-auto" />
+      <Image src={logo} alt="pil" class="max-w-voresl mx-auto mt-voress" />
     </nav>
   </section>
 
   <section class="text-center mt-voress">
-    <h1 class="text-lillexlfooter md:text-xlfooter text-gul-50">
-      Naturvinskassen
-    </h1>
+    <Image src={logofooter} alt="logo" class="" />
   </section>
 </section>
