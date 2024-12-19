@@ -82,7 +82,7 @@ export default {
     fontSize: {
       lillebase: ["1rem", { lineHeight: "1.5rem" }],
       lilleherotext: ["3.2rem", { lineHeight: "4rem" }],
-      lillexlarge: ["3rem", { lineHeight: "3.5rem" }],
+      lillexlarge: ["2.5rem", { lineHeight: "3.5rem" }],
       lillelarge: ["2rem", { lineHeight: "2.5rem" }],
       lillemedium: ["1.5rem", { lineHeight: "4rem" }],
       // lillesmall: ["1rem", { lineH eight: "2.5rem" }],
@@ -114,9 +114,11 @@ export default {
     extend: {
       spacing: {
         margin: "105px",
+        mobilemargin: "36px",
         voresxs: "24px",
         voress: "44px",
         voresm: "68px",
+        voresml: "110px",
         voresl: "116px",
       },
       borderRadius: {

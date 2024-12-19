@@ -6,6 +6,7 @@ const {
   quantity = 1,
   price = "100,00",
   buttonLabel = "Legg i handlekurv",
+  href=""
 } = Astro.props;
 
 const cardStyling = "";
@@ -42,8 +43,8 @@ const buttonStyling = "";
     </a>
   </div>
   <div class="max-w-xl hidden md:block">
-    <a href="#">
-      <Button variant="primary">Vælg</Button>
+    <a href={href}>
+      link
     </a>
   </div>
 </div>
