@@ -19,224 +19,234 @@ import sy from "../assets/images/sy.webp";
       <a href="/betal" class="font-regular">Betal</a>
     </p>
   </div>
+  <section class="grid gris-cols-2">
+    <article class="p-4 mx-margin w-[120] bg-blaa-300 rounded-card">
+      <div></div>
+      <div class="p-4">
+        <h3 class="text-center">Din kasse Lige som du kan lide det</h3>
+        <p class="p-voresxs text-center">
+          Tilføj de typer af naturvin som du ønsker i dit månedlige abonnement.
+          Du vil modtage kassen pr. d. første hver måned. - Naturvin lige til
+          døre!
+        </p>
+      </div>
 
-  <section class="p-4 mx-margin w-[120] bg-blaa-300 rounded-card">
-    <div class="p-4">
-      <h3 class="text-center">Din kasse Lige som du kan lide det</h3>
-      <p class="p-voresxs text-center">
-        Tilføj de typer af naturvin som du ønsker i dit månedlige abonnement. Du
-        vil modtage kassen pr. d. første hver måned. - Naturvin lige til døre!
-      </p>
-    </div>
+      <div class="m-voresxs">
+        <div class="flex items-center justify-between py-2">
+          <span class="text-lg font-medium">Hvid</span>
+          <div class="flex items-center space-x-2">
+            <form class="max-w-xs mx-auto bg-white">
+              <div class="relative flex items-center justify-center space-x-2">
+                <button
+                  type="button"
+                  id="decrement-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+                >
+                  &minus;
+                </button>
 
-    <div class="m-voresxs">
-      <div class="flex items-center justify-between py-2">
-        <span class="text-lg font-medium">Hvid</span>
-        <div class="flex items-center space-x-2">
-          <form class="max-w-xs mx-auto bg-white">
-            <div class="relative flex items-center justify-center space-x-2">
-              <button
-                type="button"
-                id="decrement-button"
-                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
-              >
-                &minus;
-              </button>
+                <input
+                  type="text"
+                  id="counter-input"
+                  value="0"
+                  class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+                />
 
-              <input
-                type="text"
-                id="counter-input"
-                value="0"
-                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
-              />
+                <button
+                  type="button"
+                  id="increment-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+                >
+                  &plus;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
 
-              <button
-                type="button"
-                id="increment-button"
-                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
-              >
-                &plus;
-              </button>
-            </div>
-          </form>
+        <div
+          class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
+        >
+          <span class="text-lg font-medium">Rød</span>
+          <div class="flex items-center space-x-2">
+            <form class="max-w-xs mx-auto bg-white">
+              <div class="relative flex items-center justify-center space-x-2">
+                <button
+                  type="button"
+                  id="decrement-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+                >
+                  &minus;
+                </button>
+
+                <input
+                  type="text"
+                  id="counter-input"
+                  value="1"
+                  class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+                />
+
+                <button
+                  type="button"
+                  id="increment-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+                >
+                  &plus;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
+        >
+          <span class="text-lg font-medium">Orange</span>
+          <div class="flex items-center space-x-2">
+            <form class="max-w-xs mx-auto bg-white">
+              <div class="relative flex items-center justify-center space-x-2">
+                <button
+                  type="button"
+                  id="decrement-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+                >
+                  &minus;
+                </button>
+
+                <input
+                  type="text"
+                  id="counter-input"
+                  value="1"
+                  class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+                />
+
+                <button
+                  type="button"
+                  id="increment-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+                >
+                  &plus;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
+        >
+          <span class="text-lg font-medium">Rose</span>
+          <div class="flex items-center space-x-2">
+            <form class="max-w-xs mx-auto bg-white">
+              <div class="relative flex items-center justify-center space-x-2">
+                <button
+                  type="button"
+                  id="decrement-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+                >
+                  &minus;
+                </button>
+
+                <input
+                  type="text"
+                  id="counter-input"
+                  value="0"
+                  class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+                />
+
+                <button
+                  type="button"
+                  id="increment-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+                >
+                  &plus;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
+        >
+          <span class="text-lg font-medium">Bobler</span>
+          <div class="flex items-center space-x-2">
+            <form class="max-w-xs mx-auto bg-white">
+              <div class="relative flex items-center justify-center space-x-2">
+                <button
+                  type="button"
+                  id="decrement-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+                >
+                  &minus;
+                </button>
+
+                <input
+                  type="text"
+                  id="counter-input"
+                  value="1"
+                  class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+                />
+
+                <button
+                  type="button"
+                  id="increment-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+                >
+                  &plus;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
+        >
+          <span class="text-lg font-medium">Suprise mig</span>
+          <div class="flex items-center space-x-2">
+            <form class="max-w-xs mx-auto bg-white">
+              <div class="relative flex items-center justify-center space-x-2">
+                <button
+                  type="button"
+                  id="decrement-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
+                >
+                  &minus;
+                </button>
+
+                <input
+                  type="text"
+                  id="counter-input"
+                  value="1"
+                  class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
+                />
+
+                <button
+                  type="button"
+                  id="increment-button"
+                  class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
+                >
+                  &plus;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-between border-gray-500 mt-6 pt-4"
+        >
+          <span class="navigation">Total</span>
+          <span class="navigation">600 DKK</span>
         </div>
       </div>
-
-      <div
-        class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
-      >
-        <span class="text-lg font-medium">Rød</span>
-        <div class="flex items-center space-x-2">
-          <form class="max-w-xs mx-auto bg-white">
-            <div class="relative flex items-center justify-center space-x-2">
-              <button
-                type="button"
-                id="decrement-button"
-                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
-              >
-                &minus;
-              </button>
-
-              <input
-                type="text"
-                id="counter-input"
-                value="1"
-                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
-              />
-
-              <button
-                type="button"
-                id="increment-button"
-                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
-              >
-                &plus;
-              </button>
-            </div>
-          </form>
-        </div>
+    </article>
+    <article>
+      <div class="mx-auto max-w-44 mt-voress">
+        <Image src={sy} alt="mand der syr" class="" />
       </div>
-
-      <div
-        class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
-      >
-        <span class="text-lg font-medium">Orange</span>
-        <div class="flex items-center space-x-2">
-          <form class="max-w-xs mx-auto bg-white">
-            <div class="relative flex items-center justify-center space-x-2">
-              <button
-                type="button"
-                id="decrement-button"
-                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
-              >
-                &minus;
-              </button>
-
-              <input
-                type="text"
-                id="counter-input"
-                value="1"
-                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
-              />
-
-              <button
-                type="button"
-                id="increment-button"
-                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
-              >
-                &plus;
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div
-        class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
-      >
-        <span class="text-lg font-medium">Rose</span>
-        <div class="flex items-center space-x-2">
-          <form class="max-w-xs mx-auto bg-white">
-            <div class="relative flex items-center justify-center space-x-2">
-              <button
-                type="button"
-                id="decrement-button"
-                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
-              >
-                &minus;
-              </button>
-
-              <input
-                type="text"
-                id="counter-input"
-                value="0"
-                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
-              />
-
-              <button
-                type="button"
-                id="increment-button"
-                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
-              >
-                &plus;
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div
-        class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
-      >
-        <span class="text-lg font-medium">Bobler</span>
-        <div class="flex items-center space-x-2">
-          <form class="max-w-xs mx-auto bg-white">
-            <div class="relative flex items-center justify-center space-x-2">
-              <button
-                type="button"
-                id="decrement-button"
-                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
-              >
-                &minus;
-              </button>
-
-              <input
-                type="text"
-                id="counter-input"
-                value="1"
-                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
-              />
-
-              <button
-                type="button"
-                id="increment-button"
-                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
-              >
-                &plus;
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div
-        class="flex items-center justify-between border-t border-b-1 border-gray-300 py-2"
-      >
-        <span class="text-lg font-medium">Suprise mig</span>
-        <div class="flex items-center space-x-2">
-          <form class="max-w-xs mx-auto bg-white">
-            <div class="relative flex items-center justify-center space-x-2">
-              <button
-                type="button"
-                id="decrement-button"
-                class="flex-shrink-0 font-bold py-2 px-3 rounded focus:outline-none"
-              >
-                &minus;
-              </button>
-
-              <input
-                type="text"
-                id="counter-input"
-                value="1"
-                class="w-12 text-center bg-blaa-300 border-none focus:outline-none"
-              />
-
-              <button
-                type="button"
-                id="increment-button"
-                class="flex-shrink-0 font-bold py-2 px-3 focus:outline-none"
-              >
-                &plus;
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between border-gray-500 mt-6 pt-4">
-        <span class="navigation">Total</span>
-        <span class="navigation">600 DKK</span>
-      </div>
-    </div>
+    </article>
   </section>
   <div class="mt-voresxs mx-auto md:block hidden">
     <a href="/bestil">
@@ -247,9 +257,6 @@ import sy from "../assets/images/sy.webp";
     <a href="/bestil">
       <Button variant="mobileprimary">Tilføj til kurv</Button>
     </a>
-  </div>
-  <div class="mx-auto max-w-44 mt-voress">
-    <Image src={sy} alt="mand der syr" class="" />
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
