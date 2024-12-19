@@ -6,6 +6,7 @@ import mellemkasse from "../assets/images/medium.webp";
 import pil from "../assets/images/v.webp";
 import Plus18 from "../components/Plus18.astro";
 ---
+
 <Plus18 />
 <MainLayout title="Kasse">
   <h1 class="text-center">din bestilling</h1>
@@ -179,7 +180,12 @@ import Plus18 from "../components/Plus18.astro";
                 required
               />
             </div>
-            <div class="max-w-xl">
+            <div class="max-w-xl md:hidden block">
+              <a href="/bestil"
+                ><Button variant="mobileprimary">Betale</Button></a
+              >
+            </div>
+            <div class="max-w-xl md:block hidden">
               <a href="/bestil"><Button variant="primary">Betale</Button></a>
             </div>
           </div>
@@ -211,7 +217,12 @@ import Plus18 from "../components/Plus18.astro";
               required
             />
           </div>
-          <div class="ml-voresl">
+          <div class="ml-voresl md:hidden block">
+            <a href="/bestil"
+              ><Button variant="mobilesecondary">Indløs</Button></a
+            >
+          </div>
+          <div class="ml-voresl md:block hidden">
             <a href="/bestil"><Button variant="secondary">Indløs</Button></a>
           </div>
         </div>
