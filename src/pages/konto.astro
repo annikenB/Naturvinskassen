@@ -2,91 +2,222 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import pil from "../assets/images/v.webp";
+import pilhover from "../assets/images/vhover.webp";
+import mellemkasse from "../assets/images/medium.webp";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Din konto">
-  <h1 class="text-center">Administerér dit abonnement</h1>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
-    <div class="max-w-4xl mx-auto my-8 p-6">
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq1Button"
-        >
-          Dit abonnement
-        </button>
-        <div id="faq1Answer" class="faq-answer px-4 py-2">
-          <p>
-            Hver måned vil du som medlem af naturvinskassen modtage 3 flasker
-            udvalgt vin, som alle er lavet ud fra et naturligt udgangspunkt.
-            Derudover vil du modtage en opskrift, kreeret af en restaurant
-            og/eller en kok, som vi har meget kær. Udførlige beskrivelser af
-            vinene vil selvfølgelig også medfølge, hver måned! Ved første
-            levering modtager du en specialdesignet proptrækker, så har du noget
-            godt værktøj at gå i krig med.
-          </p>
+  <h1 class="text-center py-voresl">Administerér dit abonnement</h1>
+
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 m-margin">
+    <div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="flex justify-center">
+          <Image src={mellemkasse} alt="mellemkasse" class="m-voress" />
+        </div>
+        <div class="mb-voresl">
+          <h2>Nuværende</h2>
+          <h3>Den mellemstore</h3>
+          <p class="text-lg leading-relaxed mt-voresxs">3 Flasker pr. måned</p>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto my-8 p-voresm bg-blaa-300 rounded-card">
+        <h2 class="text-center mb-voresxs">Administerer</h2>
+        <div class="space-y-4">
+          <div class="faq-item">
+            <button
+              class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq1Button"
+            >
+              Hvad indebærer et abonnement?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq1Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                Hver måned vil du som medlem af naturvinskassen modtage 3
+                flasker udvalgt vin, som alle er lavet ud fra et naturligt
+                udgangspunkt. Derudover vil du modtage en opskrift, kreeret af
+                en restaurant og/eller en kok, som vi har meget kær. Udførlige
+                beskrivelser af vinene vil selvfølgelig også medfølge, hver
+                måned! Ved første levering modtager du en specialdesignet
+                proptrækker, så har du noget godt værktøj at gå i krig med.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq2Button"
+            >
+              Hvornår bliver min kasse så leveret?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq2Answer" class="faq-answer hidden px-4 py-2">
+              <p>Du vil få din naturvinskasse leveret hver måned.</p>
+            </div>
+          </div>
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq3Button"
+            >
+              Hvornår bliver min betaling trukket?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                Din kasse vil blive leveret til dig, i starten af måneden.
+                Bestiller du 'Strakslevering' ved oprettelse af dit medlemskab,
+                så vil din kasse afsendes inden for 1 hverdag.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq4Button"
+            >
+              Hvad skal jeg gøre, hvis en vin er defekt?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq4Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                Se, det er ikke så godt! Men det finder vi selvfølgelig en
+                løsning på. Naturligvis hel uden meromkostning fra din side!
+                Skriv os en mail på info@reduktivt.com, så finder vi ud af det.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq5Button"
+            >
+              Binder jeg mig i en bestemt periode?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq5Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                Det gør du ikke, nej. Vi har ingen binding eller skjulte
+                agendaer. Du kan melde dig fra eller sætte dit abonnement på
+                pause, præcis når du vil.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left px-4 py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq6Button"
+            >
+              Hvordan bliver min vin leveret?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq6Answer" class="faq-answer hidden px-4 py-2">
+              <p class="max-w-xs">
+                Afhentning Din naturvinskasse kan afhentes i Aarhus, Borggade
+                16. Hele danmark Din naturvinskasse leveres enten til DAO
+                Pakkeshop (Gratis) eller via DAO hjemmelevering (tillæg). Du
+                vælger din leveringsmetode når du bestiller dit abonnement.
+                Cykelbude (hjemmelevering, Aarhus) Din vin bliver leveret med
+                Velopak's cykelbude, direkte til din bopæl.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq2Button"
-        >
-          Skift dit abonnement
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq2Answer" class="faq-answer hidden px-4 py-2">
-          <p>Du vil få din naturvinskasse leveret hver måned.</p>
-        </div>
-      </div>
+      <script type="module" client:load>
+        function toggleAnswer(buttonId, answerId) {
+          const button = document.getElementById(buttonId);
+          const answer = document.getElementById(answerId);
+          const arrow = button.querySelector(".faq-arrow");
 
-      <div class="faq-item">
-        <button
-          class="w-full text-left px-4 py-2 text-lg font-semibold bg-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 flex justify-between items-center"
-          id="faq3Button"
-        >
-          Afmeld dit abonnement
-          <span class="faq-arrow">&#9660;</span>
-        </button>
-        <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
-          <p>
-            Din kasse vil blive leveret til dig, i starten af måneden. Bestiller
-            du 'Strakslevering' ved oprettelse af dit medlemskab, så vil din
-            kasse afsendes inden for 1 hverdag.
-          </p>
-        </div>
-      </div>
-    </div>
+          answer.classList.toggle("hidden");
+          arrow.innerHTML = answer.classList.contains("hidden")
+            ? "&#9660;"
+            : "&#9650;";
+        }
 
-    <div class="bg-graa-200 rounded-lg mt-24 mb-24">
-      <div class="p-4">
-        <h3 class="font-bold text-center">Klippekort??</h3>
-        <p class="text-center">glass?</p>
-
-        <p>2 tilbake</p>
-      </div>
+        for (let i = 1; i <= 11; i++) {
+          const buttonId = `faq${i}Button`;
+          const answerId = `faq${i}Answer`;
+          document.getElementById(buttonId).addEventListener("click", () => {
+            toggleAnswer(buttonId, answerId);
+          });
+        }
+      </script>
     </div>
   </section>
-
-  <script type="module" client:load>
-    function toggleAnswer(buttonId, answerId) {
-      const button = document.getElementById(buttonId);
-      const answer = document.getElementById(answerId);
-      const arrow = button.querySelector(".faq-arrow");
-
-      answer.classList.toggle("hidden");
-      arrow.innerHTML = answer.classList.contains("hidden")
-        ? "&#9660;"
-        : "&#9650;";
-    }
-
-    for (let i = 1; i <= 12; i++) {
-      const buttonId = `faq${i}Button`;
-      const answerId = `faq${i}Answer`;
-      document.getElementById(buttonId).addEventListener("click", () => {
-        toggleAnswer(buttonId, answerId);
-      });
-    }
-  </script>
 </MainLayout>
