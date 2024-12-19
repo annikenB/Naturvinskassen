@@ -39,6 +39,7 @@ const { title } = Astro.props;
     </footer>
 
     <script>
+      // Definer Web Component for login
       class Login extends HTMLElement {
         constructor() {
           super();
@@ -119,6 +120,7 @@ const { title } = Astro.props;
       }
       customElements.define("iform-login", Login);
 
+      // Sjekk om brukeren allerede er logget inn
       window.addEventListener("load", () => {
         if (!localStorage.getItem("iform-totally-logged-in")) {
           const div = document.createElement("div");
@@ -133,6 +135,7 @@ const { title } = Astro.props;
         }
       });
 
+      // Custom cursor funksjonalitet
       const cursor = document.querySelector(".custom-cursor");
       document.addEventListener("mousemove", (e) => {
         cursor.style.left = `${e.pageX}px`;
