@@ -16,11 +16,17 @@ import SectionCard from "../components/SectionCard.astro";
   <h1 class="text-center pb-voresl">Hvem er vi?</h1>
   <article>
     <section class="pb-voresl">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center mx-margin gap-8">
-          <div class="flex justify-end max-w-xl ml-32">
-            <Image src={team} alt="Team bag Naturvinskassen" class="rounded-image" />
-          </div>
-          <div class="">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center mx-mobilemargin md:mx-margin gap-8"
+      >
+        <div class="flex justify-end max-w-xl ml-32">
+          <Image
+            src={team}
+            alt="Team bag Naturvinskassen"
+            class="rounded-image"
+          />
+        </div>
+        <div class="">
           <h2 class="">Om os</h2>
           <p class="leading-relaxed">
             Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog
@@ -40,7 +46,7 @@ import SectionCard from "../components/SectionCard.astro";
         </div>
       </div>
     </section>
-    
+
     <section class="bg-blaa-300">
       <div class="max-w-7xl mx-auto px-4 py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -65,7 +71,9 @@ import SectionCard from "../components/SectionCard.astro";
 
     <article class="pt-voresl">
       <h2 class="text-center pb-voress">Erfaren og viden</h2>
-      <div class="md:grid grid-cols-2 mb-voresm md:mb-0 gap-8 mx-margin">
+      <div
+        class="md:grid grid-cols-2 mb-voresm md:mb-0 gap-8 mx-mobilemargin md:mx-margin"
+      >
         <div>
           <div class="flex justify-center">
             <Image
@@ -84,7 +92,7 @@ import SectionCard from "../components/SectionCard.astro";
         </div>
       </div>
       <div></div>
-      <div class="md:grid grid-cols-2 mb-voresm mx-margin">
+      <div class="md:grid grid-cols-2 mb-voresm mx-mobilemargin md:mx-margin">
         <div></div>
         <div>
           <div class="mb-voresm md:mb-0 px-4">
@@ -125,7 +133,7 @@ import SectionCard from "../components/SectionCard.astro";
           </div>
         </div>
       </div>
-      <section class="px-margin">
+      <section class="md:px-margin px-mobilemargin">
         <div class="ml-voresm text-right">
           <h4 class="rotate-12 pb-28 mb-5">Lyder det som noget for dig?</h4>
           <div class="flex justify-end pr-52">
