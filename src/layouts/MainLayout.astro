@@ -37,10 +37,106 @@ const { title } = Astro.props;
     <footer>
       <Footer />
     </footer>
-    <script>
-      const cursor = document.querySelector(".custom-cursor");
 
-      // Oppdater posisjonen til musen
+    <script>
+      // Definer Web Component for login
+      class Login extends HTMLElement {
+        constructor() {
+          super();
+          this.attachShadow({ mode: "open" });
+        }
+        connectedCallback() {
+          this.html = `<style>
+            #login-modal {
+              background: black;
+              position: fixed;
+              width: 100vw;
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .loginmodal-container {
+              padding: 30px;
+              max-width: 350px;
+              background-color: #F7F7F7;
+              border-radius: 4px;
+              box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+              font-family: Arial, sans-serif;
+            }
+            .loginmodal-container h1 {
+              text-align: center;
+              margin-bottom: 20px;
+            }
+            input[type=password] {
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 10px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+            input[type=submit] {
+              width: 100%;
+              padding: 10px;
+              background: #4CAF50;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            input[type=submit]:hover {
+              background: #45a049;
+            }
+          </style>
+          <div id="login-modal">
+            <div class="loginmodal-container">
+              <h1>Login</h1>
+              <form>
+                <input type="password" name="pass" placeholder="Password">
+                <input type="submit" value="Login">
+              </form>
+            </div>
+          </div>`;
+          this.render();
+
+          // Legg til event listener for login-knappen
+          this.shadowRoot
+            .querySelector("form")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+              const passwordInput =
+                this.shadowRoot.querySelector("input[name=pass]").value;
+              if (passwordInput === "kea") {
+                document.querySelector("#totally-delete-me").remove();
+                localStorage.setItem("iform-totally-logged-in", true);
+              } else {
+                alert("Incorrect password");
+              }
+            });
+        }
+        render() {
+          this.shadowRoot.innerHTML = this.html;
+        }
+      }
+      customElements.define("iform-login", Login);
+
+      // Sjekk om brukeren allerede er logget inn
+      window.addEventListener("load", () => {
+        if (!localStorage.getItem("iform-totally-logged-in")) {
+          const div = document.createElement("div");
+          div.id = "totally-delete-me";
+          div.style.width = "100vw";
+          div.style.height = "100vh";
+          div.style.position = "fixed";
+          div.style.zIndex = "9999";
+
+          div.innerHTML = "<iform-login />";
+          document.body.prepend(div);
+        }
+      });
+
+      // Custom cursor funksjonalitet
+      const cursor = document.querySelector(".custom-cursor");
       document.addEventListener("mousemove", (e) => {
         cursor.style.left = `${e.pageX}px`;
         cursor.style.top = `${e.pageY}px`;
@@ -50,9 +146,8 @@ const { title } = Astro.props;
 </html>
 
 <style>
-  /* Custom cursor */
   body {
-    cursor: none; /* Skru av standard cursor */
+    cursor: none;
   }
 
   .custom-cursor {
