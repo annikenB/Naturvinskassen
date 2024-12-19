@@ -115,6 +115,7 @@ export default {
       spacing: {
         margin: "105px",
         mobilemargin: "36px",
+        voresnav: "80px",
         voresxs: "24px",
         voress: "44px",
         voresm: "68px",

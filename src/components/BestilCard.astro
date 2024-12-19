@@ -21,14 +21,16 @@ const buttonStyling = "";
 ---
 
 <div
-  class="bg-white rounded-lg p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col justify-between group"
+  class="bg-white rounded-lg p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col justify-between h-full group"
 >
+<div class="grow">
   <img
     src={image}
     alt={title}
-    class="w-full h-auto object-cover rounded-md mb-4"
+    class="w-full object-cover rounded-md mb-4"
   />
-
+</div>
+<div>
   <p class={quantityStyling}>{quantity} Flasker / mnd</p>
 
   <p class={priceStyling}>{price} DKK</p>
@@ -44,4 +46,7 @@ const buttonStyling = "";
     <a href={href}>
       <Button variant="primary">Vælg</Button></a>
   </div>
+</div>
+
+
 </div>
